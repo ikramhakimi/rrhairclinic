@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Mampan helps project teams manage GBI, GreenRE, and LEED certification with practical advisory, technical review, and assessor-ready documentation."
+  >
+  <meta property="og:title" content="Mampan Solutions &middot; Green building certification advisory">
+  <meta property="og:description" content="Structured advisory for GBI, GreenRE, and LEED projects in Malaysia.">
+  <meta property="og:image" content="assets/images/bg-drawing-building.png">
+  <title>Mampan Solutions &middot; Green building certification advisory</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fragment+Mono&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+      --font-mono: "Fragment Mono", ui-monospace, monospace;
+      --color-mampan-green: #00c950;
+      --color-mampan-ink: #111827;
+      --color-mampan-soft-ink: #1d2735;
+      --color-mampan-paper: #f4f6ef;
+      --color-mampan-canvas: #fbfcf7;
+      --color-mampan-line: #dbe3d4;
+      --color-mampan-muted: #667386;
+      --color-mampan-violet: #3f35b5;
+    }
+
+    body {
+      font-variant-numeric: tabular-nums;
+    }
+
+    .text-balance {
+      text-wrap: balance;
+    }
+
+    .text-pretty {
+      text-wrap: pretty;
+    }
+
+    .site-grain::before {
+      position: fixed;
+      inset: 0;
+      z-index: 60;
+      pointer-events: none;
+      content: "";
+      opacity: .04;
+      background-image:
+        linear-gradient(rgb(17 24 39 / .28) 1px, transparent 1px),
+        linear-gradient(90deg, rgb(17 24 39 / .20) 1px, transparent 1px);
+      background-size: 38px 38px;
+      mask-image: radial-gradient(circle at 50% 8%, black, transparent 78%);
+      mix-blend-mode: multiply;
+    }
+
+    .drawing-mask {
+      mask-image: linear-gradient(90deg, transparent 0%, black 18%, black 82%, transparent 100%);
+    }
+
+    .hero-title {
+      letter-spacing: -.055em;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .float-slow {
+        animation: float-slow 9s ease-in-out infinite;
+      }
+
+      @keyframes float-slow {
+        0%, 100% {
+          transform: translate3d(0, 0, 0);
+        }
+
+        50% {
+          transform: translate3d(0, -10px, 0);
+        }
+      }
+    }
+  </style>
+</head>
+<body class="site-grain bg-mampan-canvas font-sans text-mampan-ink antialiased selection:bg-mampan-green selection:text-mampan-ink">
+  <a
+    href="#main"
+    class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[70] focus:rounded-md focus:bg-mampan-ink focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white"
+  >
+    Skip to content
+  </a>
+
+  <nav class="sticky top-0 z-50 border-b border-mampan-line/80 bg-mampan-canvas/90 backdrop-blur-xl">
+    <div class="mx-auto flex h-16 max-w-[1480px] items-center justify-between px-5 sm:px-8 lg:px-10">
+      <a
+        href="#main"
+        class="group flex items-center gap-3 rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-mampan-green focus-visible:ring-offset-4"
+        aria-label="Mampan home"
+      >
+        <svg class="h-4 w-10 transition duration-300 group-hover:-translate-y-0.5" viewBox="0 0 460 200" fill="none" aria-hidden="true">
+          <path d="M80 100L180 0L280 100V200H180L80 100Z" fill="#00C950"/>
+          <rect x="80" width="100" height="100" fill="#00C950"/>
+          <path d="M240 100L340 0L440 100V200H340L240 100Z" fill="#00C950"/>
+          <rect x="240" width="100" height="100" fill="#00C950"/>
+          <rect y="80" width="120" height="120" fill="#00C950"/>
+          <rect x="340" y="80" width="120" height="120" fill="#00C950"/>
+        </svg>
+        <span class="font-mono text-[12px] tracking-[.22em] text-mampan-soft-ink">MAMPAN</span>
+      </a>
+
+      <div class="hidden items-center gap-8 md:flex">
+        <a class="border-b border-transparent py-1 text-sm text-mampan-muted transition hover:border-mampan-green hover:text-mampan-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-mampan-green" href="#services">Services</a>
+        <a class="border-b border-transparent py-1 text-sm text-mampan-muted transition hover:border-mampan-green hover:text-mampan-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-mampan-green" href="#process">Process</a>
+        <a class="border-b border-transparent py-1 text-sm text-mampan-muted transition hover:border-mampan-green hover:text-mampan-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-mampan-green" href="#about">About</a>
+        <a class="border-b border-transparent py-1 text-sm text-mampan-muted transition hover:border-mampan-green hover:text-mampan-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-mampan-green" href="#projects">Projects</a>
+        <a class="border-b border-transparent py-1 text-sm text-mampan-muted transition hover:border-mampan-green hover:text-mampan-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-mampan-green" href="#frameworks">Frameworks</a>
+      </div>
+
+      <a
+        href="#start"
+        class="inline-flex items-center justify-center rounded-md bg-mampan-ink px-4 py-2.5 text-xs font-semibold tracking-[.03em] text-white shadow-[0_16px_36px_-24px_rgba(17,24,39,.9)] transition duration-200 hover:-translate-y-0.5 hover:bg-[#263241] active:translate-y-px focus:outline-none focus-visible:ring-2 focus-visible:ring-mampan-green focus-visible:ring-offset-4"
+      >
+        Book review
+      </a>
+    </div>
+  </nav>
+
+  <main id="main">
+    <section class="relative isolate overflow-hidden border-b border-mampan-line bg-[#eef3e8]">
+      <div class="absolute inset-0 -z-20 bg-[radial-gradient(circle_at_16%_18%,rgba(0,201,80,.18),transparent_31%),radial-gradient(circle_at_88%_16%,rgba(63,53,181,.10),transparent_28%),linear-gradient(180deg,#eef3e8_0%,#fbfcf7_86%)]"></div>
+      <img
+        src="assets/images/bg-drawing-building.png"
+        alt="Technical drawing of a high-performance building facade"
+        class="drawing-mask absolute inset-x-0 bottom-0 -z-10 hidden h-[62%] w-full object-cover object-center opacity-30 mix-blend-multiply lg:block"
+      >
+
+      <div class="mx-auto grid min-h-[calc(100dvh-4rem)] max-w-[1480px] gap-10 px-5 pb-8 pt-12 sm:px-8 lg:grid-cols-[minmax(0,1.02fr)_minmax(360px,.58fr)] lg:px-10 lg:pt-20">
+        <div class="flex flex-col justify-between">
+          <div class="max-w-5xl pt-10 lg:pt-14">
+            <p class="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[.24em] text-[#147d48]">
+              <span class="h-px w-8 bg-[#147d48]"></span>
+              Green building certification advisory
+            </p>
+            <h1 class="hero-title mt-7 max-w-[12ch] text-balance text-[clamp(4.25rem,12vw,11rem)] font-semibold leading-[.82] text-mampan-ink">
+              Build for approval, not rework.
+            </h1>
+          </div>
+
+          <div class="grid gap-8 border-t border-mampan-line/90 py-8 lg:grid-cols-[.72fr_1fr] lg:items-end">
+            <div class="flex flex-wrap gap-2">
+              <span class="rounded-md border border-[#cbd8c3] bg-white/70 px-3 py-2 font-mono text-[10px] uppercase tracking-[.14em] text-mampan-muted">GBI</span>
+              <span class="rounded-md border border-[#cbd8c3] bg-white/70 px-3 py-2 font-mono text-[10px] uppercase tracking-[.14em] text-mampan-muted">GreenRE</span>
+              <span class="rounded-md border border-[#cbd8c3] bg-white/70 px-3 py-2 font-mono text-[10px] uppercase tracking-[.14em] text-mampan-muted">LEED</span>
+            </div>
+            <div>
+              <p class="max-w-[62ch] text-pretty text-lg font-light leading-8 text-[#334155]">
+                Mampan helps developers and project teams navigate GBI, GreenRE, and LEED requirements with structured advisory, technical review, and submission-ready documentation from early gap analysis to assessor response.
+              </p>
+              <div class="mt-7 flex flex-col gap-3 sm:flex-row">
+                <a
+                  href="#start"
+                  class="inline-flex items-center justify-center rounded-md bg-mampan-violet px-6 py-3.5 text-sm font-semibold text-white shadow-[0_18px_42px_-24px_rgba(63,53,181,.92)] transition duration-200 hover:-translate-y-0.5 hover:bg-[#342b99] active:translate-y-px focus:outline-none focus-visible:ring-2 focus-visible:ring-mampan-green focus-visible:ring-offset-4"
+                >
+                  Book a project review
+                </a>
+                <a
+                  href="#services"
+                  class="inline-flex items-center justify-center rounded-md border border-[#c4d0bd] bg-white/70 px-6 py-3.5 text-sm font-semibold text-mampan-soft-ink transition duration-200 hover:-translate-y-0.5 hover:border-mampan-green hover:bg-white active:translate-y-px focus:outline-none focus-visible:ring-2 focus-visible:ring-mampan-green focus-visible:ring-offset-4"
+                >
+                  See advisory scope
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="relative self-end pb-8 lg:pb-16">
+          <div class="float-slow overflow-hidden rounded-xl border border-white/80 bg-white/70 shadow-[0_40px_100px_-70px_rgba(17,24,39,.95)] backdrop-blur-xl">
+            <div class="relative min-h-72 overflow-hidden bg-[#e4ecdf]">
+              <img
+                src="assets/images/bg-hero.png"
+                alt="Architectural certification drawing with green building markings"
+                class="absolute inset-0 h-full w-full object-cover object-center opacity-80 mix-blend-multiply"
+              >
+              <div class="absolute left-5 top-5 rounded-md bg-mampan-ink px-3 py-2 font-mono text-[10px] uppercase tracking-[.16em] text-white">Pathway brief</div>
+              <div class="absolute bottom-5 left-5 right-5 rounded-lg border border-white/70 bg-white/75 p-4 backdrop-blur-md">
+                <p class="font-mono text-[10px] uppercase tracking-[.18em] text-mampan-muted">Current focus</p>
+                <p class="mt-2 text-lg font-semibold leading-6 tracking-[-.02em] text-mampan-ink">
+                  Credit clarity, evidence registers, assessor-ready documentation.
+                </p>
+              </div>
+            </div>
+            <dl class="grid grid-cols-3 divide-x divide-mampan-line border-t border-mampan-line bg-white/85">
+              <div class="p-5">
+                <dt class="font-mono text-[10px] uppercase leading-4 tracking-[.12em] text-mampan-muted">Projects supported</dt>
+                <dd class="mt-3 text-4xl font-semibold tracking-[-.05em]">40<span class="text-mampan-green">+</span></dd>
+              </div>
+              <div class="p-5">
+                <dt class="font-mono text-[10px] uppercase leading-4 tracking-[.12em] text-mampan-muted">Frameworks</dt>
+                <dd class="mt-3 text-4xl font-semibold tracking-[-.05em]">3</dd>
+              </div>
+              <div class="p-5">
+                <dt class="font-mono text-[10px] uppercase leading-4 tracking-[.12em] text-mampan-muted">Documentation</dt>
+                <dd class="mt-3 text-4xl font-semibold tracking-[-.05em] text-mampan-green" aria-label="Yes">OK</dd>
+              </div>
+            </dl>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="services" class="bg-mampan-canvas px-5 py-20 sm:px-8 lg:px-10 lg:py-28">
+      <div class="mx-auto max-w-[1480px]">
+        <div class="grid gap-8 lg:grid-cols-[.46fr_1fr] lg:items-end">
+          <div>
+            <p class="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[.24em] text-mampan-muted">
+              <span class="h-px w-8 bg-mampan-muted"></span>
+              What we do
+            </p>
+            <h2 class="mt-5 max-w-xl text-balance text-4xl font-semibold leading-[1.02] tracking-[-.04em] sm:text-6xl">
+              Advisory that turns rating criteria into project work.
+            </h2>
+          </div>
+          <p class="max-w-[68ch] text-pretty text-base font-light leading-8 text-mampan-muted lg:justify-self-end">
+            Whether you are planning a new development, preparing a submission, or recovering a delayed certification pathway, Mampan gives your team the structure, evidence, and technical clarity needed to move forward with confidence.
+          </p>
+        </div>
+
+        <div class="mt-14 grid gap-4 lg:grid-cols-12 lg:items-start">
+          <article class="group relative overflow-hidden rounded-xl bg-mampan-ink p-7 text-white shadow-[0_28px_70px_-56px_rgba(17,24,39,.95)] transition duration-300 hover:-translate-y-1 lg:col-span-5 lg:min-h-[520px]">
+            <img
+              src="assets/images/services/services-feature-building.png"
+              alt="Commercial building facade reviewed for green certification"
+              class="absolute bottom-0 right-0 h-full w-1/2 object-cover opacity-20 mix-blend-screen transition duration-500 group-hover:scale-[1.03]"
+            >
+            <div class="relative max-w-sm">
+              <p class="font-mono text-[10px] uppercase tracking-[.18em] text-mampan-green">Primary advisory</p>
+              <h3 class="mt-5 text-3xl font-semibold leading-tight tracking-[-.035em]">GBI certification advisory</h3>
+              <p class="mt-4 text-sm font-light leading-8 text-[#9aa8ba]">
+                Identify the right GBI tool, target the right credits, and understand what your project needs before submission begins. We turn the rating criteria into a practical certification roadmap for your team.
+              </p>
+            </div>
+            <div class="relative mt-12 grid gap-2 border-t border-white/10 pt-6 sm:grid-cols-3 lg:absolute lg:bottom-7 lg:left-7 lg:right-7">
+              <span class="rounded-md bg-white/[.08] px-3 py-2 text-xs text-[#d7dee8]">GBI Non-Residential</span>
+              <span class="rounded-md bg-white/[.08] px-3 py-2 text-xs text-[#d7dee8]">GBI Residential</span>
+              <span class="rounded-md bg-white/[.08] px-3 py-2 text-xs text-[#d7dee8]">GBI Industrial</span>
+            </div>
+          </article>
+
+          <div class="grid gap-4 lg:col-span-7">
+            <article class="group grid gap-6 rounded-xl bg-[#edf3e8] p-6 transition duration-300 hover:-translate-y-1 hover:bg-[#e7f0e0] md:grid-cols-[.58fr_1fr] md:items-end">
+              <div>
+                <p class="font-mono text-[10px] uppercase tracking-[.18em] text-[#147d48]">02 / Consultation</p>
+                <h3 class="mt-4 text-2xl font-semibold tracking-[-.025em]">Green building consultation</h3>
+              </div>
+              <p class="text-sm font-light leading-8 text-mampan-muted">
+                Sustainability input that fits into real project decisions from passive design and material strategy to M&E coordination, compliance planning, and performance improvement.
+              </p>
+            </article>
+
+            <div class="grid gap-4 md:grid-cols-2">
+              <article class="group rounded-xl border border-mampan-line bg-white p-6 transition duration-300 hover:-translate-y-1 hover:border-mampan-green">
+                <p class="font-mono text-[10px] uppercase tracking-[.18em] text-[#147d48]">03 / Evidence</p>
+                <h3 class="mt-5 text-xl font-semibold tracking-[-.02em]">GBI documentation support</h3>
+                <p class="mt-3 text-sm font-light leading-7 text-mampan-muted">Prepare, organise, and quality-check credit narratives, drawings, calculations, evidence registers, and submission packages.</p>
+              </article>
+              <article class="group rounded-xl border border-mampan-line bg-white p-6 transition duration-300 hover:-translate-y-1 hover:border-mampan-green md:translate-y-8">
+                <p class="font-mono text-[10px] uppercase tracking-[.18em] text-[#147d48]">04 / Performance</p>
+                <h3 class="mt-5 text-xl font-semibold tracking-[-.02em]">Energy efficiency review</h3>
+                <p class="mt-3 text-sm font-light leading-7 text-mampan-muted">Review envelope, lighting, HVAC, metering, and equipment strategy to identify practical improvements.</p>
+              </article>
+            </div>
+
+            <div class="grid gap-4 pt-0 md:grid-cols-[.9fr_1.1fr] md:pt-8">
+              <article class="group rounded-xl border border-mampan-line bg-white p-6 transition duration-300 hover:-translate-y-1 hover:border-mampan-green">
+                <p class="font-mono text-[10px] uppercase tracking-[.18em] text-[#147d48]">05 / Assessment</p>
+                <h3 class="mt-5 text-lg font-semibold tracking-[-.015em]">Building performance assessment</h3>
+                <p class="mt-3 text-sm font-light leading-7 text-mampan-muted">Assess water efficiency, IEQ, site planning, systems performance, and operational readiness.</p>
+              </article>
+              <article class="group rounded-xl bg-[#f4f7f2] p-6 ring-1 ring-mampan-line transition duration-300 hover:-translate-y-1 hover:ring-mampan-green">
+                <p class="font-mono text-[10px] uppercase tracking-[.18em] text-[#147d48]">06 / Recovery</p>
+                <h3 class="mt-5 text-lg font-semibold tracking-[-.015em]">Gap analysis</h3>
+                <p class="mt-3 text-sm font-light leading-7 text-mampan-muted">A structured review of what qualifies, what is missing, and which credits deserve priority.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="process" class="relative overflow-hidden bg-[#121923] px-5 py-20 text-white sm:px-8 lg:px-10 lg:py-28">
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_82%_8%,rgba(0,201,80,.13),transparent_30%),linear-gradient(180deg,#121923_0%,#0d131c_100%)]"></div>
+      <div class="relative mx-auto grid max-w-[1480px] gap-12 lg:grid-cols-[420px_1fr]">
+        <aside class="lg:sticky lg:top-28 lg:self-start">
+          <p class="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[.24em] text-[#7b8798]">
+            <span class="h-px w-8 bg-[#364153]"></span>
+            How we work
+          </p>
+          <h2 class="mt-5 text-balance text-4xl font-semibold leading-[1.03] tracking-[-.04em] sm:text-5xl">
+            A certification workflow your project team can actually follow.
+          </h2>
+          <p class="mt-6 text-pretty text-sm font-light leading-8 text-[#909bad]">
+            Green building certification becomes difficult when responsibilities, evidence, and credit requirements are unclear. Mampan keeps the process traceable with defined stages, clear deliverables, and practical next actions.
+          </p>
+          <div class="mt-8 rounded-xl border border-white/10 bg-white/[.04] p-5">
+            <p class="font-mono text-[10px] uppercase tracking-[.18em] text-mampan-green">Flexible engagement</p>
+            <p class="mt-3 text-sm font-light leading-7 text-[#aeb8c6]">
+              We can step in at concept stage, mid-design, during construction, or late documentation catch-up.
+            </p>
+          </div>
+        </aside>
+
+        <div class="grid gap-4">
+          <article class="grid gap-5 rounded-xl border border-white/10 bg-white/[.055] p-6 transition duration-300 hover:-translate-y-1 hover:bg-white/[.08] md:grid-cols-[120px_1fr]">
+            <p class="font-mono text-[10px] uppercase tracking-[.16em] text-mampan-green">Step 01</p>
+            <div>
+              <h3 class="text-xl font-semibold tracking-[-.02em] text-[#edf3f8]">Project pathway review</h3>
+              <p class="mt-2 text-sm font-light leading-7 text-[#909bad]">We review project type, stage, target framework, timeline, and available documentation.</p>
+            </div>
+          </article>
+          <article class="grid gap-5 rounded-xl border border-white/10 bg-white/[.035] p-6 transition duration-300 hover:-translate-y-1 hover:bg-white/[.065] md:ml-14 md:grid-cols-[120px_1fr]">
+            <p class="font-mono text-[10px] uppercase tracking-[.16em] text-mampan-green">Step 02</p>
+            <div>
+              <h3 class="text-xl font-semibold tracking-[-.02em] text-[#edf3f8]">Credit gap analysis</h3>
+              <p class="mt-2 text-sm font-light leading-7 text-[#909bad]">Current design is mapped against rating criteria to identify credits, missing evidence, and risks.</p>
+            </div>
+          </article>
+          <article class="grid gap-5 rounded-xl border border-white/10 bg-white/[.055] p-6 transition duration-300 hover:-translate-y-1 hover:bg-white/[.08] md:grid-cols-[120px_1fr]">
+            <p class="font-mono text-[10px] uppercase tracking-[.16em] text-mampan-green">Step 03</p>
+            <div>
+              <h3 class="text-xl font-semibold tracking-[-.02em] text-[#edf3f8]">Design and team coordination</h3>
+              <p class="mt-2 text-sm font-light leading-7 text-[#909bad]">We align architects, engineers, contractors, and owners before issues become costly.</p>
+            </div>
+          </article>
+          <article class="grid gap-5 rounded-xl border border-white/10 bg-white/[.035] p-6 transition duration-300 hover:-translate-y-1 hover:bg-white/[.065] md:ml-24 md:grid-cols-[120px_1fr]">
+            <p class="font-mono text-[10px] uppercase tracking-[.16em] text-mampan-green">Step 04</p>
+            <div>
+              <h3 class="text-xl font-semibold tracking-[-.02em] text-[#edf3f8]">Submission documentation</h3>
+              <p class="mt-2 text-sm font-light leading-7 text-[#909bad]">Credit reports, drawings, calculations, evidence registers, and supporting files are reviewed.</p>
+            </div>
+          </article>
+          <article class="grid gap-5 rounded-xl border border-mampan-green/35 bg-mampan-green/[.08] p-6 transition duration-300 hover:-translate-y-1 hover:bg-mampan-green/[.11] md:grid-cols-[120px_1fr]">
+            <p class="font-mono text-[10px] uppercase tracking-[.16em] text-mampan-green">Step 05</p>
+            <div>
+              <h3 class="text-xl font-semibold tracking-[-.02em] text-[#edf3f8]">Assessor response support</h3>
+              <p class="mt-2 text-sm font-light leading-7 text-[#aeb8c6]">We help respond with the right evidence, explanation, and technical justification.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="bg-[#eef3e8] px-5 py-20 sm:px-8 lg:px-10 lg:py-28">
+      <div class="mx-auto max-w-[1480px]">
+        <div class="grid gap-10 lg:grid-cols-[.9fr_1.1fr] lg:items-start">
+          <div>
+            <p class="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[.24em] text-mampan-muted">
+              <span class="h-px w-8 bg-mampan-muted"></span>
+              About Mampan
+            </p>
+            <h2 class="mt-5 max-w-3xl text-balance text-4xl font-semibold leading-[1.03] tracking-[-.04em] sm:text-6xl">
+              Green certification made legible across design, engineering, and evidence.
+            </h2>
+          </div>
+          <div class="grid gap-4">
+            <article class="rounded-xl bg-white p-7 shadow-[0_22px_60px_-48px_rgba(17,24,39,.8)]">
+              <p class="font-mono text-[10px] uppercase tracking-[.2em] text-mampan-muted">Our mission</p>
+              <h3 class="mt-5 text-2xl font-semibold leading-tight tracking-[-.025em]">
+                To help project teams turn green building requirements into clear decisions, coordinated evidence, and credible certification outcomes.
+              </h3>
+              <p class="mt-4 text-sm font-light leading-8 text-mampan-muted">
+                Green building certification in Malaysia can feel complex because it sits between design, engineering, documentation, construction, and assessor review. Mampan exists to bring structure to that process, helping developers and project teams understand what matters, what is missing, and what needs to happen next.
+              </p>
+            </article>
+            <article class="rounded-xl bg-mampan-ink p-7 text-white shadow-[0_22px_60px_-48px_rgba(17,24,39,.9)] md:ml-16">
+              <p class="font-mono text-[10px] uppercase tracking-[.2em] text-[#7b8798]">Our vision</p>
+              <h3 class="mt-5 text-2xl font-semibold leading-tight tracking-[-.025em]">
+                A built environment where better-performing buildings become the normal way to build.
+              </h3>
+              <p class="mt-4 text-sm font-light leading-8 text-[#909bad]">
+                Our vision is a Malaysia where green building certification is part of better project planning from the beginning, not a late-stage checkbox.
+              </p>
+            </article>
+          </div>
+        </div>
+
+        <div class="mt-16 grid gap-4 lg:grid-cols-4">
+          <article class="border-t border-mampan-line pt-5 lg:col-span-1">
+            <p class="font-mono text-[10px] uppercase tracking-[.18em] text-[#147d48]">01</p>
+            <h3 class="mt-4 font-semibold">Focused on certification outcomes</h3>
+            <p class="mt-2 text-sm font-light leading-7 text-mampan-muted">Reduce documentation gaps and improve technical confidence.</p>
+          </article>
+          <article class="border-t border-mampan-line pt-5 lg:col-span-1 lg:mt-14">
+            <p class="font-mono text-[10px] uppercase tracking-[.18em] text-[#147d48]">02</p>
+            <h3 class="mt-4 font-semibold">Documentation with traceability</h3>
+            <p class="mt-2 text-sm font-light leading-7 text-mampan-muted">Map every submission item to its credit requirement, evidence source, and review status.</p>
+          </article>
+          <article class="border-t border-mampan-line pt-5 lg:col-span-1">
+            <p class="font-mono text-[10px] uppercase tracking-[.18em] text-[#147d48]">03</p>
+            <h3 class="mt-4 font-semibold">Framework-specific guidance</h3>
+            <p class="mt-2 text-sm font-light leading-7 text-mampan-muted">GBI, GreenRE, and LEED each have different scoring logic and documentation expectations.</p>
+          </article>
+          <article class="border-t border-mampan-line pt-5 lg:col-span-1 lg:mt-14">
+            <p class="font-mono text-[10px] uppercase tracking-[.18em] text-[#147d48]">04</p>
+            <h3 class="mt-4 font-semibold">Clear status and next actions</h3>
+            <p class="mt-2 text-sm font-light leading-7 text-mampan-muted">Know credit progress, missing evidence, documentation status, and assessor risk.</p>
+          </article>
+        </div>
+
+        <div class="mt-16 rounded-xl border border-mampan-line bg-white">
+          <div class="grid gap-6 border-b border-mampan-line p-7 lg:grid-cols-[.6fr_1fr] lg:items-end">
+            <h3 class="text-3xl font-semibold tracking-[-.035em]">What your team can expect from us.</h3>
+            <p class="max-w-[68ch] text-sm font-light leading-8 text-mampan-muted">
+              Mampan's approach is built around clarity, technical care, and accountability. We define scope, timeline, risks, and responsibilities so your team knows what is needed to keep the certification pathway moving.
+            </p>
+          </div>
+          <div class="grid divide-y divide-mampan-line md:grid-cols-4 md:divide-x md:divide-y-0">
+            <article class="p-6 transition duration-200 hover:bg-[#f5f8f1]">
+              <h4 class="font-semibold">Clear scope from day one</h4>
+              <p class="mt-2 text-sm font-light leading-7 text-mampan-muted">We define what is achievable, where the risks are, and what the timeline requires.</p>
+            </article>
+            <article class="p-6 transition duration-200 hover:bg-[#f5f8f1]">
+              <h4 class="font-semibold">Assessor-ready documentation</h4>
+              <p class="mt-2 text-sm font-light leading-7 text-mampan-muted">Documents are reviewed for completeness, consistency, and rating alignment.</p>
+            </article>
+            <article class="p-6 transition duration-200 hover:bg-[#f5f8f1]">
+              <h4 class="font-semibold">Responsive project support</h4>
+              <p class="mt-2 text-sm font-light leading-7 text-mampan-muted">Reviews, clarifications, and next actions keep moving with the project timeline.</p>
+            </article>
+            <article class="p-6 transition duration-200 hover:bg-[#f5f8f1]">
+              <h4 class="font-semibold">Capability, not dependency</h4>
+              <p class="mt-2 text-sm font-light leading-7 text-mampan-muted">We explain credit decisions and assessor expectations so your team gets stronger.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="bg-mampan-canvas px-5 py-20 sm:px-8 lg:px-10 lg:py-28">
+      <div class="mx-auto max-w-[1480px]">
+        <div class="grid gap-8 lg:grid-cols-[.72fr_1fr] lg:items-end">
+          <div>
+            <p class="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[.24em] text-mampan-muted">
+              <span class="h-px w-8 bg-mampan-muted"></span>
+              Project types
+            </p>
+            <h2 class="mt-5 text-balance text-4xl font-semibold leading-[1.03] tracking-[-.04em] sm:text-6xl">
+              Built for commercial, residential, industrial, and mixed-use teams.
+            </h2>
+          </div>
+          <p class="max-w-[68ch] text-pretty text-base font-light leading-8 text-mampan-muted lg:justify-self-end">
+            From office towers to residential developments, industrial facilities, renovations, and mixed-use projects, Mampan supports the project types most commonly assessed under green building frameworks.
+          </p>
+        </div>
+
+        <div class="mt-14 grid gap-5 lg:grid-cols-[1.08fr_.92fr]">
+          <article class="group overflow-hidden rounded-xl bg-[#e8f0e2] transition duration-300 hover:-translate-y-1 lg:row-span-2">
+            <div class="relative min-h-[420px] overflow-hidden">
+              <img
+                src="assets/images/services/services-feature-building.png"
+                alt="Commercial office building facade"
+                class="absolute inset-0 h-full w-full object-cover object-center opacity-85 mix-blend-multiply transition duration-700 group-hover:scale-[1.03]"
+              >
+              <div class="absolute left-6 top-6 rounded-md bg-white/85 px-3 py-2 font-mono text-[10px] uppercase tracking-[.14em] text-mampan-muted backdrop-blur">Commercial</div>
+              <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#111827]/90 to-transparent p-7 pt-28 text-white">
+                <h3 class="max-w-lg text-3xl font-semibold tracking-[-.035em]">Commercial office developments</h3>
+                <p class="mt-3 max-w-xl text-sm font-light leading-8 text-[#d4dce6]">
+                  Advisory for office towers, corporate buildings, and commercial developments pursuing structured certification pathways.
+                </p>
+              </div>
+            </div>
+            <div class="grid gap-4 bg-white p-7 sm:grid-cols-3">
+              <div>
+                <p class="font-mono text-[10px] uppercase tracking-[.14em] text-mampan-muted">Framework</p>
+                <p class="mt-1 font-semibold">GBI</p>
+              </div>
+              <div>
+                <p class="font-mono text-[10px] uppercase tracking-[.14em] text-mampan-muted">Stage</p>
+                <p class="mt-1 font-semibold">Design to build</p>
+              </div>
+              <div>
+                <p class="font-mono text-[10px] uppercase tracking-[.14em] text-mampan-muted">Support</p>
+                <p class="mt-1 font-semibold">Full pathway</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="rounded-xl border border-mampan-line bg-white p-7 transition duration-300 hover:-translate-y-1 hover:border-mampan-green">
+            <p class="font-mono text-[10px] uppercase tracking-[.18em] text-mampan-muted">Residential / High-rise</p>
+            <h3 class="mt-5 text-2xl font-semibold tracking-[-.03em]">Residential and high-rise developments</h3>
+            <p class="mt-3 text-sm font-light leading-8 text-mampan-muted">
+              Certification support for residential towers, serviced apartments, and mixed residential schemes covering water efficiency, IEQ, passive design, and documentation readiness.
+            </p>
+            <a href="#start" class="mt-6 inline-flex text-sm font-semibold text-mampan-violet transition duration-200 hover:translate-x-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-mampan-green">Discuss a residential project &rarr;</a>
+          </article>
+
+          <article class="rounded-xl bg-mampan-ink p-7 text-white transition duration-300 hover:-translate-y-1">
+            <p class="font-mono text-[10px] uppercase tracking-[.18em] text-[#7b8798]">Industrial / Factory</p>
+            <h3 class="mt-5 text-2xl font-semibold tracking-[-.03em]">Industrial facilities and warehouses</h3>
+            <p class="mt-3 text-sm font-light leading-8 text-[#909bad]">
+              Green building advisory for factories, warehouses, and purpose-built facilities, with focus on energy performance, site planning, operating efficiency, and evidence coordination.
+            </p>
+            <a href="#start" class="mt-6 inline-flex text-sm font-semibold text-mampan-green transition duration-200 hover:translate-x-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-white">Discuss an industrial project &rarr;</a>
+          </article>
+        </div>
+
+        <div class="mt-8 grid gap-4 rounded-xl bg-[#eef3e8] p-6 sm:grid-cols-[1fr_auto] sm:items-center">
+          <div>
+            <p class="text-base font-semibold">Not sure which framework applies to your project?</p>
+            <p class="mt-1 text-sm font-light leading-7 text-mampan-muted">Share your project type, location, and development stage. We'll help identify the most suitable certification pathway.</p>
+          </div>
+          <a href="#start" class="inline-flex justify-center rounded-md bg-mampan-ink px-5 py-3 text-sm font-semibold text-white transition duration-200 hover:-translate-y-0.5 hover:bg-[#263241] active:translate-y-px focus:outline-none focus-visible:ring-2 focus-visible:ring-mampan-green focus-visible:ring-offset-4">Start with a project review</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-[#eef3e8] px-5 py-20 sm:px-8 lg:px-10 lg:py-28">
+      <div class="mx-auto grid max-w-[1480px] gap-12 lg:grid-cols-[.42fr_1fr]">
+        <div>
+          <p class="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[.24em] text-mampan-muted">
+            <span class="h-px w-8 bg-mampan-muted"></span>
+            Who we work with
+          </p>
+          <h2 class="mt-5 text-balance text-4xl font-semibold leading-[1.03] tracking-[-.04em] sm:text-5xl">
+            Advisory for the teams responsible for better buildings.
+          </h2>
+          <p class="mt-5 text-pretty text-sm font-light leading-8 text-mampan-muted">
+            Mampan works with developers, contractors, consultants, GLCs, and SMEs who need a clearer way to manage certification requirements, technical evidence, and sustainability decisions.
+          </p>
+        </div>
+
+        <div class="grid gap-6 lg:grid-cols-[1fr_.9fr]">
+          <div class="divide-y divide-mampan-line border-y border-mampan-line">
+            <article class="grid gap-4 py-5 sm:grid-cols-[1fr_auto]">
+              <div>
+                <h3 class="font-semibold">Property developers</h3>
+                <p class="mt-1 text-sm font-light leading-7 text-mampan-muted">Green building advisory from early planning to certification submission.</p>
+              </div>
+              <span class="h-fit rounded-md border border-mampan-line px-2.5 py-1 font-mono text-[10px] uppercase tracking-[.12em] text-mampan-muted">Primary</span>
+            </article>
+            <article class="grid gap-4 py-5 sm:grid-cols-[1fr_auto]">
+              <div>
+                <h3 class="font-semibold">Contractors and M&E teams</h3>
+                <p class="mt-1 text-sm font-light leading-7 text-mampan-muted">Construction-stage documentation, technical coordination, and compliance support.</p>
+              </div>
+              <span class="h-fit rounded-md border border-mampan-line px-2.5 py-1 font-mono text-[10px] uppercase tracking-[.12em] text-mampan-muted">Primary</span>
+            </article>
+            <article class="grid gap-4 py-5 sm:grid-cols-[1fr_auto]">
+              <div>
+                <h3 class="font-semibold">Government-linked companies</h3>
+                <p class="mt-1 text-sm font-light leading-7 text-mampan-muted">Structured certification advisory for public sector expectations and green procurement requirements.</p>
+              </div>
+              <span class="h-fit rounded-md border border-mampan-line px-2.5 py-1 font-mono text-[10px] uppercase tracking-[.12em] text-mampan-muted">GLC</span>
+            </article>
+            <article class="grid gap-4 py-5 sm:grid-cols-[1fr_auto]">
+              <div>
+                <h3 class="font-semibold">Small and medium enterprises</h3>
+                <p class="mt-1 text-sm font-light leading-7 text-mampan-muted">Right-sized guidance without large in-house sustainability or ESG departments.</p>
+              </div>
+              <span class="h-fit rounded-md border border-mampan-line px-2.5 py-1 font-mono text-[10px] uppercase tracking-[.12em] text-mampan-muted">SME</span>
+            </article>
+          </div>
+
+          <div class="grid gap-3 sm:grid-cols-2">
+            <article class="rounded-xl bg-white p-5 sm:col-span-2">
+              <p class="font-semibold">Office and commercial</p>
+              <p class="mt-1 font-mono text-[10px] uppercase tracking-[.12em] text-mampan-muted">Towers / Retail / Mixed-use</p>
+            </article>
+            <article class="rounded-xl bg-white p-5">
+              <p class="font-semibold">Residential</p>
+              <p class="mt-1 font-mono text-[10px] uppercase tracking-[.12em] text-mampan-muted">High-rise / Landed</p>
+            </article>
+            <article class="rounded-xl bg-white p-5">
+              <p class="font-semibold">Industrial</p>
+              <p class="mt-1 font-mono text-[10px] uppercase tracking-[.12em] text-mampan-muted">Factory / Warehouse</p>
+            </article>
+            <article class="rounded-xl bg-white p-5">
+              <p class="font-semibold">Renovation</p>
+              <p class="mt-1 font-mono text-[10px] uppercase tracking-[.12em] text-mampan-muted">Existing buildings</p>
+            </article>
+            <article class="rounded-xl bg-white p-5">
+              <p class="font-semibold">Mixed development</p>
+              <p class="mt-1 font-mono text-[10px] uppercase tracking-[.12em] text-mampan-muted">Integrated township</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="frameworks" class="bg-mampan-canvas px-5 py-20 sm:px-8 lg:px-10 lg:py-28">
+      <div class="mx-auto grid max-w-[1480px] gap-12 lg:grid-cols-[1fr_420px]">
+        <div>
+          <p class="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[.24em] text-mampan-muted">
+            <span class="h-px w-8 bg-mampan-muted"></span>
+            Frameworks we support
+          </p>
+          <h2 class="mt-5 max-w-4xl text-balance text-4xl font-semibold leading-[1.03] tracking-[-.04em] sm:text-6xl">
+            Framework-specific guidance, one advisory team.
+          </h2>
+
+          <div class="mt-12 grid gap-px overflow-hidden rounded-xl border border-mampan-line bg-mampan-line md:grid-cols-3">
+            <article class="bg-[#f4f7f2] p-6 transition duration-200 hover:bg-white">
+              <h3 class="font-mono text-sm tracking-[.14em]">GBI</h3>
+              <p class="mt-4 text-sm font-light leading-7 text-mampan-muted">Malaysia's recognised rating tool for residential, non-residential, industrial, and township projects.</p>
+            </article>
+            <article class="bg-[#f4f7f2] p-6 transition duration-200 hover:bg-white">
+              <h3 class="font-mono text-sm tracking-[.14em]">GreenRE</h3>
+              <p class="mt-4 text-sm font-light leading-7 text-mampan-muted">Commonly used across residential, commercial, and mixed-use developments in Malaysia and the region.</p>
+            </article>
+            <article class="bg-[#f4f7f2] p-6 transition duration-200 hover:bg-white">
+              <h3 class="font-mono text-sm tracking-[.14em]">LEED</h3>
+              <p class="mt-4 text-sm font-light leading-7 text-mampan-muted">An international green building framework for projects with global sustainability requirements.</p>
+            </article>
+          </div>
+
+          <p class="mt-10 max-w-3xl text-pretty text-2xl font-light leading-10 text-[#334155]">
+            From <strong class="font-semibold text-mampan-ink">early feasibility review</strong> to technical documentation and <strong class="font-semibold text-mampan-ink">assessor response</strong>, Mampan helps project teams manage certification with more structure, fewer blind spots, and clearer accountability.
+          </p>
+          <ul class="mt-8 grid gap-3 text-sm leading-7 text-[#334155] sm:grid-cols-2">
+            <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-mampan-green"></span>Structured process with clear deliverables at every stage.</li>
+            <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-mampan-green"></span>Framework-specific guidance across GBI, GreenRE, and LEED.</li>
+            <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-mampan-green"></span>Practical, project-specific advice.</li>
+            <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-mampan-green"></span>Flexible engagement from concept design to documentation recovery.</li>
+          </ul>
+        </div>
+
+        <aside id="start" class="relative overflow-hidden rounded-xl bg-mampan-ink p-7 text-white shadow-[0_34px_90px_-62px_rgba(17,24,39,.95)] sm:p-9 lg:sticky lg:top-28 lg:self-start">
+          <img
+            src="assets/images/cta/building.png"
+            alt="Building facade drawing"
+            class="absolute bottom-0 right-0 w-2/3 opacity-10"
+          >
+          <div class="relative">
+            <p class="font-mono text-[10px] uppercase tracking-[.22em] text-mampan-green">Start your project</p>
+            <h3 class="mt-5 text-balance text-3xl font-semibold leading-tight tracking-[-.035em]">
+              Review your certification pathway with Mampan.
+            </h3>
+            <p class="mt-4 text-sm font-light leading-8 text-[#909bad]">
+              Tell us where your project stands today. We'll help identify the right framework, likely gaps, documentation needs, and next steps before your team commits to a full engagement.
+            </p>
+            <a
+              href="mailto:hello@mampan.com.my"
+              class="mt-7 inline-flex w-full justify-center rounded-md bg-mampan-green px-5 py-3.5 text-sm font-semibold text-mampan-ink transition duration-200 hover:-translate-y-0.5 hover:bg-[#31dc70] active:translate-y-px focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-4 focus-visible:ring-offset-mampan-ink"
+            >
+              Book a project review
+            </a>
+            <div class="mt-7 border-t border-white/10 pt-5 font-mono text-[10px] leading-6 tracking-[.08em] text-[#909bad]">
+              <p>hello@mampan.com.my</p>
+              <p>mampan.com.my</p>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-mampan-line bg-[#eef3e8] px-5 py-8 sm:px-8 lg:px-10">
+    <div class="mx-auto flex max-w-[1480px] flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
+      <div class="flex items-center gap-3">
+        <svg class="h-3 w-8" viewBox="0 0 460 200" fill="none" aria-hidden="true">
+          <path d="M80 100L180 0L280 100V200H180L80 100Z" fill="#00C950"/>
+          <rect x="80" width="100" height="100" fill="#00C950"/>
+          <path d="M240 100L340 0L440 100V200H340L240 100Z" fill="#00C950"/>
+          <rect x="240" width="100" height="100" fill="#00C950"/>
+          <rect y="80" width="120" height="120" fill="#00C950"/>
+          <rect x="340" y="80" width="120" height="120" fill="#00C950"/>
+        </svg>
+        <p class="font-mono text-xs text-mampan-muted">&copy; 2026 MAMPAN &middot; Green building advisory</p>
+      </div>
+      <div class="flex gap-5">
+        <a class="text-sm text-mampan-muted transition hover:text-mampan-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-mampan-green" href="#start">Contact</a>
+        <a class="text-sm text-mampan-muted transition hover:text-mampan-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-mampan-green" href="mailto:hello@mampan.com.my">Privacy</a>
+        <a class="text-sm text-mampan-muted transition hover:text-mampan-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-mampan-green" href="mailto:hello@mampan.com.my">Terms</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

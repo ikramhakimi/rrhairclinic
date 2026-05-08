@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@source "../../**/*.php";
+@source "../../assets/js/**/*.js";
+
+@theme {
+  --font-sans: "Inter", "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Fragment Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+}
