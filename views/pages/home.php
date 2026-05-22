@@ -6,7 +6,7 @@ $page_current = 'home';
 ?>
 <section
   class="hero relative isolate overflow-hidden bg-emerald-950 text-white before:absolute before:inset-0 before:-z-10 before:bg-cover before:bg-center before:bg-no-repeat before:opacity-10 before:[background-image:var(--hero-bg)] before:content-[''] px-6"
-  style="--hero-bg: url('../images/bg-hero-drawing.png');"
+  style="--hero-bg: url('assets/images/bg-hero-drawing.png');"
 >
   <div class="relative z-10 max-w-6xl pt-10 mx-auto md:pb-60">
     <div class="hero-logo">
