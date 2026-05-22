@@ -1,5 +1,12 @@
 <?php
 
+if (!function_exists('e')) {
+  function e($value): string
+  {
+    return htmlspecialchars((string) $value, ENT_QUOTES, 'UTF-8');
+  }
+}
+
 if (!function_exists('include_view_file')) {
   function include_view_file(string $root, string $file, string $suffix = '.php'): ?string
   {
@@ -66,5 +73,19 @@ if (!function_exists('component')) {
     }
 
     include $component_path;
+  }
+}
+
+if (!function_exists('icon')) {
+  function icon(string $icon_name, array $data = []): void
+  {
+    $resolved_icon_name = trim($icon_name);
+
+    if ($resolved_icon_name === '') {
+      return;
+    }
+
+    $data['icon_name'] = $resolved_icon_name;
+    component('icon', $data);
   }
 }

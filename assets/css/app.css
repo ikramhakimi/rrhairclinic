@@ -1,7 +1,10 @@
-@import "tailwindcss";
+@import "tailwindcss" source(none);
 
-@source "../../**/*.php";
-@source "../../assets/js/**/*.js";
+@source "../../index.php";
+@source "../../layout.php";
+@source "../../assets/js";
+@source "../../includes";
+@source "../../views";
 
 @theme {
   --font-sans: "Inter", "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;

@@ -1,10 +1,14 @@
 {
   "scripts": {
-    "build:css": "tailwindcss -i ./assets/css/app.css -o ./assets/build/app.css --minify",
-    "watch:css": "tailwindcss -i ./assets/css/app.css -o ./assets/build/app.css --watch"
+    "build:css": "npx @tailwindcss/cli -i ./assets/css/app.css -o ./assets/build/app.css --minify",
+    "watch:css": "npx @tailwindcss/cli -i ./assets/css/app.css -o ./assets/build/app.css --watch"
   },
   "devDependencies": {
     "@tailwindcss/cli": "^4.2.4",
     "tailwindcss": "^4.2.4"
+  },
+  "dependencies": {
+    "@phosphor-icons/core": "^2.1.1",
+    "remixicon": "^4.9.1"
   }
 }
