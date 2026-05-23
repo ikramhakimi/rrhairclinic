@@ -76,6 +76,21 @@ if (!function_exists('component')) {
   }
 }
 
+if (!function_exists('asset_url')) {
+  function asset_url(string $path): string
+  {
+    $asset_path  = ltrim($path, '/');
+    $script_name = str_replace('\\', '/', $_SERVER['SCRIPT_NAME'] ?? '');
+    $base_path   = rtrim(dirname($script_name), '/');
+
+    if ($base_path === '.' || $base_path === '/') {
+      $base_path = '';
+    }
+
+    return $base_path . '/' . $asset_path;
+  }
+}
+
 if (!function_exists('icon')) {
   function icon(string $icon_name, array $data = []): void
   {

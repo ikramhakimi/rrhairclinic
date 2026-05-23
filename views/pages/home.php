@@ -6,11 +6,11 @@ $page_current = 'home';
 ?>
 <section
   class="hero relative isolate overflow-hidden bg-emerald-950 text-white before:absolute before:inset-0 before:-z-10 before:bg-cover before:bg-center before:bg-no-repeat before:opacity-10 before:[background-image:var(--hero-bg)] before:content-[''] px-6"
-  style="--hero-bg: url('assets/images/bg-hero-drawing.png');"
+  style="--hero-bg: url('<?= e(asset_url('assets/images/bg-hero-drawing.png')); ?>');"
 >
   <div class="relative z-10 max-w-6xl pt-10 mx-auto md:pb-60">
     <div class="hero-logo">
-      <img src="assets/images/logo-mampan.svg" alt="MAMPAN" width="48" />
+      <img src="assets/images/logo-mampan.svg" alt="MAMPAN" width="64" />
     </div>
     <div class="hero-content pb-20 pt-20">
       <h1 class="hero-title font-semibold text-4xl md:text-6xl text-white my-5 leading-12 md:leading-18">
@@ -58,7 +58,7 @@ $page_current = 'home';
         </div>
         <div class="service-content p-6 md:p-0">
           <div class="service-icon border border-mist-200 rounded-sm inline-flex mb-6 md:hidden"><img src="assets/images/service-icons/roadmap-risk-assessment-source.png" width="100" height="100" alt="Strategic Roadmap & Risk Assessment"></div>
-          <h2 class="service-title font-semibold text-mist-800 text-xl leading-7 mb-2">Strategic Roadmap & Risk Assessment</h2>
+          <h2 class="service-title font-semibold text-mist-800 text-lg mb-2">Strategic Roadmap & Risk Assessment</h2>
           <div class="service-brief">Defining your path and closing compliance gaps before submission.</div>
         </div>
         <div class="bg-mist-50 border-t border-dashed border-mist-300 p-6 pt-6 md:p-0 md:pt-4 md:mt-4 md:bg-transparent">
@@ -93,7 +93,7 @@ $page_current = 'home';
         </div>
         <div class="service-content p-6 md:p-0">
           <div class="service-icon border border-mist-200 rounded-sm inline-flex mb-6 md:hidden"><img src="assets/images/service-icons/energy-design-optimization-source.png" width="100" height="100" alt="Energy & Technical Design Optimization"></div>
-          <h2 class="service-title font-semibold text-mist-800 text-xl leading-7 mb-2">Energy & Technical Design Optimization</h2>
+          <h2 class="service-title font-semibold text-mist-800 text-lg mb-2">Energy & Technical Design Optimization</h2>
           <div class="service-brief">Data-driven input for passive design and high-performance engineering.</div>
         </div>
         <div class="bg-mist-50 border-t border-dashed border-mist-300 p-6 pt-6 md:p-0 md:pt-4 md:mt-4 md:bg-transparent">
@@ -128,7 +128,7 @@ $page_current = 'home';
         </div>
         <div class="service-content p-6 md:p-0">
           <div class="service-icon border border-mist-200 rounded-sm inline-flex mb-6 md:hidden"><img src="assets/images/service-icons/environmental-wellness-assessment-source.png" width="100" height="100" alt="Environmental & Wellness Assessment"></div>
-          <h2 class="service-title font-semibold text-mist-800 text-xl leading-7 mb-2">Environmental & Wellness Assessment</h2>
+          <h2 class="service-title font-semibold text-mist-800 text-lg mb-2">Environmental & Wellness Assessment</h2>
           <div class="service-brief">Verifying site sustainability and indoor environmental quality.</div>
         </div>
         <div class="bg-mist-50 border-t border-dashed border-mist-300 p-6 pt-6 md:p-0 md:pt-4 md:mt-4 md:bg-transparent">
@@ -163,7 +163,7 @@ $page_current = 'home';
         </div>
         <div class="service-content p-6 md:p-0">
           <div class="service-icon border border-mist-200 rounded-sm inline-flex mb-6 md:hidden"><img src="assets/images/service-icons/evidence-submission-management-source.png" width="100" height="100" alt="Evidence & Submission Management"></div>
-          <h2 class="service-title font-semibold text-mist-800 text-xl leading-7 mb-2">Evidence & Submission Management</h2>
+          <h2 class="service-title font-semibold text-mist-800 text-lg mb-2">Evidence & Submission Management</h2>
           <div class="service-brief">Organizing technical proof into a structured, assessor-ready package.</div>
         </div>
         <div class="bg-mist-50 border-t border-dashed border-mist-300 p-6 pt-6 md:p-0 md:pt-4 md:mt-4 md:bg-transparent">
@@ -193,7 +193,7 @@ $page_current = 'home';
 <section class="section section-approach bg-mist-900 text-mist-400 py-20 px-6">
   <div class="max-w-6xl mx-auto">
     <header class="section-header mb-10">
-      <h2 class="section-title font-semibold text-4xl text-mist-200 max-w-2xl leading-tight">Our approach to making certification simple and clear.</h2>
+      <h2 class="section-title font-semibold text-4xl text-mist-200 max-w-xl leading-tight">Our approach to making certification simple and clear.</h2>
       <p class="section-subtitle max-w-3xl mt-5 text-base leading-7">We bridge the gap between design intent and final certification through technical expertise, structured documentation, and hands-on implementation support.</p>
     </header>
 
@@ -245,85 +245,81 @@ $page_current = 'home';
 <div class="bg-mist-900 h-[101px]" style="background-image: linear-gradient(#22292b 1px, transparent 1px), linear-gradient(to right, #22292b 1px, transparent 1px) !important;background-size: 1% 50px !important;"></div>
 
 
-
-
-
-
-
-<section class="section section-about bg-mist-100 py-20 px-6">
-  <div class="max-w-6xl mx-auto">
-      <header class="section-header mb-10">
-        <h2 class="section-title font-semibold text-4xl text-mist-800 max-w-2xl leading-tight">Built to make green certification easier to manage.</h2>
-        <p class="section-subtitle max-w-3xl mt-5 text-base leading-7">Green certification shouldn't be a burden on your project team. We provide the specialized oversight and technical evidence needed to secure your rating, allowing you to focus on building while we handle the complexities of compliance.</p>
-      </header>
-      <div class="md:grid md:grid-cols-5 gap-6">
-        <div class="col-span-2">
-          <div class="max-w-xl space-y-4">
-            <h2 class="font-semibold text-xl text-mist-700">Our Mission</h2>
-            <p class="text-base text-mist-600 italics pr-10">To turn green building requirements into clear decisions, organised evidence, and credible project outcomes.</p>
-            <p>Mampan brings structure to the work behind certification — helping teams understand what matters, what is missing, and what comes next.</p>
+<section class="section section-about bg-mist-100 px-6 overflow-hidden">
+  <div class="max-w-6xl mx-auto relative isolate pt-20 pb-60">
+    <header class="section-header mb-10 relative z-10">
+      <h2 class="section-title font-semibold text-4xl text-mist-800 max-w-xl leading-tight">Precision Management for Complex Sustainability Certifications.</h2>
+      <p class="section-subtitle max-w-3xl mt-5 text-base leading-7">Eliminate the friction of compliance. We provide the technical oversight and rigorous documentation management required to secure your rating, allowing your team to focus on project excellence while we navigate the complexities of certification.</p>
+    </header>
+    <div class="md:grid md:grid-cols-5 gap-6 relative z-10">
+      <div class="col-span-2">
+        <div class="max-w-xl space-y-4">
+          <h2 class="font-semibold text-xl text-mist-700">Our Mission</h2>
+          <p class="text-base text-mist-600 italics pr-10">To turn green building requirements into clear decisions, organised evidence, and credible project outcomes.</p>
+          <p>Mampan brings structure to the work behind certification — helping teams understand what matters, what is missing, and what comes next.</p>
+        </div>
+        <div class="max-w-xl space-y-4 pt-10 mt-10 border-t border-mist-300">
+          <h2 class="font-semibold text-xl text-mist-700">Our Vision</h2>
+          <p class="text-base text-mist-600 italics pr-10">A future where better-performing buildings become the standard and normal way to design, build, and operate.</p>
+          <p>We believe green certification should be an integral part of project planning — not a late-stage checkbox or a disconnected exercise.</p>
+        </div>
+      </div>
+      <div class="commitments col-span-3 grid grid-cols-2 gap-3">
+        <div class="space-y-3">
+          <div class="commitment bg-mist-200 p-6 flex flex-col justify-end rounded-md">
+            <div class="commitment-icon mb-15 mt-1">
+              <?php icon('calendar', ['icon_size' => '48', 'icon_class' => 'inline-block shrink-0 align-middle leading-none text-mist-700',]); ?>
+            </div>
+            <h3 class="commitmen-title text-mist-800 text-lg font-semibold capitalize mb-2">Precision Planning</h3>
+            <p class="commitmen-desc">Identify achievable targets, mitigate compliance risks, and establish a clear execution strategy from the start.</p>
           </div>
-          <div class="max-w-xl space-y-4 pt-10 mt-10 border-t border-mist-300">
-            <h2 class="font-semibold text-xl text-mist-700">Our Vision</h2>
-            <p class="text-base text-mist-600 italics pr-10">A future where better-performing buildings become the standard and normal way to design, build, and operate.</p>
-            <p>We believe green certification should be an integral part of project planning — not a late-stage checkbox or a disconnected exercise.</p>
+          <div class="commitment bg-mist-200 p-6 flex flex-col justify-end rounded-md">
+            <div class="commitment-icon mb-15 mt-1">
+              <?php icon('pin', ['icon_size' => '48', 'icon_class' => 'inline-block shrink-0 align-middle leading-none text-mist-700',]); ?>
+            </div>
+            <h3 class="commitmen-title text-mist-800 text-lg font-semibold capitalize mb-2">Audit-Ready Evidence</h3>
+            <p class="commitmen-desc">We rigorously review every submission for accuracy, consistency, and total alignment with certification standards.</p>
           </div>
         </div>
-        <div class="commitments col-span-3 grid grid-cols-2 gap-3">
-          <div class="commitment bg-mist-200 p-6 flex flex-col justify-end">
-            <div class="commitment-icon mb-5">
-              <?php icon('commitment-compass', [
-                'icon_size'  => '48',
-                'icon_class' => 'inline-block shrink-0 align-middle leading-[1em] h-[48px] w-[48px] text-mist-700',
-              ]); ?>
+        <div class="space-y-3 mt-15">
+          <div class="commitment bg-mist-200 p-6 flex flex-col justify-end rounded-md">
+            <div class="commitment-icon mb-15 mt-1">
+              <?php icon('star-automation', ['icon_size' => '48', 'icon_class' => 'inline-block shrink-0 align-middle leading-none text-mist-700',]); ?>
             </div>
-            <h3 class="text-mist-800 font-semibold capitalize mb-2">Precision Planning</h3>
-            <p>Identify achievable targets, mitigate compliance risks, and establish a clear execution strategy from the start.</p>
+            <h3 class="commitmen-title text-mist-800 text-lg font-semibold capitalize mb-2">Empowered Expertise</h3>
+            <p class="commitmen-desc">We build your team’s internal knowledge, turning complex requirements into sustainable, long-term operational workflows.</p>
           </div>
-          <div class="commitment bg-mist-200 p-6 flex flex-col justify-end">
-            <div class="commitment-icon mb-5">
-              <?php icon('commitment-verified', [
-                'icon_size'  => '48',
-                'icon_class' => 'inline-block shrink-0 align-middle leading-[1em] h-[48px] w-[48px] text-mist-700',
-              ]); ?>
+          <div class="commitment bg-mist-200 p-6 flex flex-col justify-end rounded-md">
+            <div class="commitment-icon mb-15 mt-1">
+              <?php icon('repost', ['icon_size' => '48', 'icon_class' => 'inline-block shrink-0 align-middle leading-none text-mist-700',]); ?>
             </div>
-            <h3 class="text-mist-800 font-semibold capitalize mb-2">Audit-Ready Evidence</h3>
-            <p>We rigorously review every submission for accuracy, consistency, and total alignment with certification standards.</p>
+            <h3 class="commitmen-title text-mist-800 text-lg font-semibold capitalize mb-2">Agile Project Support</h3>
+            <p class="commitmen-desc">Keep your schedule on track with proactive guidance, fast-tracked clarifications, and continuous project oversight.</p>
           </div>
-          <div class="commitment bg-mist-200 p-6 flex flex-col justify-end">
-            <div class="commitment-icon mb-5">
-              <?php icon('commitment-people-group', [
-                'icon_size'  => '48',
-                'icon_class' => 'inline-block shrink-0 align-middle leading-[1em] h-[48px] w-[48px] text-mist-700',
-              ]); ?>
-            </div>
-            <h3 class="text-mist-800 font-semibold capitalize mb-2">Empowered Expertise</h3>
-            <p>We build your team’s internal knowledge, turning complex requirements into sustainable, long-term operational workflows.</p>
-          </div>
-          <div class="commitment bg-mist-200 p-6 flex flex-col justify-end">
-            <div class="commitment-icon mb-5">
-              <?php icon('repost', [
-                'icon_size' => '48',
-                'icon_class' => 'inline-block shrink-0 align-middle leading-[1em] h-[48px] w-[48px] text-mist-700',
-                ]); ?>
-            </div>
-            <h3 class="text-mist-800 font-semibold capitalize mb-2">Agile Project Support</h3>
-            <p>Keep your schedule on track with proactive guidance, fast-tracked clarifications, and continuous project oversight.</p>
-          </div>
-        </div>  
-      </div>
+        </div>
+      </div>  
+    </div>
+    <img
+      src="<?= e(asset_url('assets/images/bg-about-drawing.png')); ?>"
+      alt=""
+      width="1717"
+      height="916"
+      aria-hidden="true"
+      class="hidden md:block absolute pointer-events-none grayscale-100"
+      style="bottom: -5rem; left: 0; z-index: 0; width: 100%; height: auto; opacity: .75;"
+    />
   </div>
 </section>
 <div class="bg-mist-100 h-[101px]" style="background-image: linear-gradient(#e9e5e6 1px, transparent 1px), linear-gradient(to right, #e9e5e6 1px, transparent 1px) !important;background-size: 1% 50px !important;"></div>
 
 
-<div class="more-icons">
+<div class="more-icons hidden">
   <?php icon('price-tag', ['icon_size' => '48']); ?>
   <?php icon('table', ['icon_size' => '48']); ?>
-  <?php icon('pin', ['icon_size' => '48']); ?>
+  
   <?php icon('paper-clip', ['icon_size' => '48']); ?>
   <?php icon('folder', ['icon_size' => '48']); ?>
-  <?php icon('calendar', ['icon_size' => '48']); ?>
+  
   <?php icon('pencil', ['icon_size' => '48']); ?>
   <?php icon('document', ['icon_size' => '48']); ?>
   <?php icon('photo', ['icon_size' => '48']); ?>
@@ -332,6 +328,6 @@ $page_current = 'home';
   <?php icon('plugin', ['icon_size' => '48']); ?>
   <?php icon('check', ['icon_size' => '48']); ?>
   <?php icon('cloud-check', ['icon_size' => '48']); ?>
-  <?php icon('star-automation', ['icon_size' => '48']); ?>
+  
   <?php icon('education', ['icon_size' => '48']); ?>
 </div>
