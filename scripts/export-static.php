@@ -111,11 +111,17 @@ function render_route(string $project_root, string $request_path): string
 function asset_path_from_url(string $url): ?string
 {
   $path = parse_url(trim($url), PHP_URL_PATH);
-  if (!is_string($path) || strpos($path, 'assets/') !== 0) {
+  if (!is_string($path)) {
     return null;
   }
 
-  return $path;
+  $asset_path = ltrim($path, '/');
+
+  if (strpos($asset_path, 'assets/') !== 0) {
+    return null;
+  }
+
+  return $asset_path;
 }
 
 function collect_asset_paths(string $html): array
@@ -146,7 +152,7 @@ function collect_asset_paths(string $html): array
       continue;
     }
 
-    preg_match_all('/url\((["\']?)(assets\/[^)"\']+)\1\)/', $element->getAttribute('style'), $matches);
+    preg_match_all('/url\((["\']?)(\/?assets\/[^)"\']+)\1\)/', $element->getAttribute('style'), $matches);
 
     foreach ($matches[2] ?? [] as $url) {
       $asset_path = asset_path_from_url($url);
