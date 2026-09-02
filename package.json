@@ -1,4 +1,5 @@
 {
+  "name": "rrhairclinic",
   "scripts": {
     "build:css": "npx @tailwindcss/cli -i ./assets/css/app.css -o ./assets/build/app.css --minify",
     "export:static": "php ./scripts/export-static.php",

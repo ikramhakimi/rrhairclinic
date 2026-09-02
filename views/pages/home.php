@@ -1,23 +1,22 @@
 <?php
 
-$page_title = 'Mampan Solutions';
+$page_title = 'RR Hair Clinic';
 $page_current = 'home';
 
 ?>
 <section
-  class="hero relative isolate overflow-hidden bg-emerald-950 text-white before:absolute before:inset-0 before:-z-10 before:bg-cover before:bg-center before:bg-no-repeat before:opacity-10 before:[background-image:var(--hero-bg)] before:content-[''] px-6"
-  style="--hero-bg: url('<?= e(asset_url('assets/images/bg-hero-drawing.png')); ?>');"
+  class="hero relative isolate overflow-hidden bg-emerald-950 text-white px-6"
 >
   <div class="relative z-10 max-w-6xl pt-10 mx-auto md:pb-60">
     <div class="hero-logo">
-      <img src="assets/images/logo-mampan.svg" alt="MAMPAN" width="64" />
+      <img src="<?= e(asset_url('assets/images/logo-rrhairclinic.svg')); ?>" alt="RR Hair Clinic" width="128" />
     </div>
     <div class="hero-content pb-20 pt-20">
       <h1 class="hero-title font-semibold text-4xl md:text-6xl text-white my-5 leading-12 md:leading-18">
-        Certifying High-Performance <br class="hidden md:block">
-        Buildings, Simplified.
+        Personalized Hair & Scalp <br class="hidden md:block">
+        Care, Made Clear.
       </h1>
-      <div class="hero-subtitle text-lg text-white max-w-3xl">From design intent to certification delivery, we guide your team with practical sustainability strategy, technical evidence, and measurable implementation support.</div>
+      <div class="hero-subtitle text-lg text-white max-w-3xl">From consultation to treatment planning, RR Hair Clinic helps clients understand their hair concerns and choose a care pathway with confidence.</div>
       <div class="hero-actions flex flex-col md:flex-row md:items-center gap-4 mt-10">
         <a href="#" class="text-base inline-flex items-center justify-between bg-green-500 text-green-950 font-semibold leading-6 py-4 px-6 cursor-pointer rounded-sm hover:bg-green-400">
           <span>Book a Consultation</span>
@@ -26,7 +25,7 @@ $page_current = 'home';
           </span>
         </a>
         <a href="#" class="text-base inline-flex items-center justify-between bg-emerald-900 font-medium text-white leading-6 py-4 px-6 cursor-pointer rounded-sm hover:bg-emerald-800">
-          <span>Our Approach</span>
+          <span>Our Treatments</span>
           <span class="rounded-sm p-1 bg-emerald-950 text-white leading-0 ml-4 -mr-2">
             <?php icon('arrow-right-up-line', ['icon_size' => '16', 'icon_class' => 'size-4']); ?>
           </span>
@@ -40,146 +39,118 @@ $page_current = 'home';
   <div class="max-w-6xl mx-auto md:-mt-60 pt-20 md:pt-0 pb-20">
     <header class="section-header md:hidden">
       <h2 class="section-title font-semibold text-3xl text-mist-800 max-w-3xl leading-tight">Our Services</h2>
-      <p class="section-subtitle max-w-4xl mt-3 leading-6">Whether you are planning a new development, lorem ipsum.</p>
+      <p class="section-subtitle max-w-4xl mt-3 leading-6">Hair and scalp care planned around your condition, goals, and treatment readiness.</p>
     </header>
 
     <div class="section-content services flex  overflow-x-auto pb-6 snap-x snap-mandatory -mx-6 px-6 scroll-px-6 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden md:grid md:grid-cols-2 lg:grid-cols-4 md:overflow-visible md:mx-0 md:px-0 md:pb-0 md:scroll-px-0 gap-3 md:gap-6">
       <div class="service shadow-lg shadow-mist-400/20 w-[82vw] shrink-0 snap-start border border-mist-200 rounded-sm overflow-hidden md:w-auto md:shrink md:border-0  md:shadow-none">
-        <div class="service-topic text-xs uppercase mb-4 hidden md:block">Foundation & Planning</div>
-        <div class="service-thumbnail aspect-3/2 md:aspect-3/4 rounded-sm overflow-hidden md:mb-4 hidden md:block">
-          <img
-            src="assets/images/services/certification-roadmap-risk-assessment.png"
-            alt="Green building certification roadmap materials arranged beside an architectural model."
-            width="1402"
-            height="1122"
-            class="h-full w-full bg-mist-800 rounded-sm"
-            style="object-fit: cover;"
-          />
+        <div class="service-topic text-xs uppercase mb-4 hidden md:block">Consultation & Diagnosis</div>
+        <div class="service-thumbnail aspect-3/2 md:aspect-3/4 rounded-sm overflow-hidden md:mb-4 hidden md:flex items-center justify-center bg-mist-100 text-mist-700">
+          <?php icon('document', ['icon_size' => '56', 'icon_class' => 'size-14']); ?>
         </div>
         <div class="service-content p-6 md:p-0">
-          <div class="service-icon border border-mist-200 rounded-sm inline-flex mb-6 md:hidden"><img src="assets/images/service-icons/roadmap-risk-assessment-source.png" width="100" height="100" alt="Strategic Roadmap & Risk Assessment"></div>
-          <h2 class="service-title font-semibold text-mist-800 text-lg mb-2">Strategic Roadmap & Risk Assessment</h2>
-          <div class="service-brief">Defining your path and closing compliance gaps before submission.</div>
+          <div class="service-icon border border-mist-200 rounded-sm inline-flex p-5 mb-6 md:hidden"><?php icon('document', ['icon_size' => '48', 'icon_class' => 'size-12 text-mist-700']); ?></div>
+          <h2 class="service-title font-semibold text-mist-800 text-lg mb-2">Hair & Scalp Consultation</h2>
+          <div class="service-brief">Understanding your hair loss pattern, scalp condition, and treatment goals.</div>
         </div>
         <div class="bg-mist-50 border-t border-dashed border-mist-300 p-6 pt-6 md:p-0 md:pt-4 md:mt-4 md:bg-transparent">
           <div class="text-xs uppercase text-mist-500 mb-2">Core Services</div>
           <div class="service-list space-y-1 mt-4">
             <div class="flex items-center gap-2">
               <?php icon('checkbox-circle-fill', ['icon_size' => '16', 'icon_class' => 'text-green-500 size-4']); ?>
-              <span>Certification Advisory</span>
+              <span>Scalp Analysis</span>
             </div>
             <div class="flex items-center gap-2">
               <?php icon('checkbox-circle-fill', ['icon_size' => '16', 'icon_class' => 'text-green-500 size-4']); ?>
-              <span>Gap Analysis</span>
+              <span>Hair Loss Review</span>
             </div>
             <div class="flex items-center gap-2">
               <?php icon('checkbox-circle-fill', ['icon_size' => '16', 'icon_class' => 'text-green-500 size-4']); ?>
-              <span>Feasibility Review</span>
+              <span>Treatment Planning</span>
             </div>
           </div>
         </div>
       </div>
       <div class="service shadow-lg shadow-mist-400/20 w-[82vw] shrink-0 snap-start border border-mist-200 rounded-sm overflow-hidden md:w-auto md:shrink md:border-0 md:shadow-none">
-        <div class="service-topic text-xs uppercase mb-4 hidden md:block">Design & Engineering</div>
-        <div class="service-thumbnail aspect-3/2 md:aspect-3/4 rounded-sm overflow-hidden md:mb-4 hidden md:block">
-          <img
-            src="assets/images/services/energy-technical-design-optimization.png"
-            alt="Green building energy design optimization materials arranged around a solar building model."
-            width="1254"
-            height="1254"
-            class="h-full w-full bg-mist-800 rounded-sm"
-            style="object-fit: cover;"
-          />
+        <div class="service-topic text-xs uppercase mb-4 hidden md:block">Growth & Restoration</div>
+        <div class="service-thumbnail aspect-3/2 md:aspect-3/4 rounded-sm overflow-hidden md:mb-4 hidden md:flex items-center justify-center bg-mist-100 text-mist-700">
+          <?php icon('star-automation', ['icon_size' => '56', 'icon_class' => 'size-14']); ?>
         </div>
         <div class="service-content p-6 md:p-0">
-          <div class="service-icon border border-mist-200 rounded-sm inline-flex mb-6 md:hidden"><img src="assets/images/service-icons/energy-design-optimization-source.png" width="100" height="100" alt="Energy & Technical Design Optimization"></div>
-          <h2 class="service-title font-semibold text-mist-800 text-lg mb-2">Energy & Technical Design Optimization</h2>
-          <div class="service-brief">Data-driven input for passive design and high-performance engineering.</div>
+          <div class="service-icon border border-mist-200 rounded-sm inline-flex p-5 mb-6 md:hidden"><?php icon('star-automation', ['icon_size' => '48', 'icon_class' => 'size-12 text-mist-700']); ?></div>
+          <h2 class="service-title font-semibold text-mist-800 text-lg mb-2">Hair Growth Treatment</h2>
+          <div class="service-brief">Focused care for thinning hair, shedding, and early restoration support.</div>
         </div>
         <div class="bg-mist-50 border-t border-dashed border-mist-300 p-6 pt-6 md:p-0 md:pt-4 md:mt-4 md:bg-transparent">
           <div class="text-xs uppercase text-mist-500 mb-2">Core Services</div>
           <div class="service-list space-y-1 mt-4">
             <div class="flex items-center gap-2">
               <?php icon('checkbox-circle-fill', ['icon_size' => '16', 'icon_class' => 'text-green-500 size-4']); ?>
-              <span>Energy Efficiency</span>
+              <span>Growth Stimulation</span>
             </div>
             <div class="flex items-center gap-2">
               <?php icon('checkbox-circle-fill', ['icon_size' => '16', 'icon_class' => 'text-green-500 size-4']); ?>
-              <span>Review Green Building</span>
+              <span>Hair Strengthening</span>
             </div>
             <div class="flex items-center gap-2">
               <?php icon('checkbox-circle-fill', ['icon_size' => '16', 'icon_class' => 'text-green-500 size-4']); ?>
-              <span>Consultation M&E Coordination</span>
+              <span>Progress Monitoring</span>
             </div>
           </div>
         </div>
       </div>
       <div class="service shadow-lg shadow-mist-400/20 w-[82vw] shrink-0 snap-start border border-mist-200 rounded-sm overflow-hidden md:w-auto md:shrink md:border-0 md:shadow-none">
-        <div class="service-topic text-xs uppercase mb-4 hidden md:block">Site & Wellness</div>
-        <div class="service-thumbnail aspect-3/2 md:aspect-3/4 rounded-sm overflow-hidden md:mb-4 hidden md:block">
-          <img
-            src="assets/images/services/environmental-wellness-assessment.png"
-            alt="Environmental wellness assessment materials arranged around a biophilic interior model."
-            width="1254"
-            height="1254"
-            class="h-full w-full bg-mist-800 rounded-sm"
-            style="object-fit: cover;"
-          />
+        <div class="service-topic text-xs uppercase mb-4 hidden md:block">Scalp Health</div>
+        <div class="service-thumbnail aspect-3/2 md:aspect-3/4 rounded-sm overflow-hidden md:mb-4 hidden md:flex items-center justify-center bg-mist-100 text-mist-700">
+          <?php icon('check', ['icon_size' => '56', 'icon_class' => 'size-14']); ?>
         </div>
         <div class="service-content p-6 md:p-0">
-          <div class="service-icon border border-mist-200 rounded-sm inline-flex mb-6 md:hidden"><img src="assets/images/service-icons/environmental-wellness-assessment-source.png" width="100" height="100" alt="Environmental & Wellness Assessment"></div>
-          <h2 class="service-title font-semibold text-mist-800 text-lg mb-2">Environmental & Wellness Assessment</h2>
-          <div class="service-brief">Verifying site sustainability and indoor environmental quality.</div>
+          <div class="service-icon border border-mist-200 rounded-sm inline-flex p-5 mb-6 md:hidden"><?php icon('check', ['icon_size' => '48', 'icon_class' => 'size-12 text-mist-700']); ?></div>
+          <h2 class="service-title font-semibold text-mist-800 text-lg mb-2">Scalp & Dandruff Care</h2>
+          <div class="service-brief">Helping calm irritation, flakes, oil imbalance, and sensitive scalp concerns.</div>
         </div>
         <div class="bg-mist-50 border-t border-dashed border-mist-300 p-6 pt-6 md:p-0 md:pt-4 md:mt-4 md:bg-transparent">
           <div class="text-xs uppercase text-mist-500 mb-2">Core Services</div>
           <div class="service-list space-y-1 mt-4">
             <div class="flex items-center gap-2">
               <?php icon('checkbox-circle-fill', ['icon_size' => '16', 'icon_class' => 'text-green-500 size-4']); ?>
-              <span>Performance Assessment</span>
+              <span>Scalp Detox</span>
             </div>
             <div class="flex items-center gap-2">
               <?php icon('checkbox-circle-fill', ['icon_size' => '16', 'icon_class' => 'text-green-500 size-4']); ?>
-              <span>IEQ & Water Reviews</span>
+              <span>Dandruff Control</span>
             </div>
             <div class="flex items-center gap-2">
               <?php icon('checkbox-circle-fill', ['icon_size' => '16', 'icon_class' => 'text-green-500 size-4']); ?>
-              <span>Operational Readiness</span>
+              <span>Sensitive Scalp Care</span>
             </div>
           </div>
         </div>
       </div>
       <div class="service shadow-lg shadow-mist-400/20 w-[82vw] shrink-0 snap-start border border-mist-200 rounded-sm overflow-hidden md:w-auto md:shrink md:border-0 md:shadow-none">
-        <div class="service-topic text-xs uppercase mb-4 hidden md:block">Documentation & Approval</div>
-        <div class="service-thumbnail aspect-3/2 md:aspect-3/4 rounded-sm overflow-hidden md:mb-4 hidden md:block">
-          <img
-            src="assets/images/services/evidence-submission-management.png"
-            alt="Organized green building certification evidence folders, drawings, samples, and submission documents."
-            width="1402"
-            height="1122"
-            class="h-full w-full bg-mist-800 rounded-sm"
-            style="object-fit: cover;"
-          />
+        <div class="service-topic text-xs uppercase mb-4 hidden md:block">Follow-Up & Care</div>
+        <div class="service-thumbnail aspect-3/2 md:aspect-3/4 rounded-sm overflow-hidden md:mb-4 hidden md:flex items-center justify-center bg-mist-100 text-mist-700">
+          <?php icon('calendar', ['icon_size' => '56', 'icon_class' => 'size-14']); ?>
         </div>
         <div class="service-content p-6 md:p-0">
-          <div class="service-icon border border-mist-200 rounded-sm inline-flex mb-6 md:hidden"><img src="assets/images/service-icons/evidence-submission-management-source.png" width="100" height="100" alt="Evidence & Submission Management"></div>
-          <h2 class="service-title font-semibold text-mist-800 text-lg mb-2">Evidence & Submission Management</h2>
-          <div class="service-brief">Organizing technical proof into a structured, assessor-ready package.</div>
+          <div class="service-icon border border-mist-200 rounded-sm inline-flex p-5 mb-6 md:hidden"><?php icon('calendar', ['icon_size' => '48', 'icon_class' => 'size-12 text-mist-700']); ?></div>
+          <h2 class="service-title font-semibold text-mist-800 text-lg mb-2">Maintenance & Follow-Up</h2>
+          <div class="service-brief">Keeping your care plan consistent with review, adjustment, and aftercare guidance.</div>
         </div>
         <div class="bg-mist-50 border-t border-dashed border-mist-300 p-6 pt-6 md:p-0 md:pt-4 md:mt-4 md:bg-transparent">
           <div class="text-xs uppercase text-mist-500 mb-2">Core Services</div>
           <div class="service-list space-y-1 mt-4">
             <div class="flex items-center gap-2">
               <?php icon('checkbox-circle-fill', ['icon_size' => '16', 'icon_class' => 'text-green-500 size-4']); ?>
-              <span>GBI Documentation</span>
+              <span>Aftercare Guidance</span>
             </div>
             <div class="flex items-center gap-2">
               <?php icon('checkbox-circle-fill', ['icon_size' => '16', 'icon_class' => 'text-green-500 size-4']); ?>
-              <span>Support Evidence Tracking</span>
+              <span>Review Sessions</span>
             </div>
             <div class="flex items-center gap-2">
               <?php icon('checkbox-circle-fill', ['icon_size' => '16', 'icon_class' => 'text-green-500 size-4']); ?>
-              <span>Assessor Coordination</span>
+              <span>Care Routine Support</span>
             </div>
           </div>
         </div>
@@ -193,46 +164,66 @@ $page_current = 'home';
 <section class="section section-approach bg-mist-900 text-mist-400 py-20 px-6">
   <div class="max-w-6xl mx-auto">
     <header class="section-header mb-10">
-      <h2 class="section-title font-semibold text-4xl text-mist-200 max-w-xl leading-tight">Our approach to making certification simple and clear.</h2>
-      <p class="section-subtitle max-w-3xl mt-5 text-base leading-7">We bridge the gap between design intent and final certification through technical expertise, structured documentation, and hands-on implementation support.</p>
+      <h2 class="section-title font-semibold text-4xl text-mist-200 max-w-xl leading-tight">
+        <span class="hidden md:inline">Our approach to making hair care simple and clear.</span>
+        <span class="md:hidden">Simple steps to care.</span>
+      </h2>
+      <p class="section-subtitle max-w-3xl mt-5 text-base leading-7">
+        <span class="hidden md:inline">We connect careful consultation, treatment planning, and follow-up support so every client understands what is happening and what comes next.</span>
+        <span class="md:hidden">We help you understand your hair concern, choose a plan, and stay consistent with care.</span>
+      </p>
     </header>
 
     <div class="section-content md:grid md:grid-cols-3 gap-10">
-      <div class="process">
-        <div class="process-icon mb-5">
+      <div class="process flex items-start gap-4 pb-6 md:block md:pb-0">
+        <div class="process-icon shrink-0 mb-0 md:mb-5">
           <?php icon('approach-evaluate', [
             'icon_size'  => '48',
             'icon_class' => 'inline-block shrink-0 align-middle leading-[1em] h-[48px] w-[48px] text-mist-200',
           ]); ?>
         </div>
-        <div class="process-title font-medium text-xl text-mist-200 mb-3">Evaluate</div>
-        <div class="process-desc">We analyze your project goals and site context to pinpoint the most impactful sustainability opportunities and compliance requirements.</div>
+        <div class="process-content min-w-0">
+          <div class="process-title font-medium text-xl text-mist-200 mb-3">Evaluate</div>
+          <div class="process-desc">
+            <span class="hidden md:inline">We assess your hair and scalp condition, lifestyle factors, and treatment history before recommending the next step.</span>
+            <span class="md:hidden">We review your hair, scalp, goals, and treatment history first.</span>
+          </div>
+        </div>
       </div>
-      <div class="process">
-        <div class="process-icon mb-5">
+      <div class="process flex items-start gap-4 border-t border-mist-800 py-6 md:block md:border-t-0 md:py-0">
+        <div class="process-icon shrink-0 mb-0 md:mb-5">
           <?php icon('approach-strategize', [
             'icon_size'  => '48',
             'icon_class' => 'inline-block shrink-0 align-middle leading-[1em] h-[48px] w-[48px] text-mist-200',
           ]); ?>
         </div>
-        <div class="process-title font-medium text-xl text-mist-200 mb-3">Strategize</div>
-        <div class="process-desc">We translate those priorities into a clear, actionable roadmap that defines your certification targets, technical workflows, and team responsibilities.</div>
+        <div class="process-content min-w-0">
+          <div class="process-title font-medium text-xl text-mist-200 mb-3">Strategize</div>
+          <div class="process-desc">
+            <span class="hidden md:inline">We map a practical care plan around your condition, priorities, treatment frequency, and realistic progress milestones.</span>
+            <span class="md:hidden">We set a practical care plan with clear next steps.</span>
+          </div>
+        </div>
       </div>
-      <div class="process">
-        <div class="process-icon mb-5">
+      <div class="process flex items-start gap-4 border-t border-mist-800 pt-6 md:block md:border-t-0 md:pt-0">
+        <div class="process-icon shrink-0 mb-0 md:mb-5">
           <?php icon('approach-deliver', [
             'icon_size'  => '48',
             'icon_class' => 'inline-block shrink-0 align-middle leading-[1em] h-[48px] w-[48px] text-mist-200',
           ]); ?>
         </div>
-        <div class="process-title font-medium text-xl text-mist-200 mb-3">Deliver</div>
-        <div class="process-desc">We provide the oversight needed to bridge design and construction, ensuring your evidence remains audit-ready and your sustainability goals are realized.</div>
+        <div class="process-content min-w-0">
+          <div class="process-title font-medium text-xl text-mist-200 mb-3">Deliver</div>
+          <div class="process-desc">
+            <span class="hidden md:inline">We support your treatment journey with attentive sessions, aftercare guidance, and progress reviews along the way.</span>
+            <span class="md:hidden">We guide each session, aftercare, and follow-up review.</span>
+          </div>
+        </div>
       </div>
     </div>
     <div class="section-cta relative mt-15 pt-15 border-t border-mist-800">
-      <h3 class="font-semibold text-2xl text-slate-50">Built to fit your team’s workflow.</h3>
-      <p class="text-base my-5 max-w-3xl">We integrate seamlessly into your project at any stage—from concept to final audit—to ensure your certification goals stay on track.</p>
-      <p class="text-base my-5">Book a consultation to see how we can help.</p>
+      <h3 class="font-semibold text-3xl text-slate-50">Need a clearer path for your hair concerns?</h3>
+      <p class="text-base my-5 max-w-3xl">Start with a focused consultation.</p>
       <a href="#" class="text-base flex md:inline-flex items-center justify-between bg-green-500 text-green-950 font-semibold leading-6 py-4 px-6 cursor-pointer rounded-sm hover:bg-green-400">
         <span>Book a Consultation</span>
         <span class="rounded-sm p-1 bg-green-900 text-white leading-0 ml-4 -mr-2">
@@ -248,66 +239,73 @@ $page_current = 'home';
 <section class="section section-about bg-mist-100 px-6 overflow-hidden">
   <div class="max-w-6xl mx-auto relative isolate pt-20 pb-60">
     <header class="section-header mb-10 relative z-10">
-      <h2 class="section-title font-semibold text-4xl text-mist-800 max-w-xl leading-tight">Precision Management for Complex Sustainability Certifications.</h2>
-      <p class="section-subtitle max-w-3xl mt-5 text-base leading-7">Eliminate the friction of compliance. We provide the technical oversight and rigorous documentation management required to secure your rating, allowing your team to focus on project excellence while we navigate the complexities of certification.</p>
+      <h2 class="section-title font-semibold text-4xl text-mist-800 max-w-xl leading-tight">
+        <span class="hidden md:inline">About RR Hair Clinic: Clear Care for Hair & Scalp Health.</span>
+        <span class="md:hidden">About RR Hair Clinic.</span>
+      </h2>
+      <p class="section-subtitle hidden md:block max-w-3xl mt-5 text-base leading-7">RR Hair Clinic supports clients with personalised consultation, treatment planning, and aftercare for healthier hair and scalp confidence.</p>
+      <p class="section-subtitle md:hidden max-w-3xl mt-5 text-base leading-7">RR Hair Clinic helps clients choose clearer care for hair and scalp concerns.</p>
     </header>
     <div class="md:grid md:grid-cols-5 gap-6 relative z-10">
       <div class="col-span-2">
         <div class="max-w-xl space-y-4">
           <h2 class="font-semibold text-xl text-mist-700">Our Mission</h2>
-          <p class="text-base text-mist-600 italics pr-10">To turn green building requirements into clear decisions, organised evidence, and credible project outcomes.</p>
-          <p>Mampan brings structure to the work behind certification — helping teams understand what matters, what is missing, and what comes next.</p>
+          <p class="text-base text-mist-600 italics pr-10">
+            <span class="hidden md:inline">To make hair and scalp care easier to understand, with personalised plans that help clients feel informed, supported, and confident throughout treatment.</span>
+            <span class="md:hidden">To make hair and scalp care easier to understand and follow.</span>
+          </p>
         </div>
         <div class="max-w-xl space-y-4 pt-10 mt-10 border-t border-mist-300">
           <h2 class="font-semibold text-xl text-mist-700">Our Vision</h2>
-          <p class="text-base text-mist-600 italics pr-10">A future where better-performing buildings become the standard and normal way to design, build, and operate.</p>
-          <p>We believe green certification should be an integral part of project planning — not a late-stage checkbox or a disconnected exercise.</p>
+          <p class="text-base text-mist-600 italics pr-10">
+            <span class="hidden md:inline">A future where more people can access trusted hair care early, understand their options clearly, and maintain healthier routines over time.</span>
+            <span class="md:hidden">Trusted hair care that is clear, early, and easier to maintain.</span>
+          </p>
         </div>
       </div>
-      <div class="commitments col-span-3 grid grid-cols-2 gap-3">
-        <div class="space-y-3">
-          <div class="commitment bg-mist-200 p-6 flex flex-col justify-end rounded-md">
-            <div class="commitment-icon mb-15 mt-1">
+      <div class="commitments col-span-3 mt-10 md:mt-0 md:grid md:grid-cols-2 gap-3">
+        <div>
+          <div class="commitment flex items-start gap-4 pb-6 md:p-6 md:flex-col md:justify-end md:rounded-md md:bg-mist-200">
+            <div class="commitment-icon shrink-0 mb-0 md:mb-15 md:mt-1">
               <?php icon('calendar', ['icon_size' => '48', 'icon_class' => 'inline-block shrink-0 align-middle leading-none text-mist-700',]); ?>
             </div>
-            <h3 class="commitmen-title text-mist-800 text-lg font-semibold capitalize mb-2">Precision Planning</h3>
-            <p class="commitmen-desc">Identify achievable targets, mitigate compliance risks, and establish a clear execution strategy from the start.</p>
+            <div class="commitment-content min-w-0">
+              <h3 class="commitmen-title text-mist-800 text-lg font-semibold capitalize mb-2">Early Clarity</h3>
+              <p class="commitmen-desc">Clients understand their hair and scalp condition before choosing a treatment path.</p>
+            </div>
           </div>
-          <div class="commitment bg-mist-200 p-6 flex flex-col justify-end rounded-md">
-            <div class="commitment-icon mb-15 mt-1">
+          <div class="commitment flex items-start gap-4 border-t border-mist-300 py-6 md:mt-3 md:p-6 md:flex-col md:justify-end md:rounded-md md:border-t-0 md:bg-mist-200">
+            <div class="commitment-icon shrink-0 mb-0 md:mb-15 md:mt-1">
               <?php icon('pin', ['icon_size' => '48', 'icon_class' => 'inline-block shrink-0 align-middle leading-none text-mist-700',]); ?>
             </div>
-            <h3 class="commitmen-title text-mist-800 text-lg font-semibold capitalize mb-2">Audit-Ready Evidence</h3>
-            <p class="commitmen-desc">We rigorously review every submission for accuracy, consistency, and total alignment with certification standards.</p>
+            <div class="commitment-content min-w-0">
+              <h3 class="commitmen-title text-mist-800 text-lg font-semibold capitalize mb-2">Personalised Care</h3>
+              <p class="commitmen-desc">Recommendations are shaped around the client’s concern, routine, and realistic care goals.</p>
+            </div>
           </div>
         </div>
-        <div class="space-y-3 mt-15">
-          <div class="commitment bg-mist-200 p-6 flex flex-col justify-end rounded-md">
-            <div class="commitment-icon mb-15 mt-1">
+        <div class="md:mt-15">
+          <div class="commitment flex items-start gap-4 border-t border-mist-300 py-6 md:p-6 md:flex-col md:justify-end md:rounded-md md:border-t-0 md:bg-mist-200">
+            <div class="commitment-icon shrink-0 mb-0 md:mb-15 md:mt-1">
               <?php icon('star-automation', ['icon_size' => '48', 'icon_class' => 'inline-block shrink-0 align-middle leading-none text-mist-700',]); ?>
             </div>
-            <h3 class="commitmen-title text-mist-800 text-lg font-semibold capitalize mb-2">Empowered Expertise</h3>
-            <p class="commitmen-desc">We build your team’s internal knowledge, turning complex requirements into sustainable, long-term operational workflows.</p>
+            <div class="commitment-content min-w-0">
+              <h3 class="commitmen-title text-mist-800 text-lg font-semibold capitalize mb-2">Consistent Support</h3>
+              <p class="commitmen-desc">Treatment sessions, review timing, and aftercare stay connected throughout the journey.</p>
+            </div>
           </div>
-          <div class="commitment bg-mist-200 p-6 flex flex-col justify-end rounded-md">
-            <div class="commitment-icon mb-15 mt-1">
+          <div class="commitment flex items-start gap-4 border-t border-mist-300 pt-6 md:mt-3 md:p-6 md:flex-col md:justify-end md:rounded-md md:border-t-0 md:bg-mist-200">
+            <div class="commitment-icon shrink-0 mb-0 md:mb-15 md:mt-1">
               <?php icon('repost', ['icon_size' => '48', 'icon_class' => 'inline-block shrink-0 align-middle leading-none text-mist-700',]); ?>
             </div>
-            <h3 class="commitmen-title text-mist-800 text-lg font-semibold capitalize mb-2">Agile Project Support</h3>
-            <p class="commitmen-desc">Keep your schedule on track with proactive guidance, fast-tracked clarifications, and continuous project oversight.</p>
+            <div class="commitment-content min-w-0">
+              <h3 class="commitmen-title text-mist-800 text-lg font-semibold capitalize mb-2">Progress Focus</h3>
+              <p class="commitmen-desc">Care plans are reviewed over time so treatment can respond to changes and client feedback.</p>
+            </div>
           </div>
         </div>
       </div>  
     </div>
-    <img
-      src="<?= e(asset_url('assets/images/bg-about-drawing.png')); ?>"
-      alt=""
-      width="1717"
-      height="916"
-      aria-hidden="true"
-      class="hidden md:block absolute pointer-events-none grayscale-100"
-      style="bottom: -5rem; left: 0; z-index: 0; width: 100%; height: auto; opacity: .75;"
-    />
   </div>
 </section>
 <div class="bg-mist-100 h-[101px]" style="background-image: linear-gradient(#e9e5e6 1px, transparent 1px), linear-gradient(to right, #e9e5e6 1px, transparent 1px) !important;background-size: 1% 50px !important;"></div>

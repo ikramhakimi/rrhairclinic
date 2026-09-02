@@ -1,0 +1,10 @@
+<svg width="256" height="72" viewBox="0 0 256 72" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title">
+  <title id="title">RR Hair Clinic</title>
+  <rect width="72" height="72" rx="6" fill="#22c55e"/>
+  <path d="M21 48V22h15c6 0 10 4 10 9 0 4-2 7-6 8l8 9H37l-7-8h-1v8h-8Zm8-15h6c2 0 3-1 3-3s-1-3-3-3h-6v6Z" fill="#052e16"/>
+  <path d="M43 48V22h15c6 0 10 4 10 9 0 4-2 7-6 8l8 9H59l-7-8h-1v8h-8Zm8-15h6c2 0 3-1 3-3s-1-3-3-3h-6v6Z" fill="#052e16" opacity=".72"/>
+  <path d="M92 24h12c7 0 11 4 11 10 0 4-2 7-5 9l7 11h-8l-6-9h-4v9h-7V24Zm7 15h5c3 0 4-2 4-5s-1-4-4-4h-5v9Z" fill="white"/>
+  <path d="M121 24h12c7 0 11 4 11 10 0 4-2 7-5 9l7 11h-8l-6-9h-4v9h-7V24Zm7 15h5c3 0 4-2 4-5s-1-4-4-4h-5v9Z" fill="white"/>
+  <path d="M151 24h7v12h12V24h7v30h-7V42h-12v12h-7V24Zm33 0h7v30h-7V24Zm15 0h7v24h14v6h-21V24Zm25 0h7v30h-7V24Z" fill="white"/>
+  <path d="M93 64h46v3H93v-3Zm54 0h83v3h-83v-3Z" fill="#22c55e"/>
+</svg>
