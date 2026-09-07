@@ -76,6 +76,22 @@ if (!function_exists('component')) {
   }
 }
 
+if (!function_exists('section')) {
+  function section(string $file, array $data = []): void
+  {
+    $section_path = include_view_file(__DIR__ . '/../views/sections', 'section-' . $file);
+    if ($section_path === null) {
+      return;
+    }
+
+    if ($data !== []) {
+      extract($data, EXTR_SKIP);
+    }
+
+    include $section_path;
+  }
+}
+
 if (!function_exists('asset_url')) {
   function asset_url(string $path): string
   {

@@ -11,3 +11,16 @@
   --font-mono: "Fragment Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
     "Courier New", monospace;
 }
+
+.container {
+  @apply mx-auto max-w-6xl;
+}
+
+.flex-split {
+  @apply flex items-center justify-between;
+}
+
+.button {
+  @apply px-8 py-4 flex items-center justify-between leading-6 rounded-full;
+  font-weight: 500;
+}
