@@ -1,4 +1,4 @@
-<section class="section section-surgeon py-25 border-t border-slate-200">
+<section class="section section-surgeon py-25">
   <div class="container">
     <div class="grid grid-cols-1 gap-10 md:grid-cols-2 md:items-center">
       <div>

@@ -1,0 +1,11 @@
+Mode: built-in image_gen
+Asset: assets/images/cta-doctor-phone-assessment.png
+
+Use case: photorealistic-natural
+Asset type: wide website CTA background photograph, landscape 1920x900 composition.
+Primary request: one male doctor checking his iPhone and thoughtfully assessing remotely submitted hair photos.
+Scene/backdrop: contemporary clinic beside large windows, soft daylight, quiet uncluttered interior. Inspired by natural candid medical editorial photography with white coats and cool neutral clinic tones.
+Subject: a single fictional male doctor in his late 30s wearing a white medical coat over a muted shirt, seated at a desk, looking down attentively at an iPhone held naturally in one hand while his other hand makes assessment notes on paper. Phone back toward camera, screen toward doctor. Believable hands and posture.
+Composition/framing: wide environmental medium shot, doctor positioned in right third, head and phone both clearly visible with breathing room; softly defocused clinic interior across left and center provides quiet space behind existing centered website CTA text. Keep face in upper-right portion and phone lower-right, no close crop.
+Lighting/mood: soft window daylight, professional, calm, authentic, subtle cool slate shadows, realistic skin texture and fabric, premium editorial photograph.
+Constraints: exactly one person, no visible patient information, no text, no signage, no watermark, no added graphic gradients (website will add gradient overlay), no exaggerated smile, no looking at camera.

@@ -1,8 +1,8 @@
-<section class="section section-intro py-25 border-t border-slate-200">
+<section class="section section-intro py-25">
   <div class="container">
     <div class="section-headline max-w-2xl mx-autos text-centers">
       <div class="headline-topic mb-5 text-xs text-slate-500 uppercase">Frequently Asked Questions</div>
-      <h2 class="headline-title font-semibold text-4xl text-slate-950">A few things you might be wondering.</h2>
+      <h2 class="headline-title text-4xl text-slate-950">A few things you might be wondering.</h2>
       <div class="headline-subtitle mt-5">Clear answers about hair loss, treatments, recovery and results.</div>
     </div>
 
@@ -11,7 +11,7 @@
         <summary
           class="flex cursor-pointer list-none items-start justify-between gap-6 [&::-webkit-details-marker]:hidden"
         >
-          <h3 class="font-semibold text-lg text-slate-950">Is a hair transplant painful?</h3>
+          <h3 class="text-lg text-slate-950">Is a hair transplant painful?</h3>
           <span class="shrink-0 text-2xl leading-6 text-slate-400" aria-hidden="true">
             <span class="block group-open:hidden">+</span>
             <span class="hidden group-open:block">-</span>
@@ -35,7 +35,7 @@
         <summary
           class="flex cursor-pointer list-none items-start justify-between gap-6 [&::-webkit-details-marker]:hidden"
         >
-          <h3 class="font-semibold text-lg text-slate-950">How long does hair transplant recovery take?</h3>
+          <h3 class="text-lg text-slate-950">How long does hair transplant recovery take?</h3>
           <span class="shrink-0 text-2xl leading-6 text-slate-400" aria-hidden="true">
             <span class="block group-open:hidden">+</span>
             <span class="hidden group-open:block">-</span>
@@ -59,7 +59,7 @@
         <summary
           class="flex cursor-pointer list-none items-start justify-between gap-6 [&::-webkit-details-marker]:hidden"
         >
-          <h3 class="font-semibold text-lg text-slate-950">Will my hair transplant look natural?</h3>
+          <h3 class="text-lg text-slate-950">Will my hair transplant look natural?</h3>
           <span class="shrink-0 text-2xl leading-6 text-slate-400" aria-hidden="true">
             <span class="block group-open:hidden">+</span>
             <span class="hidden group-open:block">-</span>
@@ -86,7 +86,7 @@
         <summary
           class="flex cursor-pointer list-none items-start justify-between gap-6 [&::-webkit-details-marker]:hidden"
         >
-          <h3 class="font-semibold text-lg text-slate-950">Does FUE hair transplant leave visible scars?</h3>
+          <h3 class="text-lg text-slate-950">Does FUE hair transplant leave visible scars?</h3>
           <span class="shrink-0 text-2xl leading-6 text-slate-400" aria-hidden="true">
             <span class="block group-open:hidden">+</span>
             <span class="hidden group-open:block">-</span>
@@ -110,7 +110,7 @@
         <summary
           class="flex cursor-pointer list-none items-start justify-between gap-6 [&::-webkit-details-marker]:hidden"
         >
-          <h3 class="font-semibold text-lg text-slate-950">
+          <h3 class="text-lg text-slate-950">
             What if I do not have enough donor hair for a transplant?
           </h3>
           <span class="shrink-0 text-2xl leading-6 text-slate-400" aria-hidden="true">
@@ -139,7 +139,7 @@
         <summary
           class="flex cursor-pointer list-none items-start justify-between gap-6 [&::-webkit-details-marker]:hidden"
         >
-          <h3 class="font-semibold text-lg text-slate-950">When will I see my final hair transplant results?</h3>
+          <h3 class="text-lg text-slate-950">When will I see my final hair transplant results?</h3>
           <span class="shrink-0 text-2xl leading-6 text-slate-400" aria-hidden="true">
             <span class="block group-open:hidden">+</span>
             <span class="hidden group-open:block">-</span>

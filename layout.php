@@ -12,14 +12,14 @@
 
   <style>
     .font-display {font-family: 'Space Grotesk', sans-serif;}
-    .font-sans    {font-family: 'Lexend', sans-serif;}
+    .font-sans    {font-family: 'Lexend', Inter, sans-serif;}
   </style>
 </head>
-<body class="bg-white font-sans text-[16px] text-slate-600 leading-6 tracking-[-1%]">
+<body class="bg-slate-100 font-sans text-[16px] text-slate-600 leading-6 tracking-[-1%]">
   <?php // component('component/nav'); ?>
   <?php // component('component/nav-mobile'); ?>
 
-  <main class="pb-200">
+  <main>
     <?= $content ?? ''; ?>
   </main>
 </body>

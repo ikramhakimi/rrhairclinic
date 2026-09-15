@@ -3,10 +3,16 @@
 $page_title   = 'RR Hair Clinic';
 $page_current = 'home';
 
+component('navbar-mobile');
+component('navbar');
 section('hero');
-section('intro');
-section('treatments');
-section('surgeon');
+section('hair-loss');
+// section('intro');
 section('case-study');
-section('faq');
+section('treatments');
+section('products');
+// section('surgeon');
+// section('how-it-work');
+// section('faq');
 section('cta');
+section('footer');

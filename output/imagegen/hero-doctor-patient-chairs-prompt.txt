@@ -1,0 +1,7 @@
+Use case: background-extraction.
+Input: assets/images/hero-v3.png, the original full clinic photograph. Start from this source, not any previous cutout.
+Extract the two seated men AND the two chairs they are actually sitting on into one tightly cropped transparent PNG.
+Keep all visible parts of their occupied chairs, including seat cushions, armrests, backrests and supports. Remove the separate unoccupied white treatment bed behind them completely. Remove all walls, floor, room background and floor shadows.
+Preserve both men's exact faces, hair, expressions, eye contact, skin tones, hands, clothing, seated poses, relative scale and spacing. Doctor wears dark slate scrubs; patient wears pale blue-green scrubs. Preserve existing bottom cropping; do not invent feet or unseen chair parts.
+Crop closely around the combined subjects and their occupied chairs, leaving a small transparent margin at the top and sides. Keep natural fine hair edges and anti-aliased silhouettes without halos. Every background gap, including between the subjects and chair supports, must be transparent.
+Deliver genuine RGBA PNG transparency, not a painted checkerboard, white backdrop or simulated transparency. No text, logos, additional objects or stylistic changes.

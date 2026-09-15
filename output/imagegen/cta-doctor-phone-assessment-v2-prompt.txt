@@ -1,0 +1,7 @@
+Mode: built-in image_gen
+Asset: assets/images/cta-doctor-phone-assessment-v2.png
+
+Use case: identity-preserve
+Edit target: Image 1, the wide CTA photograph of a doctor reviewing an iPhone at a desk.
+Identity reference: Image 2, use ONLY the doctor on the LEFT holding the medicine bottle as facial identity reference, NOT the patient on the right.
+Change the doctor in Image 1 to closely match the reference doctor's face, short black hairstyle, skin tone and clean-shaven appearance. Dress him ONLY in plain dark navy blue short-sleeved V-neck medical scrubs. NO white coat, NO coat or jacket of any kind, NO collared dress shirt. Preserve Image 1's wide landscape framing, clinic background, daylight, right-third placement, seated posture, iPhone held in one hand with screen facing him, and other hand making assessment notes. He looks down thoughtfully at his phone. Exactly one person. Natural skin and hands, photorealistic editorial photography. Keep quiet negative space on left for website copy. No text, logos, watermarks, or baked-in gradient. Preserve environment and composition; change only doctor identity and clothing.

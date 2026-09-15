@@ -21,6 +21,120 @@
 }
 
 .button {
-  @apply px-8 py-4 flex items-center justify-between leading-6 rounded-full;
+  @apply px-8 py-3 text-center leading-6 rounded-full;
   font-weight: 500;
+}
+.button-sm {
+  @apply px-6 py-2 text-center leading-6 rounded-full;
+  font-weight: 500;
+}
+
+.footer-links a:hover {
+  @apply underline underline-offset-6;
+}
+
+.footer-brand-text {
+  letter-spacing: -7%;
+}
+
+.marquee {
+  width: 100%;
+  overflow: hidden;
+}
+
+.marquee-track {
+  display: flex;
+  width: -moz-max-content;
+  width: max-content;
+  animation: marquee-scroll 90s linear infinite;
+  will-change: transform;
+}
+
+.marquee-group {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  flex-shrink: 0;
+  padding-right: 0.75rem;
+}
+
+@layer components {
+  .footer-brand-text {
+    text-shadow:
+      1px 0 0 var(--color-slate-500),
+      -1px 0 0 var(--color-slate-500),
+      0 1px 0 var(--color-slate-500),
+      0 -1px 0 var(--color-slate-500),
+      1px 1px 0 var(--color-slate-500),
+      -1px -1px 0 var(--color-slate-500),
+      1px -1px 0 var(--color-slate-500),
+      -1px 1px 0 var(--color-slate-500);
+  }
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* .section-intro {
+  @apply bg-linear-to-t from-slate-100 to-white
+}
+
+.section-treatments {
+  @apply bg-linear-to-t from-slate-200 to-slate-100
+}
+
+.section-case-study {
+  @apply bg-linear-to-t from-slate-100 to-slate-200
+}
+
+.section-surgeon {
+  @apply bg-linear-to-t from-white to-slate-100
+} */
+
+/* Mobile cards scroll naturally; tablet and desktop use the button-controlled track. */
+.section-hair-loss [data-carousel-ready] {
+  grid-template-columns: none;
+  grid-auto-flow: column;
+  grid-auto-columns: 80%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+}
+
+.section-hair-loss [data-carousel-ready]::-webkit-scrollbar {
+  display: none;
+}
+
+@media (min-width: 48rem) {
+  .section-hair-loss [data-carousel-ready] {
+    grid-auto-columns: calc((100% - 3 * var(--spacing) * 3) / 4);
+    overflow: visible;
+    transition: transform 400ms ease;
+  }
+
+  .section-hair-loss [data-carousel-active="false"] {
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: 64rem) {
+  .section-hair-loss [data-carousel-ready] {
+    grid-auto-columns: calc((100% - 3 * var(--spacing) * 3) / 4);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track,
+  .section-hair-loss [data-carousel-ready],
+  .section-hair-loss [data-carousel-active] {
+    animation: none;
+    transition: none;
+  }
 }
