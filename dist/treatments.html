@@ -7,8 +7,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/build/app.css?v=1790584243">
-  <script src="/assets/js/app.js?v=1790154070" defer></script>
+  <link rel="stylesheet" href="/assets/build/app.css?v=1791095535">
+  <script src="/assets/js/app.js?v=1791095500" defer></script>
 
   <style>
   </style>
@@ -18,42 +18,87 @@
   <main>
     <header
   class="fixed inset-x-0 top-0 z-40 bg-slate-100 transition-transform duration-300 ease-out
-    motion-reduce:transition-none lg:hidden js-site-mobile-navbar"
+    motion-reduce:transition-none lg:static lg:translate-y-0 lg:transition-none js-site-mobile-navbar"
 >
-  <div class="flex h-18 items-center justify-between px-4">
-    <a href="/" class="text-lg font-semibold text-slate-800 tracking-tight flex items-center">
-      <span class="square border border-slate-600 mr-2 px-1">RR</span>
-      <span class="tracking-tight">HairClinic</span>
+  <div class="flex h-18 items-center justify-between px-4 lg:h-auto lg:px-6 lg:py-4">
+    <a href="/" class="text-xl tracking-tight text-slate-800 tracking-tight flex items-center">
+      <span class="aspect-square w-9 flex items-center justify-center border border-slate-600 mr-2 font-bold">RR</span>
+      <span class="font-medium">HairClinic</span>
     </a>
 
-    <div class="flex items-center gap-1">
-      <a
-        href="#"
-        class="flex size-12 items-center justify-center rounded-full text-slate-950 transition-colors
-          hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-950"
-        aria-label="View cart"
-      >
-        <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="size-6"><path d="M6.50488 2H17.5049C17.8196 2 18.116 2.14819 18.3049 2.4L21.0049 6V21C21.0049 21.5523 20.5572 22 20.0049 22H4.00488C3.4526 22 3.00488 21.5523 3.00488 21V6L5.70488 2.4C5.89374 2.14819 6.19013 2 6.50488 2ZM19.0049 8H5.00488V20H19.0049V8ZM18.5049 6L17.0049 4H7.00488L5.50488 6H18.5049ZM9.00488 10V12C9.00488 13.6569 10.348 15 12.0049 15C13.6617 15 15.0049 13.6569 15.0049 12V10H17.0049V12C17.0049 14.7614 14.7663 17 12.0049 17C9.24346 17 7.00488 14.7614 7.00488 12V10H9.00488Z"/></svg>      </a>
+    <nav class="hidden items-center gap-6 text-sm lg:flex" aria-label="Main navigation">
+        <details class="group relative">
+          <summary class="flex cursor-pointer list-none items-center gap-0.5 text-sm font-medium text-slate-800">
+            Hair Loss
+            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="size-5 transition-transform group-open:rotate-180"><path d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z"/></svg>          </summary>
+          <div class="absolute left-0 top-full z-10 mt-3 w-56 rounded-lg border border-slate-200 bg-white p-2 shadow-lg">
+            <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Male Pattern Baldness</a>
+            <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Female Hair Loss</a>
+            <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Receding Hairline</a>
+            <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Thinning Hair</a>
+            <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Crown Hair Loss</a>
+            <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Hair Shedding</a>
+          </div>
+        </details>
 
-      <span class="h-6 w-px bg-slate-200" aria-hidden="true"></span>
+        <details class="group relative">
+          <summary class="flex cursor-pointer list-none items-center gap-0.5 text-sm font-medium text-slate-800">
+            Treatments
+            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="size-5 transition-transform group-open:rotate-180"><path d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z"/></svg>          </summary>
+          <div class="absolute left-0 top-full z-10 mt-3 w-56 rounded-lg border border-slate-200 bg-white p-2 shadow-lg">
+            <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Hair Transplant</a>
+            <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Sapphire FUE</a>
+            <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">PRP Hair Treatment</a>
+            <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Hair Loss Medication</a>
+            <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Scalp Treatment</a>
+            <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Hair Regrowth Treatment</a>
+          </div>
+        </details>
 
-      <button
-        type="button"
-        class="flex size-12 cursor-pointer items-center justify-center rounded-full text-slate-950 transition-colors
-          hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-950"
-        aria-label="Open menu"
-        aria-controls="site-mobile-menu"
-        aria-expanded="false"
-        data-drawer-open="site-mobile-menu"
-      >
-        <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="size-6"><path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z"/></svg>      </button>
+        <details class="group relative">
+          <summary class="flex cursor-pointer list-none items-center gap-0.5 text-sm font-medium text-slate-800">
+            Products
+            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="size-5 transition-transform group-open:rotate-180"><path d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z"/></svg>          </summary>
+          <div class="absolute left-0 top-full z-10 mt-3 w-56 rounded-lg border border-slate-200 bg-white p-2 shadow-lg">
+            <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">All Products</a>
+            <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Hair Growth</a>
+            <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Hair Loss Shampoo</a>
+            <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Scalp Care</a>
+          </div>
+        </details>
+
+        <a href="#" class="font-medium text-slate-800">Doctors</a>
+
+    </nav>
+
+    <div class="flex items-center gap-1 lg:gap-2">
+          <a
+            href="#"
+            class="flex size-10 items-center justify-center rounded-full text-slate-950 transition-colors
+              hover:bg-slate-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-950"
+            aria-label="View cart"
+          >
+            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="size-6"><path d="M6.50488 2H17.5049C17.8196 2 18.116 2.14819 18.3049 2.4L21.0049 6V21C21.0049 21.5523 20.5572 22 20.0049 22H4.00488C3.4526 22 3.00488 21.5523 3.00488 21V6L5.70488 2.4C5.89374 2.14819 6.19013 2 6.50488 2ZM19.0049 8H5.00488V20H19.0049V8ZM18.5049 6L17.0049 4H7.00488L5.50488 6H18.5049ZM9.00488 10V12C9.00488 13.6569 10.348 15 12.0049 15C13.6617 15 15.0049 13.6569 15.0049 12V10H17.0049V12C17.0049 14.7614 14.7663 17 12.0049 17C9.24346 17 7.00488 14.7614 7.00488 12V10H9.00488Z"/></svg>          </a>
+
+          <span class="h-6 w-px bg-slate-200 lg:h-8 lg:bg-gradient-to-b lg:from-transparent lg:via-slate-300 lg:to-transparent" aria-hidden="true"></span>
+
+          <button
+            type="button"
+            class="flex size-10 cursor-pointer items-center justify-center rounded-full text-slate-950 transition-colors
+              hover:bg-slate-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-950"
+            aria-label="Open menu"
+            aria-controls="site-mobile-menu"
+            aria-expanded="false"
+            data-drawer-open="site-mobile-menu"
+          >
+            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="size-6"><path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z"/></svg>          </button>
     </div>
   </div>
 </header>
 
 <div
   id="site-mobile-menu"
-  class="pointer-events-none fixed inset-0 z-50 opacity-0 transition-opacity duration-200 md:hidden"
+  class="pointer-events-none fixed inset-0 z-50 opacity-0 transition-opacity duration-300 motion-reduce:transition-none"
   aria-hidden="true"
   inert
 >
@@ -66,26 +111,24 @@
   ></button>
 
   <aside
-    class="absolute inset-y-0 right-0 flex w-[min(22rem,calc(100%-3rem))] translate-x-full flex-col bg-white
-      shadow-xl transition-transform duration-300 ease-out motion-reduce:transition-none js-site-drawer-panel"
+    class="absolute inset-y-0 right-0 flex w-[min(24rem,calc(100%-2rem))] translate-x-full flex-col overflow-hidden bg-white
+      shadow-xl transition-transform duration-300 ease-out motion-reduce:transition-none js-component-navbar-drawer-panel"
     role="dialog"
     aria-modal="true"
-    aria-label="Mobile navigation"
+    aria-label="Site navigation"
+    tabindex="-1"
   >
-    <div class="flex h-18 shrink-0 items-center justify-between border-b border-slate-200 px-4">
-      <a href="/" aria-label="RR Hair Clinic home">
-        <img
-          src="/assets/images/logo-rrhairclinic.svg"
-          alt="RR Hair Clinic"
-          class="h-10 w-auto"
-          width="256"
-          height="72"
-        >
+    <div class="flex min-h-18 shrink-0 items-center justify-between gap-3 border-b border-slate-200 px-4
+      pt-[env(safe-area-inset-top)]">
+      <a href="/" class="flex items-center text-xl tracking-tight text-slate-800
+          focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-950">
+        <span class="aspect-square w-9 flex items-center justify-center border border-slate-600 mr-2 font-bold">RR</span>
+        <span class="font-medium">HairClinic</span>
       </a>
 
       <button
         type="button"
-        class="flex size-12 cursor-pointer items-center justify-center rounded-full text-slate-950 transition-colors
+        class="flex size-12 shrink-0 cursor-pointer items-center justify-center rounded-full text-slate-950 transition-colors
           hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-950"
         aria-label="Close menu"
         data-drawer-close
@@ -93,174 +136,160 @@
         <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="size-6"><path d="M11.9997 10.5865L16.9495 5.63672L18.3637 7.05093L13.4139 12.0007L18.3637 16.9504L16.9495 18.3646L11.9997 13.4149L7.04996 18.3646L5.63574 16.9504L10.5855 12.0007L5.63574 7.05093L7.04996 5.63672L11.9997 10.5865Z"/></svg>      </button>
     </div>
 
-    <nav class="flex-1 overflow-y-auto px-4 py-5" aria-label="Main navigation">
+    <nav class="min-h-0 flex-1 overflow-y-auto overscroll-contain px-4 py-2" aria-label="Main navigation">
       <details class="group border-b border-slate-200">
-        <summary class="flex min-h-14 cursor-pointer list-none items-center justify-between font-medium text-slate-950">
-          Hair Loss
-          <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="size-5 transition-transform group-open:rotate-180"><path d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z"/></svg>        </summary>
-        <div class="space-y-1 pb-4 pl-4">
-          <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">
+        <summary class="flex min-h-14 cursor-pointer list-none items-start justify-between gap-4 rounded-md px-2 py-4
+          font-medium text-slate-950 transition-colors hover:bg-slate-100
+          focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-950
+          [&::-webkit-details-marker]:hidden">
+          <span class="min-w-0">
+            <span class="block">Hair Loss</span>
+            <span class="mt-1 block text-sm font-normal leading-relaxed text-slate-600">
+              Explore common causes and patterns of hair loss.
+            </span>
+          </span>
+          <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="mt-0.5 size-5 shrink-0 transition-transform group-open:rotate-180 motion-reduce:transition-none"><path d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z"/></svg>        </summary>
+        <div class="space-y-1 pb-4 pl-2">
+          <a href="#" class="flex min-h-11 items-center rounded-md px-3 py-2 text-sm text-slate-700 transition-colors
+              hover:bg-slate-100 hover:text-slate-950 focus-visible:outline-2
+              focus-visible:outline-offset-2 focus-visible:outline-slate-950">
             Male Pattern Baldness
           </a>
-          <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">
+          <a href="#" class="flex min-h-11 items-center rounded-md px-3 py-2 text-sm text-slate-700 transition-colors
+              hover:bg-slate-100 hover:text-slate-950 focus-visible:outline-2
+              focus-visible:outline-offset-2 focus-visible:outline-slate-950">
             Female Hair Loss
           </a>
-          <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">
+          <a href="#" class="flex min-h-11 items-center rounded-md px-3 py-2 text-sm text-slate-700 transition-colors
+              hover:bg-slate-100 hover:text-slate-950 focus-visible:outline-2
+              focus-visible:outline-offset-2 focus-visible:outline-slate-950">
             Receding Hairline
           </a>
-          <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">
+          <a href="#" class="flex min-h-11 items-center rounded-md px-3 py-2 text-sm text-slate-700 transition-colors
+              hover:bg-slate-100 hover:text-slate-950 focus-visible:outline-2
+              focus-visible:outline-offset-2 focus-visible:outline-slate-950">
             Thinning Hair
           </a>
-          <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">
+          <a href="#" class="flex min-h-11 items-center rounded-md px-3 py-2 text-sm text-slate-700 transition-colors
+              hover:bg-slate-100 hover:text-slate-950 focus-visible:outline-2
+              focus-visible:outline-offset-2 focus-visible:outline-slate-950">
             Crown Hair Loss
           </a>
-          <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">
+          <a href="#" class="flex min-h-11 items-center rounded-md px-3 py-2 text-sm text-slate-700 transition-colors
+              hover:bg-slate-100 hover:text-slate-950 focus-visible:outline-2
+              focus-visible:outline-offset-2 focus-visible:outline-slate-950">
             Hair Shedding
           </a>
         </div>
       </details>
 
       <details class="group border-b border-slate-200">
-        <summary class="flex min-h-14 cursor-pointer list-none items-center justify-between font-medium text-slate-950">
-          Treatments
-          <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="size-5 transition-transform group-open:rotate-180"><path d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z"/></svg>        </summary>
-        <div class="space-y-1 pb-4 pl-4">
-          <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">
+        <summary class="flex min-h-14 cursor-pointer list-none items-start justify-between gap-4 rounded-md px-2 py-4
+          font-medium text-slate-950 transition-colors hover:bg-slate-100
+          focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-950
+          [&::-webkit-details-marker]:hidden">
+          <span class="min-w-0">
+            <span class="block">Treatments</span>
+            <span class="mt-1 block text-sm font-normal leading-relaxed text-slate-600">
+              Find out about our hair and scalp treatment options.
+            </span>
+          </span>
+          <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="mt-0.5 size-5 shrink-0 transition-transform group-open:rotate-180 motion-reduce:transition-none"><path d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z"/></svg>        </summary>
+        <div class="space-y-1 pb-4 pl-2">
+          <a href="#" class="flex min-h-11 items-center rounded-md px-3 py-2 text-sm text-slate-700 transition-colors
+              hover:bg-slate-100 hover:text-slate-950 focus-visible:outline-2
+              focus-visible:outline-offset-2 focus-visible:outline-slate-950">
             Hair Transplant
           </a>
-          <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">
+          <a href="#" class="flex min-h-11 items-center rounded-md px-3 py-2 text-sm text-slate-700 transition-colors
+              hover:bg-slate-100 hover:text-slate-950 focus-visible:outline-2
+              focus-visible:outline-offset-2 focus-visible:outline-slate-950">
             Sapphire FUE
           </a>
-          <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">
+          <a href="#" class="flex min-h-11 items-center rounded-md px-3 py-2 text-sm text-slate-700 transition-colors
+              hover:bg-slate-100 hover:text-slate-950 focus-visible:outline-2
+              focus-visible:outline-offset-2 focus-visible:outline-slate-950">
             PRP Hair Treatment
           </a>
-          <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">
+          <a href="#" class="flex min-h-11 items-center rounded-md px-3 py-2 text-sm text-slate-700 transition-colors
+              hover:bg-slate-100 hover:text-slate-950 focus-visible:outline-2
+              focus-visible:outline-offset-2 focus-visible:outline-slate-950">
             Hair Loss Medication
           </a>
-          <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">
+          <a href="#" class="flex min-h-11 items-center rounded-md px-3 py-2 text-sm text-slate-700 transition-colors
+              hover:bg-slate-100 hover:text-slate-950 focus-visible:outline-2
+              focus-visible:outline-offset-2 focus-visible:outline-slate-950">
             Scalp Treatment
           </a>
-          <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">
+          <a href="#" class="flex min-h-11 items-center rounded-md px-3 py-2 text-sm text-slate-700 transition-colors
+              hover:bg-slate-100 hover:text-slate-950 focus-visible:outline-2
+              focus-visible:outline-offset-2 focus-visible:outline-slate-950">
             Hair Regrowth Treatment
           </a>
         </div>
       </details>
 
       <details class="group border-b border-slate-200">
-        <summary class="flex min-h-14 cursor-pointer list-none items-center justify-between font-medium text-slate-950">
-          Products
-          <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="size-5 transition-transform group-open:rotate-180"><path d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z"/></svg>        </summary>
-        <div class="space-y-1 pb-4 pl-4">
-          <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">
+        <summary class="flex min-h-14 cursor-pointer list-none items-start justify-between gap-4 rounded-md px-2 py-4
+          font-medium text-slate-950 transition-colors hover:bg-slate-100
+          focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-950
+          [&::-webkit-details-marker]:hidden">
+          <span class="min-w-0">
+            <span class="block">Products</span>
+            <span class="mt-1 block text-sm font-normal leading-relaxed text-slate-600">
+              Browse products for hair growth and scalp care.
+            </span>
+          </span>
+          <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="mt-0.5 size-5 shrink-0 transition-transform group-open:rotate-180 motion-reduce:transition-none"><path d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z"/></svg>        </summary>
+        <div class="space-y-1 pb-4 pl-2">
+          <a href="#" class="flex min-h-11 items-center rounded-md px-3 py-2 text-sm text-slate-700 transition-colors
+              hover:bg-slate-100 hover:text-slate-950 focus-visible:outline-2
+              focus-visible:outline-offset-2 focus-visible:outline-slate-950">
             All Products
           </a>
-          <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">
+          <a href="#" class="flex min-h-11 items-center rounded-md px-3 py-2 text-sm text-slate-700 transition-colors
+              hover:bg-slate-100 hover:text-slate-950 focus-visible:outline-2
+              focus-visible:outline-offset-2 focus-visible:outline-slate-950">
             Hair Growth
           </a>
-          <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">
+          <a href="#" class="flex min-h-11 items-center rounded-md px-3 py-2 text-sm text-slate-700 transition-colors
+              hover:bg-slate-100 hover:text-slate-950 focus-visible:outline-2
+              focus-visible:outline-offset-2 focus-visible:outline-slate-950">
             Hair Loss Shampoo
           </a>
-          <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">
+          <a href="#" class="flex min-h-11 items-center rounded-md px-3 py-2 text-sm text-slate-700 transition-colors
+              hover:bg-slate-100 hover:text-slate-950 focus-visible:outline-2
+              focus-visible:outline-offset-2 focus-visible:outline-slate-950">
             Scalp Care
           </a>
         </div>
       </details>
 
-      <a href="#" class="flex min-h-14 items-center border-b border-slate-200 font-medium text-slate-950">
+      <a href="#" class="flex min-h-14 items-center border-b border-slate-200 px-2 font-medium text-slate-950
+          transition-colors hover:bg-slate-100 focus-visible:outline-2
+          focus-visible:outline-offset-2 focus-visible:outline-slate-950">
         Our Doctors
       </a>
-      <a href="#" class="flex min-h-14 items-center border-b border-slate-200 font-medium text-slate-950">
+      <a href="#" class="flex min-h-14 items-center border-b border-slate-200 px-2 font-medium text-slate-950
+          transition-colors hover:bg-slate-100 focus-visible:outline-2
+          focus-visible:outline-offset-2 focus-visible:outline-slate-950">
         Case Studies
       </a>
-      <a href="#" class="flex min-h-14 items-center border-b border-slate-200 font-medium text-slate-950">
+      <a href="#" class="flex min-h-14 items-center border-b border-slate-200 px-2 font-medium text-slate-950
+          transition-colors hover:bg-slate-100 focus-visible:outline-2
+          focus-visible:outline-offset-2 focus-visible:outline-slate-950">
         About
       </a>
     </nav>
 
-    <div class="shrink-0 border-t border-slate-200 p-4">
-      <a href="#" class="button w-full bg-slate-950 text-white">
+    <div class="shrink-0 border-t border-slate-200 p-4 pb-[max(1rem,env(safe-area-inset-bottom))]">
+      <a href="#" class="button flex w-full items-center justify-center gap-2 bg-slate-950 text-white transition-colors
+          hover:bg-slate-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-950">
         Contact Us
         <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="size-5"><path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z"/></svg>      </a>
     </div>
   </aside>
 </div>
-<header class="hidden lg:block">
-  <div class="px-6">
-    <div class="flex-split py-4">
-      <a href="/" class="text-lg font-semibold text-slate-800 tracking-tight flex items-center">
-        <span class="square border border-slate-600 mr-2 px-1">RR</span>
-        <span class="tracking-tight">HairClinic</span>
-      </a>
-
-      <nav class="flex items-center gap-6 text-sm" aria-label="Main navigation">
-        <details class="group relative">
-          <summary class="flex cursor-pointer list-none items-center gap-0.5 text-sm font-medium text-slate-800">
-            Hair Loss
-            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="size-5 transition-transform group-open:rotate-180"><path d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z"/></svg>          </summary>
-          <div class="absolute left-0 top-full z-10 mt-3 w-56 rounded-lg border border-slate-200 bg-white p-2 shadow-lg">
-            <a href="http://localhost/rrhairclinic/#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Male Pattern Baldness</a>
-            <a href="http://localhost/rrhairclinic/#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Female Hair Loss</a>
-            <a href="http://localhost/rrhairclinic/#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Receding Hairline</a>
-            <a href="http://localhost/rrhairclinic/#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Thinning Hair</a>
-            <a href="http://localhost/rrhairclinic/#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Crown Hair Loss</a>
-            <a href="http://localhost/rrhairclinic/#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Hair Shedding</a>
-          </div>
-        </details>
-
-        <details class="group relative">
-          <summary class="flex cursor-pointer list-none items-center gap-0.5 text-sm font-medium text-slate-800">
-            Treatments
-            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="size-5 transition-transform group-open:rotate-180"><path d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z"/></svg>          </summary>
-          <div class="absolute left-0 top-full z-10 mt-3 w-56 rounded-lg border border-slate-200 bg-white p-2 shadow-lg">
-            <a href="http://localhost/rrhairclinic/#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Hair Transplant</a>
-            <a href="http://localhost/rrhairclinic/#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Sapphire FUE</a>
-            <a href="http://localhost/rrhairclinic/#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">PRP Hair Treatment</a>
-            <a href="http://localhost/rrhairclinic/#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Hair Loss Medication</a>
-            <a href="http://localhost/rrhairclinic/#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Scalp Treatment</a>
-            <a href="http://localhost/rrhairclinic/#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Hair Regrowth Treatment</a>
-          </div>
-        </details>
-
-        <details class="group relative">
-          <summary class="flex cursor-pointer list-none items-center gap-0.5 text-sm font-medium text-slate-800">
-            Products
-            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="size-5 transition-transform group-open:rotate-180"><path d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z"/></svg>          </summary>
-          <div class="absolute left-0 top-full z-10 mt-3 w-56 rounded-lg border border-slate-200 bg-white p-2 shadow-lg">
-            <a href="http://localhost/rrhairclinic/#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">All Products</a>
-            <a href="http://localhost/rrhairclinic/#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Hair Growth</a>
-            <a href="http://localhost/rrhairclinic/#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Hair Loss Shampoo</a>
-            <a href="http://localhost/rrhairclinic/#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Scalp Care</a>
-          </div>
-        </details>
-
-        <a href="#" class="font-medium text-slate-800">Doctors</a>
-
-        <div class="flex items-center gap-2">
-          <a
-            href="#"
-            class="flex size-10 items-center justify-center rounded-full text-slate-950 transition-colors
-              hover:bg-slate-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-950"
-            aria-label="View cart"
-          >
-            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="size-6"><path d="M6.50488 2H17.5049C17.8196 2 18.116 2.14819 18.3049 2.4L21.0049 6V21C21.0049 21.5523 20.5572 22 20.0049 22H4.00488C3.4526 22 3.00488 21.5523 3.00488 21V6L5.70488 2.4C5.89374 2.14819 6.19013 2 6.50488 2ZM19.0049 8H5.00488V20H19.0049V8ZM18.5049 6L17.0049 4H7.00488L5.50488 6H18.5049ZM9.00488 10V12C9.00488 13.6569 10.348 15 12.0049 15C13.6617 15 15.0049 13.6569 15.0049 12V10H17.0049V12C17.0049 14.7614 14.7663 17 12.0049 17C9.24346 17 7.00488 14.7614 7.00488 12V10H9.00488Z"/></svg>          </a>
-
-          <span class="h-8 w-px bg-gradient-to-b from-transparent via-slate-300 to-transparent" aria-hidden="true"></span>
-
-          <button
-            type="button"
-            class="flex size-10 cursor-pointer items-center justify-center rounded-full text-slate-950 transition-colors
-              hover:bg-slate-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-950"
-            aria-label="Open menu"
-            aria-controls="site-mobile-menu"
-            aria-expanded="false"
-            data-drawer-open="site-mobile-menu"
-          >
-            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="size-6"><path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z"/></svg>          </button>
-        </div>
-      </nav>
-    </div>
-  </div>
-</header>
 <section class="section service-listing pt-30 pb-15 sm:pb-20 lg:pt-20">
   <div class="container">
     <div class="hero-headline max-w-4xl">
@@ -278,8 +307,8 @@
         <div class="aspect-4/3 w-full rounded-lg bg-slate-300 md:group-even:order-2" aria-hidden="true"></div>
         <div class="min-w-0 md:group-even:order-1">
           <div class="mb-3 text-xs text-slate-500">01</div>
-          <div class="section-headline max-w-2xl">
-    <h2 class="headline-title text-2xl sm:text-4xl sm:leading-11 text-transparent bg-clip-text bg-gradient-to-br from-slate-700 via-slate-800 to-slate-950">
+          <div class="section-headline max-w-2xl mx-auto sm:text-center">
+    <h2 class="headline-title font-medium sm:font-normal text-2xl sm:text-4xl sm:leading-11 text-transparent bg-clip-text bg-gradient-to-br from-slate-700 via-slate-800 to-slate-950">
     Hair Transplant  </h2>
   </div>
           <p class="mt-4">Explore a personalised approach to hair restoration, from assessing your donor area to planning your hairline and follow-up care.</p>
@@ -313,8 +342,8 @@
         <div class="aspect-4/3 w-full rounded-lg bg-slate-300 md:group-even:order-2" aria-hidden="true"></div>
         <div class="min-w-0 md:group-even:order-1">
           <div class="mb-3 text-xs text-slate-500">02</div>
-          <div class="section-headline max-w-2xl">
-    <h2 class="headline-title text-2xl sm:text-4xl sm:leading-11 text-transparent bg-clip-text bg-gradient-to-br from-slate-700 via-slate-800 to-slate-950">
+          <div class="section-headline max-w-2xl mx-auto sm:text-center">
+    <h2 class="headline-title font-medium sm:font-normal text-2xl sm:text-4xl sm:leading-11 text-transparent bg-clip-text bg-gradient-to-br from-slate-700 via-slate-800 to-slate-950">
     Medical Hair Loss Treatment  </h2>
   </div>
           <p class="mt-4">Discuss medical treatment options with your doctor, including suitability, ongoing care and what to expect from your plan.</p>
@@ -348,8 +377,8 @@
         <div class="aspect-4/3 w-full rounded-lg bg-slate-300 md:group-even:order-2" aria-hidden="true"></div>
         <div class="min-w-0 md:group-even:order-1">
           <div class="mb-3 text-xs text-slate-500">03</div>
-          <div class="section-headline max-w-2xl">
-    <h2 class="headline-title text-2xl sm:text-4xl sm:leading-11 text-transparent bg-clip-text bg-gradient-to-br from-slate-700 via-slate-800 to-slate-950">
+          <div class="section-headline max-w-2xl mx-auto sm:text-center">
+    <h2 class="headline-title font-medium sm:font-normal text-2xl sm:text-4xl sm:leading-11 text-transparent bg-clip-text bg-gradient-to-br from-slate-700 via-slate-800 to-slate-950">
     PRP Hair Treatment  </h2>
   </div>
           <p class="mt-4">Find out where PRP may fit within your hair care plan. Your consultation covers the procedure, suitability and follow-up appointments.</p>
@@ -383,8 +412,8 @@
         <div class="aspect-4/3 w-full rounded-lg bg-slate-300 md:group-even:order-2" aria-hidden="true"></div>
         <div class="min-w-0 md:group-even:order-1">
           <div class="mb-3 text-xs text-slate-500">04</div>
-          <div class="section-headline max-w-2xl">
-    <h2 class="headline-title text-2xl sm:text-4xl sm:leading-11 text-transparent bg-clip-text bg-gradient-to-br from-slate-700 via-slate-800 to-slate-950">
+          <div class="section-headline max-w-2xl mx-auto sm:text-center">
+    <h2 class="headline-title font-medium sm:font-normal text-2xl sm:text-4xl sm:leading-11 text-transparent bg-clip-text bg-gradient-to-br from-slate-700 via-slate-800 to-slate-950">
     Scalp &amp; Hair Growth Treatment  </h2>
   </div>
           <p class="mt-4">Talk through your scalp concerns and daily hair care routine, then discuss the care options available for your needs.</p>
@@ -472,7 +501,7 @@
             </blockquote>
             <figcaption class="mt-6 flex items-center gap-3 md:mt-auto md:pt-8 md:pr-28">
               <img
-                src="/assets/images/customer/2.png"
+                src="/assets/images/customer/2.webp"
                 alt=""
                 width="48"
                 height="48"
@@ -492,7 +521,7 @@
             </blockquote>
             <figcaption class="mt-6 flex items-center gap-3 md:mt-auto md:pt-8 md:pr-28">
               <img
-                src="/assets/images/customer/5.png"
+                src="/assets/images/customer/5.webp"
                 alt=""
                 width="48"
                 height="48"
@@ -512,7 +541,7 @@
             </blockquote>
             <figcaption class="mt-6 flex items-center gap-3 md:mt-auto md:pt-8 md:pr-28">
               <img
-                src="/assets/images/customer/8.png"
+                src="/assets/images/customer/8.webp"
                 alt=""
                 width="48"
                 height="48"
@@ -1056,7 +1085,7 @@
         <a href="https://wa.me/601116741858" class="button bg-slate-100 text-slate-900 inline-flex">
           <div class="flex-split">
             <div>Get Free Hair Analysis</div>
-            <div class="size-7 -m-1 -mr-4 ml-5 rounded-full flex items-center justify-center bg-blue-600 text-slate-100">
+            <div class="size-7 -m-1 -mr-4 ml-5 rounded-full flex items-center justify-center text-white bg-gradient-to-br from-purple-500 via-indigo-600 to-indigo-500">
               <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="size-5"><path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z"></path></svg>          </div>
           </div>  
         </a>
@@ -1159,8 +1188,8 @@
   target="_blank"
   rel="noopener noreferrer"
   class="whatsapp-button fixed bottom-6 right-6 z-40 flex size-16 items-center justify-center rounded-full
-    bg-gradient-to-br from-green-500 to-green-600
-    ring-1 ring-inset ring-green-700/50
+    bg-gradient-to-br from-lime-500 via-green-600 to-emerald-500
+    ring-1 ring-inset ring-green-900/50
     shadow-xl shadow-slate-900/40
     text-white transition-colors hover:bg-green-700 focus-visible:outline-2
     focus-visible:outline-offset-2 focus-visible:outline-green-700 js-whatsapp-consultation-link"

@@ -25,12 +25,12 @@
             <?php svg('arrow-down-s-line', 'size-5 transition-transform group-open:rotate-180'); ?>
           </summary>
           <div class="absolute left-0 top-full z-10 mt-3 w-56 rounded-lg border border-slate-200 bg-white p-2 shadow-lg">
-            <a href="http://localhost/rrhairclinic/#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Male Pattern Baldness</a>
-            <a href="http://localhost/rrhairclinic/#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Female Hair Loss</a>
-            <a href="http://localhost/rrhairclinic/#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Receding Hairline</a>
-            <a href="http://localhost/rrhairclinic/#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Thinning Hair</a>
-            <a href="http://localhost/rrhairclinic/#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Crown Hair Loss</a>
-            <a href="http://localhost/rrhairclinic/#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Hair Shedding</a>
+            <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Male Pattern Baldness</a>
+            <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Female Hair Loss</a>
+            <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Receding Hairline</a>
+            <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Thinning Hair</a>
+            <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Crown Hair Loss</a>
+            <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Hair Shedding</a>
           </div>
         </details>
 
@@ -40,12 +40,12 @@
             <?php svg('arrow-down-s-line', 'size-5 transition-transform group-open:rotate-180'); ?>
           </summary>
           <div class="absolute left-0 top-full z-10 mt-3 w-56 rounded-lg border border-slate-200 bg-white p-2 shadow-lg">
-            <a href="http://localhost/rrhairclinic/#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Hair Transplant</a>
-            <a href="http://localhost/rrhairclinic/#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Sapphire FUE</a>
-            <a href="http://localhost/rrhairclinic/#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">PRP Hair Treatment</a>
-            <a href="http://localhost/rrhairclinic/#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Hair Loss Medication</a>
-            <a href="http://localhost/rrhairclinic/#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Scalp Treatment</a>
-            <a href="http://localhost/rrhairclinic/#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Hair Regrowth Treatment</a>
+            <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Hair Transplant</a>
+            <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Sapphire FUE</a>
+            <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">PRP Hair Treatment</a>
+            <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Hair Loss Medication</a>
+            <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Scalp Treatment</a>
+            <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Hair Regrowth Treatment</a>
           </div>
         </details>
 
@@ -55,10 +55,10 @@
             <?php svg('arrow-down-s-line', 'size-5 transition-transform group-open:rotate-180'); ?>
           </summary>
           <div class="absolute left-0 top-full z-10 mt-3 w-56 rounded-lg border border-slate-200 bg-white p-2 shadow-lg">
-            <a href="http://localhost/rrhairclinic/#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">All Products</a>
-            <a href="http://localhost/rrhairclinic/#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Hair Growth</a>
-            <a href="http://localhost/rrhairclinic/#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Hair Loss Shampoo</a>
-            <a href="http://localhost/rrhairclinic/#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Scalp Care</a>
+            <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">All Products</a>
+            <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Hair Growth</a>
+            <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Hair Loss Shampoo</a>
+            <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Scalp Care</a>
           </div>
         </details>
 

@@ -7,8 +7,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/build/app.css?v=1790584243">
-  <script src="/assets/js/app.js?v=1790154070" defer></script>
+  <link rel="stylesheet" href="/assets/build/app.css?v=1791095535">
+  <script src="/assets/js/app.js?v=1791095500" defer></script>
 
   <style>
   </style>
@@ -18,42 +18,87 @@
   <main>
     <header
   class="fixed inset-x-0 top-0 z-40 bg-slate-100 transition-transform duration-300 ease-out
-    motion-reduce:transition-none lg:hidden js-site-mobile-navbar"
+    motion-reduce:transition-none lg:static lg:translate-y-0 lg:transition-none js-site-mobile-navbar"
 >
-  <div class="flex h-18 items-center justify-between px-4">
-    <a href="/" class="text-lg font-semibold text-slate-800 tracking-tight flex items-center">
-      <span class="square border border-slate-600 mr-2 px-1">RR</span>
-      <span class="tracking-tight">HairClinic</span>
+  <div class="flex h-18 items-center justify-between px-4 lg:h-auto lg:px-6 lg:py-4">
+    <a href="/" class="text-xl tracking-tight text-slate-800 tracking-tight flex items-center">
+      <span class="aspect-square w-9 flex items-center justify-center border border-slate-600 mr-2 font-bold">RR</span>
+      <span class="font-medium">HairClinic</span>
     </a>
 
-    <div class="flex items-center gap-1">
-      <a
-        href="#"
-        class="flex size-12 items-center justify-center rounded-full text-slate-950 transition-colors
-          hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-950"
-        aria-label="View cart"
-      >
-        <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="size-6"><path d="M6.50488 2H17.5049C17.8196 2 18.116 2.14819 18.3049 2.4L21.0049 6V21C21.0049 21.5523 20.5572 22 20.0049 22H4.00488C3.4526 22 3.00488 21.5523 3.00488 21V6L5.70488 2.4C5.89374 2.14819 6.19013 2 6.50488 2ZM19.0049 8H5.00488V20H19.0049V8ZM18.5049 6L17.0049 4H7.00488L5.50488 6H18.5049ZM9.00488 10V12C9.00488 13.6569 10.348 15 12.0049 15C13.6617 15 15.0049 13.6569 15.0049 12V10H17.0049V12C17.0049 14.7614 14.7663 17 12.0049 17C9.24346 17 7.00488 14.7614 7.00488 12V10H9.00488Z"/></svg>      </a>
+    <nav class="hidden items-center gap-6 text-sm lg:flex" aria-label="Main navigation">
+        <details class="group relative">
+          <summary class="flex cursor-pointer list-none items-center gap-0.5 text-sm font-medium text-slate-800">
+            Hair Loss
+            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="size-5 transition-transform group-open:rotate-180"><path d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z"/></svg>          </summary>
+          <div class="absolute left-0 top-full z-10 mt-3 w-56 rounded-lg border border-slate-200 bg-white p-2 shadow-lg">
+            <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Male Pattern Baldness</a>
+            <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Female Hair Loss</a>
+            <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Receding Hairline</a>
+            <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Thinning Hair</a>
+            <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Crown Hair Loss</a>
+            <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Hair Shedding</a>
+          </div>
+        </details>
 
-      <span class="h-6 w-px bg-slate-200" aria-hidden="true"></span>
+        <details class="group relative">
+          <summary class="flex cursor-pointer list-none items-center gap-0.5 text-sm font-medium text-slate-800">
+            Treatments
+            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="size-5 transition-transform group-open:rotate-180"><path d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z"/></svg>          </summary>
+          <div class="absolute left-0 top-full z-10 mt-3 w-56 rounded-lg border border-slate-200 bg-white p-2 shadow-lg">
+            <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Hair Transplant</a>
+            <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Sapphire FUE</a>
+            <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">PRP Hair Treatment</a>
+            <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Hair Loss Medication</a>
+            <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Scalp Treatment</a>
+            <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Hair Regrowth Treatment</a>
+          </div>
+        </details>
 
-      <button
-        type="button"
-        class="flex size-12 cursor-pointer items-center justify-center rounded-full text-slate-950 transition-colors
-          hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-950"
-        aria-label="Open menu"
-        aria-controls="site-mobile-menu"
-        aria-expanded="false"
-        data-drawer-open="site-mobile-menu"
-      >
-        <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="size-6"><path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z"/></svg>      </button>
+        <details class="group relative">
+          <summary class="flex cursor-pointer list-none items-center gap-0.5 text-sm font-medium text-slate-800">
+            Products
+            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="size-5 transition-transform group-open:rotate-180"><path d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z"/></svg>          </summary>
+          <div class="absolute left-0 top-full z-10 mt-3 w-56 rounded-lg border border-slate-200 bg-white p-2 shadow-lg">
+            <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">All Products</a>
+            <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Hair Growth</a>
+            <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Hair Loss Shampoo</a>
+            <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Scalp Care</a>
+          </div>
+        </details>
+
+        <a href="#" class="font-medium text-slate-800">Doctors</a>
+
+    </nav>
+
+    <div class="flex items-center gap-1 lg:gap-2">
+          <a
+            href="#"
+            class="flex size-10 items-center justify-center rounded-full text-slate-950 transition-colors
+              hover:bg-slate-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-950"
+            aria-label="View cart"
+          >
+            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="size-6"><path d="M6.50488 2H17.5049C17.8196 2 18.116 2.14819 18.3049 2.4L21.0049 6V21C21.0049 21.5523 20.5572 22 20.0049 22H4.00488C3.4526 22 3.00488 21.5523 3.00488 21V6L5.70488 2.4C5.89374 2.14819 6.19013 2 6.50488 2ZM19.0049 8H5.00488V20H19.0049V8ZM18.5049 6L17.0049 4H7.00488L5.50488 6H18.5049ZM9.00488 10V12C9.00488 13.6569 10.348 15 12.0049 15C13.6617 15 15.0049 13.6569 15.0049 12V10H17.0049V12C17.0049 14.7614 14.7663 17 12.0049 17C9.24346 17 7.00488 14.7614 7.00488 12V10H9.00488Z"/></svg>          </a>
+
+          <span class="h-6 w-px bg-slate-200 lg:h-8 lg:bg-gradient-to-b lg:from-transparent lg:via-slate-300 lg:to-transparent" aria-hidden="true"></span>
+
+          <button
+            type="button"
+            class="flex size-10 cursor-pointer items-center justify-center rounded-full text-slate-950 transition-colors
+              hover:bg-slate-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-950"
+            aria-label="Open menu"
+            aria-controls="site-mobile-menu"
+            aria-expanded="false"
+            data-drawer-open="site-mobile-menu"
+          >
+            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="size-6"><path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z"/></svg>          </button>
     </div>
   </div>
 </header>
 
 <div
   id="site-mobile-menu"
-  class="pointer-events-none fixed inset-0 z-50 opacity-0 transition-opacity duration-200 md:hidden"
+  class="pointer-events-none fixed inset-0 z-50 opacity-0 transition-opacity duration-300 motion-reduce:transition-none"
   aria-hidden="true"
   inert
 >
@@ -66,26 +111,24 @@
   ></button>
 
   <aside
-    class="absolute inset-y-0 right-0 flex w-[min(22rem,calc(100%-3rem))] translate-x-full flex-col bg-white
-      shadow-xl transition-transform duration-300 ease-out motion-reduce:transition-none js-site-drawer-panel"
+    class="absolute inset-y-0 right-0 flex w-[min(24rem,calc(100%-2rem))] translate-x-full flex-col overflow-hidden bg-white
+      shadow-xl transition-transform duration-300 ease-out motion-reduce:transition-none js-component-navbar-drawer-panel"
     role="dialog"
     aria-modal="true"
-    aria-label="Mobile navigation"
+    aria-label="Site navigation"
+    tabindex="-1"
   >
-    <div class="flex h-18 shrink-0 items-center justify-between border-b border-slate-200 px-4">
-      <a href="/" aria-label="RR Hair Clinic home">
-        <img
-          src="/assets/images/logo-rrhairclinic.svg"
-          alt="RR Hair Clinic"
-          class="h-10 w-auto"
-          width="256"
-          height="72"
-        >
+    <div class="flex min-h-18 shrink-0 items-center justify-between gap-3 border-b border-slate-200 px-4
+      pt-[env(safe-area-inset-top)]">
+      <a href="/" class="flex items-center text-xl tracking-tight text-slate-800
+          focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-950">
+        <span class="aspect-square w-9 flex items-center justify-center border border-slate-600 mr-2 font-bold">RR</span>
+        <span class="font-medium">HairClinic</span>
       </a>
 
       <button
         type="button"
-        class="flex size-12 cursor-pointer items-center justify-center rounded-full text-slate-950 transition-colors
+        class="flex size-12 shrink-0 cursor-pointer items-center justify-center rounded-full text-slate-950 transition-colors
           hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-950"
         aria-label="Close menu"
         data-drawer-close
@@ -93,185 +136,170 @@
         <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="size-6"><path d="M11.9997 10.5865L16.9495 5.63672L18.3637 7.05093L13.4139 12.0007L18.3637 16.9504L16.9495 18.3646L11.9997 13.4149L7.04996 18.3646L5.63574 16.9504L10.5855 12.0007L5.63574 7.05093L7.04996 5.63672L11.9997 10.5865Z"/></svg>      </button>
     </div>
 
-    <nav class="flex-1 overflow-y-auto px-4 py-5" aria-label="Main navigation">
+    <nav class="min-h-0 flex-1 overflow-y-auto overscroll-contain px-4 py-2" aria-label="Main navigation">
       <details class="group border-b border-slate-200">
-        <summary class="flex min-h-14 cursor-pointer list-none items-center justify-between font-medium text-slate-950">
-          Hair Loss
-          <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="size-5 transition-transform group-open:rotate-180"><path d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z"/></svg>        </summary>
-        <div class="space-y-1 pb-4 pl-4">
-          <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">
+        <summary class="flex min-h-14 cursor-pointer list-none items-start justify-between gap-4 rounded-md px-2 py-4
+          font-medium text-slate-950 transition-colors hover:bg-slate-100
+          focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-950
+          [&::-webkit-details-marker]:hidden">
+          <span class="min-w-0">
+            <span class="block">Hair Loss</span>
+            <span class="mt-1 block text-sm font-normal leading-relaxed text-slate-600">
+              Explore common causes and patterns of hair loss.
+            </span>
+          </span>
+          <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="mt-0.5 size-5 shrink-0 transition-transform group-open:rotate-180 motion-reduce:transition-none"><path d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z"/></svg>        </summary>
+        <div class="space-y-1 pb-4 pl-2">
+          <a href="#" class="flex min-h-11 items-center rounded-md px-3 py-2 text-sm text-slate-700 transition-colors
+              hover:bg-slate-100 hover:text-slate-950 focus-visible:outline-2
+              focus-visible:outline-offset-2 focus-visible:outline-slate-950">
             Male Pattern Baldness
           </a>
-          <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">
+          <a href="#" class="flex min-h-11 items-center rounded-md px-3 py-2 text-sm text-slate-700 transition-colors
+              hover:bg-slate-100 hover:text-slate-950 focus-visible:outline-2
+              focus-visible:outline-offset-2 focus-visible:outline-slate-950">
             Female Hair Loss
           </a>
-          <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">
+          <a href="#" class="flex min-h-11 items-center rounded-md px-3 py-2 text-sm text-slate-700 transition-colors
+              hover:bg-slate-100 hover:text-slate-950 focus-visible:outline-2
+              focus-visible:outline-offset-2 focus-visible:outline-slate-950">
             Receding Hairline
           </a>
-          <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">
+          <a href="#" class="flex min-h-11 items-center rounded-md px-3 py-2 text-sm text-slate-700 transition-colors
+              hover:bg-slate-100 hover:text-slate-950 focus-visible:outline-2
+              focus-visible:outline-offset-2 focus-visible:outline-slate-950">
             Thinning Hair
           </a>
-          <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">
+          <a href="#" class="flex min-h-11 items-center rounded-md px-3 py-2 text-sm text-slate-700 transition-colors
+              hover:bg-slate-100 hover:text-slate-950 focus-visible:outline-2
+              focus-visible:outline-offset-2 focus-visible:outline-slate-950">
             Crown Hair Loss
           </a>
-          <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">
+          <a href="#" class="flex min-h-11 items-center rounded-md px-3 py-2 text-sm text-slate-700 transition-colors
+              hover:bg-slate-100 hover:text-slate-950 focus-visible:outline-2
+              focus-visible:outline-offset-2 focus-visible:outline-slate-950">
             Hair Shedding
           </a>
         </div>
       </details>
 
       <details class="group border-b border-slate-200">
-        <summary class="flex min-h-14 cursor-pointer list-none items-center justify-between font-medium text-slate-950">
-          Treatments
-          <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="size-5 transition-transform group-open:rotate-180"><path d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z"/></svg>        </summary>
-        <div class="space-y-1 pb-4 pl-4">
-          <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">
+        <summary class="flex min-h-14 cursor-pointer list-none items-start justify-between gap-4 rounded-md px-2 py-4
+          font-medium text-slate-950 transition-colors hover:bg-slate-100
+          focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-950
+          [&::-webkit-details-marker]:hidden">
+          <span class="min-w-0">
+            <span class="block">Treatments</span>
+            <span class="mt-1 block text-sm font-normal leading-relaxed text-slate-600">
+              Find out about our hair and scalp treatment options.
+            </span>
+          </span>
+          <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="mt-0.5 size-5 shrink-0 transition-transform group-open:rotate-180 motion-reduce:transition-none"><path d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z"/></svg>        </summary>
+        <div class="space-y-1 pb-4 pl-2">
+          <a href="#" class="flex min-h-11 items-center rounded-md px-3 py-2 text-sm text-slate-700 transition-colors
+              hover:bg-slate-100 hover:text-slate-950 focus-visible:outline-2
+              focus-visible:outline-offset-2 focus-visible:outline-slate-950">
             Hair Transplant
           </a>
-          <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">
+          <a href="#" class="flex min-h-11 items-center rounded-md px-3 py-2 text-sm text-slate-700 transition-colors
+              hover:bg-slate-100 hover:text-slate-950 focus-visible:outline-2
+              focus-visible:outline-offset-2 focus-visible:outline-slate-950">
             Sapphire FUE
           </a>
-          <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">
+          <a href="#" class="flex min-h-11 items-center rounded-md px-3 py-2 text-sm text-slate-700 transition-colors
+              hover:bg-slate-100 hover:text-slate-950 focus-visible:outline-2
+              focus-visible:outline-offset-2 focus-visible:outline-slate-950">
             PRP Hair Treatment
           </a>
-          <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">
+          <a href="#" class="flex min-h-11 items-center rounded-md px-3 py-2 text-sm text-slate-700 transition-colors
+              hover:bg-slate-100 hover:text-slate-950 focus-visible:outline-2
+              focus-visible:outline-offset-2 focus-visible:outline-slate-950">
             Hair Loss Medication
           </a>
-          <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">
+          <a href="#" class="flex min-h-11 items-center rounded-md px-3 py-2 text-sm text-slate-700 transition-colors
+              hover:bg-slate-100 hover:text-slate-950 focus-visible:outline-2
+              focus-visible:outline-offset-2 focus-visible:outline-slate-950">
             Scalp Treatment
           </a>
-          <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">
+          <a href="#" class="flex min-h-11 items-center rounded-md px-3 py-2 text-sm text-slate-700 transition-colors
+              hover:bg-slate-100 hover:text-slate-950 focus-visible:outline-2
+              focus-visible:outline-offset-2 focus-visible:outline-slate-950">
             Hair Regrowth Treatment
           </a>
         </div>
       </details>
 
       <details class="group border-b border-slate-200">
-        <summary class="flex min-h-14 cursor-pointer list-none items-center justify-between font-medium text-slate-950">
-          Products
-          <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="size-5 transition-transform group-open:rotate-180"><path d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z"/></svg>        </summary>
-        <div class="space-y-1 pb-4 pl-4">
-          <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">
+        <summary class="flex min-h-14 cursor-pointer list-none items-start justify-between gap-4 rounded-md px-2 py-4
+          font-medium text-slate-950 transition-colors hover:bg-slate-100
+          focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-950
+          [&::-webkit-details-marker]:hidden">
+          <span class="min-w-0">
+            <span class="block">Products</span>
+            <span class="mt-1 block text-sm font-normal leading-relaxed text-slate-600">
+              Browse products for hair growth and scalp care.
+            </span>
+          </span>
+          <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="mt-0.5 size-5 shrink-0 transition-transform group-open:rotate-180 motion-reduce:transition-none"><path d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z"/></svg>        </summary>
+        <div class="space-y-1 pb-4 pl-2">
+          <a href="#" class="flex min-h-11 items-center rounded-md px-3 py-2 text-sm text-slate-700 transition-colors
+              hover:bg-slate-100 hover:text-slate-950 focus-visible:outline-2
+              focus-visible:outline-offset-2 focus-visible:outline-slate-950">
             All Products
           </a>
-          <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">
+          <a href="#" class="flex min-h-11 items-center rounded-md px-3 py-2 text-sm text-slate-700 transition-colors
+              hover:bg-slate-100 hover:text-slate-950 focus-visible:outline-2
+              focus-visible:outline-offset-2 focus-visible:outline-slate-950">
             Hair Growth
           </a>
-          <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">
+          <a href="#" class="flex min-h-11 items-center rounded-md px-3 py-2 text-sm text-slate-700 transition-colors
+              hover:bg-slate-100 hover:text-slate-950 focus-visible:outline-2
+              focus-visible:outline-offset-2 focus-visible:outline-slate-950">
             Hair Loss Shampoo
           </a>
-          <a href="#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">
+          <a href="#" class="flex min-h-11 items-center rounded-md px-3 py-2 text-sm text-slate-700 transition-colors
+              hover:bg-slate-100 hover:text-slate-950 focus-visible:outline-2
+              focus-visible:outline-offset-2 focus-visible:outline-slate-950">
             Scalp Care
           </a>
         </div>
       </details>
 
-      <a href="#" class="flex min-h-14 items-center border-b border-slate-200 font-medium text-slate-950">
+      <a href="#" class="flex min-h-14 items-center border-b border-slate-200 px-2 font-medium text-slate-950
+          transition-colors hover:bg-slate-100 focus-visible:outline-2
+          focus-visible:outline-offset-2 focus-visible:outline-slate-950">
         Our Doctors
       </a>
-      <a href="#" class="flex min-h-14 items-center border-b border-slate-200 font-medium text-slate-950">
+      <a href="#" class="flex min-h-14 items-center border-b border-slate-200 px-2 font-medium text-slate-950
+          transition-colors hover:bg-slate-100 focus-visible:outline-2
+          focus-visible:outline-offset-2 focus-visible:outline-slate-950">
         Case Studies
       </a>
-      <a href="#" class="flex min-h-14 items-center border-b border-slate-200 font-medium text-slate-950">
+      <a href="#" class="flex min-h-14 items-center border-b border-slate-200 px-2 font-medium text-slate-950
+          transition-colors hover:bg-slate-100 focus-visible:outline-2
+          focus-visible:outline-offset-2 focus-visible:outline-slate-950">
         About
       </a>
     </nav>
 
-    <div class="shrink-0 border-t border-slate-200 p-4">
-      <a href="#" class="button w-full bg-slate-950 text-white">
+    <div class="shrink-0 border-t border-slate-200 p-4 pb-[max(1rem,env(safe-area-inset-bottom))]">
+      <a href="#" class="button flex w-full items-center justify-center gap-2 bg-slate-950 text-white transition-colors
+          hover:bg-slate-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-950">
         Contact Us
         <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="size-5"><path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z"/></svg>      </a>
     </div>
   </aside>
 </div>
-<header class="hidden lg:block">
-  <div class="px-6">
-    <div class="flex-split py-4">
-      <a href="/" class="text-lg font-semibold text-slate-800 tracking-tight flex items-center">
-        <span class="square border border-slate-600 mr-2 px-1">RR</span>
-        <span class="tracking-tight">HairClinic</span>
-      </a>
-
-      <nav class="flex items-center gap-6 text-sm" aria-label="Main navigation">
-        <details class="group relative">
-          <summary class="flex cursor-pointer list-none items-center gap-0.5 text-sm font-medium text-slate-800">
-            Hair Loss
-            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="size-5 transition-transform group-open:rotate-180"><path d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z"/></svg>          </summary>
-          <div class="absolute left-0 top-full z-10 mt-3 w-56 rounded-lg border border-slate-200 bg-white p-2 shadow-lg">
-            <a href="http://localhost/rrhairclinic/#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Male Pattern Baldness</a>
-            <a href="http://localhost/rrhairclinic/#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Female Hair Loss</a>
-            <a href="http://localhost/rrhairclinic/#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Receding Hairline</a>
-            <a href="http://localhost/rrhairclinic/#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Thinning Hair</a>
-            <a href="http://localhost/rrhairclinic/#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Crown Hair Loss</a>
-            <a href="http://localhost/rrhairclinic/#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Hair Shedding</a>
-          </div>
-        </details>
-
-        <details class="group relative">
-          <summary class="flex cursor-pointer list-none items-center gap-0.5 text-sm font-medium text-slate-800">
-            Treatments
-            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="size-5 transition-transform group-open:rotate-180"><path d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z"/></svg>          </summary>
-          <div class="absolute left-0 top-full z-10 mt-3 w-56 rounded-lg border border-slate-200 bg-white p-2 shadow-lg">
-            <a href="http://localhost/rrhairclinic/#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Hair Transplant</a>
-            <a href="http://localhost/rrhairclinic/#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Sapphire FUE</a>
-            <a href="http://localhost/rrhairclinic/#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">PRP Hair Treatment</a>
-            <a href="http://localhost/rrhairclinic/#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Hair Loss Medication</a>
-            <a href="http://localhost/rrhairclinic/#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Scalp Treatment</a>
-            <a href="http://localhost/rrhairclinic/#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Hair Regrowth Treatment</a>
-          </div>
-        </details>
-
-        <details class="group relative">
-          <summary class="flex cursor-pointer list-none items-center gap-0.5 text-sm font-medium text-slate-800">
-            Products
-            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="size-5 transition-transform group-open:rotate-180"><path d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z"/></svg>          </summary>
-          <div class="absolute left-0 top-full z-10 mt-3 w-56 rounded-lg border border-slate-200 bg-white p-2 shadow-lg">
-            <a href="http://localhost/rrhairclinic/#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">All Products</a>
-            <a href="http://localhost/rrhairclinic/#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Hair Growth</a>
-            <a href="http://localhost/rrhairclinic/#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Hair Loss Shampoo</a>
-            <a href="http://localhost/rrhairclinic/#" class="block rounded-md px-3 py-2 text-sm text-slate-700 hover:bg-slate-100">Scalp Care</a>
-          </div>
-        </details>
-
-        <a href="#" class="font-medium text-slate-800">Doctors</a>
-
-        <div class="flex items-center gap-2">
-          <a
-            href="#"
-            class="flex size-10 items-center justify-center rounded-full text-slate-950 transition-colors
-              hover:bg-slate-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-950"
-            aria-label="View cart"
-          >
-            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="size-6"><path d="M6.50488 2H17.5049C17.8196 2 18.116 2.14819 18.3049 2.4L21.0049 6V21C21.0049 21.5523 20.5572 22 20.0049 22H4.00488C3.4526 22 3.00488 21.5523 3.00488 21V6L5.70488 2.4C5.89374 2.14819 6.19013 2 6.50488 2ZM19.0049 8H5.00488V20H19.0049V8ZM18.5049 6L17.0049 4H7.00488L5.50488 6H18.5049ZM9.00488 10V12C9.00488 13.6569 10.348 15 12.0049 15C13.6617 15 15.0049 13.6569 15.0049 12V10H17.0049V12C17.0049 14.7614 14.7663 17 12.0049 17C9.24346 17 7.00488 14.7614 7.00488 12V10H9.00488Z"/></svg>          </a>
-
-          <span class="h-8 w-px bg-gradient-to-b from-transparent via-slate-300 to-transparent" aria-hidden="true"></span>
-
-          <button
-            type="button"
-            class="flex size-10 cursor-pointer items-center justify-center rounded-full text-slate-950 transition-colors
-              hover:bg-slate-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-950"
-            aria-label="Open menu"
-            aria-controls="site-mobile-menu"
-            aria-expanded="false"
-            data-drawer-open="site-mobile-menu"
-          >
-            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="size-6"><path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z"/></svg>          </button>
-        </div>
-      </nav>
-    </div>
-  </div>
-</header>
-<section class="section section-hero bg-slate-700 min-h-dvh sm:min-h-[800px] flex flex-col rounded-md sm:rounded-none relative" style="--hero-image: url(/assets/images/hero-v5.png); --hero-mobile-image: url(/assets/images/hero-mobile-v2.png);">
+<section class="section section-hero bg-slate-700 min-h-dvh sm:min-h-[800px] flex flex-col rounded-md sm:rounded-none relative" style="--hero-image: url(/assets/images/hero.webp); --hero-mobile-image: url(/assets/images/hero-mobile.webp);">
   <div class="bg-gradient-to-b from-slate-100 via-slate-100 to-transparent absolute w-full h-40 sm:h-70 top-0 left-0"></div>
   <div class="bg-gradient-to-t from-slate-100 to-transparent absolute w-full h-40 bottom-0 left-0"></div>
   
-  <div class="hero-badges pointer-events-none absolute inset-x-0 top-[58%] z-10 container hidden">
-    <div class="absolute left-0 top-0 flex max-w-60 items-center gap-3 rounded-2xl border border-white/70 bg-white/65 px-4 py-3 shadow-lg shadow-slate-900/10 backdrop-blur-md">
-      <div class="flex size-10 shrink-0 items-center justify-center rounded-full bg-white/70 text-slate-700">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="size-5"><path d="M6 3v5a4 4 0 0 0 8 0V3M6 3H4m2 0h2m6 0h-2m2 0h2m-4 5v4a5 5 0 0 0 10 0v-1" stroke-linecap="round" stroke-linejoin="round"/><circle cx="20" cy="9" r="1.5"/></svg>      </div>
+  <div class="hero-badges pointer-events-none absolute inset-x-0 top-[58%] z-10 container hidden sm:blocks">
+    <div class="absolute left-0 top-0 flex max-w-60 items-center gap-3 rounded-lg border border-white/40 bg-white/20 pl-3 pr-4 py-2 shadow-lg shadow-slate-900/10 backdrop-blur-xs">
+      <div class="flex size-6 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-green-500 to-teal-700 text-slate-700">
+              </div>
       <div>
-        <div class="text-sm font-semibold text-slate-800">Doctor-led care</div>
-        <div class="text-xs text-slate-600">Personalised hair treatment</div>
+        <div class="text-sm font-semibold text-slate-800">ISO 2026 Certified</div>
       </div>
     </div>
     <div class="absolute right-0 top-16 flex max-w-60 items-center gap-3 rounded-2xl border border-white/70 bg-white/65 px-4 py-3 shadow-lg shadow-slate-900/10 backdrop-blur-md">
@@ -292,14 +320,14 @@
       <h1 class="headline-subtitle text-sm leading-6 sm:leading-7 sm:text-xl mt-3 sm:mt-2 max-w-2xl mx-auto">
         Personalised, doctor-led treatment for thinning hair, receding hairlines and advanced hair loss.
       </h1>
-      <a href="#" class="button-lg bg-gradient-to-br w-full sm:w-auto from-purple-500 via-indigo-600 to-indigo-500 text-slate-100 text-shadow-2xs text-shadow-indigo-900/50 ring-1 ring-inset ring-indigo-900/50 inline-flex mt-7 transform duration-200 translate-y-0 hover:-translate-y-1 shadow-lg shadow-slate-400 hover:shadow-3xl hover:shadow-slate-500">
-        <div class="flex-split w-full">
+      <a href="/hair-check" class="button-lg bg-gradient-to-br w-full sm:w-auto from-purple-500 via-indigo-600 to-indigo-500 text-white text-shadow-2xs text-shadow-indigo-900/50 ring-1 ring-inset ring-indigo-900/50 inline-flex mt-7 transform duration-200 translate-y-0 hover:-translate-y-1 shadow-lg shadow-slate-400 hover:shadow-3xl hover:shadow-slate-500">
+        <div class="flex-split w-full font-normal text-lg">
           <div>Start Free Hair Check</div>
           <div class="size-7 -m-1 -mr-4 ml-5 rounded-full flex items-center justify-center bg-white text-blue-600">
             <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="size-5"><path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z"></path></svg>          </div>
         </div>
       </a>
-      <div class="text-xs text-slate-500 mt-5 hidden sm:block">Send 3 photos. Get your assessment within 24 hours. <br>Free · Private · No obligation</div>
+      <div class="text-xs text-slate-500 mt-5 hidden sm:block">A short questionnaire to help us understand your concerns. <br>Preview only · Answers are not sent</div>
       <div class="sm:hidden mb-6 mt-5">
           <div class="trust-reviews sm:flex items-center gap-2 mb-3 sm:flex-col sm:items-start sm:gap-0">
   <div class="star-rating relative w-max" role="img" aria-label="4.5 out of 5 stars">
@@ -313,11 +341,11 @@
   <div class="mt-1 text-sm text-slate-600">From 500+ verified Google Reviews</div>
 </div>
           <div class="trust-avatars flex gap-0">
-            <div class="aspect-1/1 size-10 rounded-full border-2 border-white shadow-md -mx-1"><img src="/assets/images/customer/5.png" /></div>
-            <div class="aspect-1/1 size-10 rounded-full border-2 border-white shadow-md -mx-1"><img src="/assets/images/customer/6.png" /></div>
-            <div class="aspect-1/1 size-10 rounded-full border-2 border-white shadow-md -mx-1"><img src="/assets/images/customer/7.png" /></div>
-            <div class="aspect-1/1 size-10 rounded-full border-2 border-white shadow-md -mx-1"><img src="/assets/images/customer/8.png" /></div>
-            <div class="aspect-1/1 size-10 rounded-full border-2 border-white shadow-md -mx-1"><img src="/assets/images/customer/9.png" /></div>
+            <div class="aspect-1/1 size-10 rounded-full border-2 border-white shadow-md -mx-1"><img src="/assets/images/customer/5.webp" class="size-full rounded-full object-cover" /></div>
+            <div class="aspect-1/1 size-10 rounded-full border-2 border-white shadow-md -mx-1"><img src="/assets/images/customer/6.webp" class="size-full rounded-full object-cover" /></div>
+            <div class="aspect-1/1 size-10 rounded-full border-2 border-white shadow-md -mx-1"><img src="/assets/images/customer/7.webp" class="size-full rounded-full object-cover" /></div>
+            <div class="aspect-1/1 size-10 rounded-full border-2 border-white shadow-md -mx-1"><img src="/assets/images/customer/8.webp" class="size-full rounded-full object-cover" /></div>
+            <div class="aspect-1/1 size-10 rounded-full border-2 border-white shadow-md -mx-1"><img src="/assets/images/customer/9.webp" class="size-full rounded-full object-cover" /></div>
           </div>
         </div>
     </div>
@@ -337,11 +365,11 @@
   <div class="mt-1 text-sm text-slate-600">From 500+ verified Google Reviews</div>
 </div>
         <div class="trust-avatars flex gap-0">
-          <div class="aspect-1/1 size-10 rounded-full border-2 border-white shadow-md -mx-1"><img src="/assets/images/customer/5.png" /></div>
-          <div class="aspect-1/1 size-10 rounded-full border-2 border-white shadow-md -mx-1"><img src="/assets/images/customer/6.png" /></div>
-          <div class="aspect-1/1 size-10 rounded-full border-2 border-white shadow-md -mx-1"><img src="/assets/images/customer/7.png" /></div>
-          <div class="aspect-1/1 size-10 rounded-full border-2 border-white shadow-md -mx-1"><img src="/assets/images/customer/8.png" /></div>
-          <div class="aspect-1/1 size-10 rounded-full border-2 border-white shadow-md -mx-1"><img src="/assets/images/customer/9.png" /></div>
+          <div class="aspect-1/1 size-10 rounded-full border-2 border-white shadow-md -mx-1"><img src="/assets/images/customer/5.webp" class="size-full rounded-full object-cover" /></div>
+          <div class="aspect-1/1 size-10 rounded-full border-2 border-white shadow-md -mx-1"><img src="/assets/images/customer/6.webp" class="size-full rounded-full object-cover" /></div>
+          <div class="aspect-1/1 size-10 rounded-full border-2 border-white shadow-md -mx-1"><img src="/assets/images/customer/7.webp" class="size-full rounded-full object-cover" /></div>
+          <div class="aspect-1/1 size-10 rounded-full border-2 border-white shadow-md -mx-1"><img src="/assets/images/customer/8.webp" class="size-full rounded-full object-cover" /></div>
+          <div class="aspect-1/1 size-10 rounded-full border-2 border-white shadow-md -mx-1"><img src="/assets/images/customer/9.webp" class="size-full rounded-full object-cover" /></div>
         </div>
       </div>
       <div class="w-110">
@@ -364,43 +392,47 @@
 </section>
 <section class="section section-hairloss js-hair-loss-carousel">
   <div class="container">
-    <div class="section-headline max-w-2xl">
+    <div class="section-headline max-w-2xl mx-auto sm:text-center">
     <div class="headline-topic mb-2 sm:mb-5 text-xs text-slate-500 uppercase">Hair Loss Issues</div>
-    <h2 class="headline-title text-2xl sm:text-4xl sm:leading-11 text-transparent bg-clip-text bg-gradient-to-br from-slate-700 via-slate-800 to-slate-950">
+    <h2 class="headline-title font-medium sm:font-normal text-2xl sm:text-4xl sm:leading-11 text-transparent bg-clip-text bg-gradient-to-br from-slate-700 via-slate-800 to-slate-950">
     Understand what your hair <br class="hidden md:block" /> is trying to tell you.  </h2>
     <div class="headline-subtitle mt-2 sm:mt-5 hidden">
     Different patterns of hair loss need different treatment plans. <br class="hidden md:block" /> Start by identifying what you are experiencing.  </div>
   </div>
 
-    
-    <div class="relative -mt-10 js-hair-loss-controls" hidden>
-  <div class="flex items-center justify-end gap-2">
+      </div>
+
+  <div class="carousel-hairloss relative -mx-6 md:mx-0 mt-5 sm:-mt-5">
+    <div class="container md:w-[calc(100%-5rem)]">
+      <div class="relative mb-5 js-hair-loss-controls" hidden>
+  <div class="flex items-center justify-end gap-1">
     <button type="button"
-            class="flex size-[40px] shrink-0 items-center justify-center rounded-full ring-1 cursor-pointer
-                   focus-visible:outline-2 focus-visible:outline-offset-4 bg-slate-100/0 text-slate-700
-                   ring-slate-300 hover:bg-slate-200 focus-visible:outline-slate-600 js-hair-loss-prev"
+            class="flex size-9 shrink-0 items-center justify-center rounded-full cursor-pointer
+                   border border-slate-950/60
+                   text-white
+                   bg-gradient-to-br from-slate-400 via-slate-800 to-slate-500
+                   focus-visible:outline-2 focus-visible:outline-offset-4
+                 focus-visible:outline-slate-600 js-hair-loss-prev"
             aria-label="Previous hair loss slide" aria-controls="hair-loss-track">
       <span aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="size-5"><path d="M7.82843 10.9999H20V12.9999H7.82843L13.1924 18.3638L11.7782 19.778L4 11.9999L11.7782 4.22168L13.1924 5.63589L7.82843 10.9999Z"/></svg></span>
     </button>
     <button type="button"
-            class="flex size-[40px] shrink-0 items-center justify-center rounded-full ring-1 cursor-pointer
-                   focus-visible:outline-2 focus-visible:outline-offset-4 bg-slate-100/0 text-slate-700
-                   ring-slate-300 hover:bg-slate-200 focus-visible:outline-slate-600 js-hair-loss-next"
+            class="flex size-9 shrink-0 items-center justify-center rounded-full cursor-pointer
+                   border border-slate-950/60
+                   text-white
+                   bg-gradient-to-br from-slate-400 via-slate-800 to-slate-500
+                   focus-visible:outline-2 focus-visible:outline-offset-4
+                    focus-visible:outline-slate-600 js-hair-loss-next"
             aria-label="Next hair loss slide" aria-controls="hair-loss-track">
       <span aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="size-5"><path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"/></svg></span>
     </button>
   </div>
   <p class="sr-only js-hair-loss-status" role="status" aria-live="polite" aria-atomic="true"></p>
 </div>
-  </div>
-
-  <div class="relative -mt-3 sm:mt-10 -mx-6 md:-mx-10">
-    <div class="container md:w-[calc(100%-5rem)]">
-      <div id="hair-loss-track" class="grid grid-cols-1 gap-2 md:grid-cols-4 py-10 md:py-0 px-6 md:px-0 js-hair-loss-track"
+      <div id="hair-loss-track" class="grid grid-cols-1 gap-2 md:grid-cols-4 md:py-0 px-6 md:px-0 js-hair-loss-track"
            role="group" aria-roledescription="carousel" aria-label="Hair loss issues">
-                <a href="#"
-           class="card group flex flex-col px-4 pt-3 sm:px-6 sm:pt-5 overflow-hidden hover:-translate-y-2 my-px
-                  hover:shadow-xl hover:ring-2 hover:shadow-indigo-300 hover:ring-indigo-600">
+                <div
+           class="card group flex flex-col px-4 pt-3 sm:px-6 sm:pt-5 overflow-hidden my-px">
           <h3 class="font-medium text-lg text-slate-950 transition duration-200 ease-out group-hover:text-indigo-700 mb-10">Hair Loss</h3>
           <p class="-mt-8 mb-5 text-sm text-slate-500 transition duration-200 ease-out group-hover:text-slate-600">
             Changes in hair density, growth or shedding.          </p>
@@ -416,10 +448,9 @@
             <div class="pointer-events-none absolute inset-y-0 left-0 w-30 bg-gradient-to-r from-white to-transparent hidden sm:block"></div>
             <div class="pointer-events-none absolute inset-y-0 right-0 w-30 bg-gradient-to-l from-white to-transparent hidden sm:block"></div>
           </div>
-        </a>
-                <a href="#"
-           class="card group flex flex-col px-4 pt-3 sm:px-6 sm:pt-5 overflow-hidden hover:-translate-y-2 my-px
-                  hover:shadow-xl hover:ring-2 hover:shadow-indigo-300 hover:ring-indigo-600">
+        </div>
+                <div
+           class="card group flex flex-col px-4 pt-3 sm:px-6 sm:pt-5 overflow-hidden my-px">
           <h3 class="font-medium text-lg text-slate-950 transition duration-200 ease-out group-hover:text-indigo-700 mb-10">Male Pattern Baldness</h3>
           <p class="-mt-8 mb-5 text-sm text-slate-500 transition duration-200 ease-out group-hover:text-slate-600">
             Gradual thinning at the temples, crown or hairline.          </p>
@@ -436,10 +467,9 @@
             <div class="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-white to-transparent hidden sm:block"></div>
             <div class="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white to-transparent hidden sm:block"></div>
           </div>
-        </a>
-                <a href="#"
-           class="card group flex flex-col px-4 pt-3 sm:px-6 sm:pt-5 overflow-hidden hover:-translate-y-2 my-px
-                  hover:shadow-xl hover:ring-2 hover:shadow-indigo-300 hover:ring-indigo-600">
+        </div>
+                <div
+           class="card group flex flex-col px-4 pt-3 sm:px-6 sm:pt-5 overflow-hidden my-px">
           <h3 class="font-medium text-lg text-slate-950 transition duration-200 ease-out group-hover:text-indigo-700 mb-10">Female Pattern Hair Loss</h3>
           <p class="-mt-8 mb-5 text-sm text-slate-500 transition duration-200 ease-out group-hover:text-slate-600">
             Thinning across the scalp, wider parting or reduced volume.          </p>
@@ -456,10 +486,9 @@
             <div class="pointer-events-none absolute inset-y-0 left-0 w-30 bg-gradient-to-r from-white to-transparent hidden sm:block"></div>
             <div class="pointer-events-none absolute inset-y-0 right-0 w-30 bg-gradient-to-l from-white to-transparent hidden sm:block"></div>
           </div>
-        </a>
-                <a href="#"
-           class="card group flex flex-col px-4 pt-3 sm:px-6 sm:pt-5 overflow-hidden hover:-translate-y-2 my-px
-                  hover:shadow-xl hover:ring-2 hover:shadow-indigo-300 hover:ring-indigo-600">
+        </div>
+                <div
+           class="card group flex flex-col px-4 pt-3 sm:px-6 sm:pt-5 overflow-hidden my-px">
           <h3 class="font-medium text-lg text-slate-950 transition duration-200 ease-out group-hover:text-indigo-700 mb-10">Receding Hairline</h3>
           <p class="-mt-8 mb-5 text-sm text-slate-500 transition duration-200 ease-out group-hover:text-slate-600">
             Hairline moving back at the temples or forehead.          </p>
@@ -476,10 +505,9 @@
             <div class="pointer-events-none absolute inset-y-0 left-0 w-30 bg-gradient-to-r from-white to-transparent hidden sm:block"></div>
             <div class="pointer-events-none absolute inset-y-0 right-0 w-30 bg-gradient-to-l from-white to-transparent hidden sm:block"></div>
           </div>
-        </a>
-                <a href="#"
-           class="card group flex flex-col px-4 pt-3 sm:px-6 sm:pt-5 overflow-hidden hover:-translate-y-2 my-px
-                  hover:shadow-xl hover:ring-2 hover:shadow-indigo-300 hover:ring-indigo-600">
+        </div>
+                <div
+           class="card group flex flex-col px-4 pt-3 sm:px-6 sm:pt-5 overflow-hidden my-px">
           <h3 class="font-medium text-lg text-slate-950 transition duration-200 ease-out group-hover:text-indigo-700 mb-10">Thinning Hair</h3>
           <p class="-mt-8 mb-5 text-sm text-slate-500 transition duration-200 ease-out group-hover:text-slate-600">
             Reduced density or weaker strands that leave hair looking finer.          </p>
@@ -496,10 +524,9 @@
             <div class="pointer-events-none absolute inset-y-0 left-0 w-30 bg-gradient-to-r from-white to-transparent hidden sm:block"></div>
             <div class="pointer-events-none absolute inset-y-0 right-0 w-30 bg-gradient-to-l from-white to-transparent hidden sm:block"></div>
           </div>
-        </a>
-                <a href="#"
-           class="card group flex flex-col px-4 pt-3 sm:px-6 sm:pt-5 overflow-hidden hover:-translate-y-2 my-px
-                  hover:shadow-xl hover:ring-2 hover:shadow-indigo-300 hover:ring-indigo-600">
+        </div>
+                <div
+           class="card group flex flex-col px-4 pt-3 sm:px-6 sm:pt-5 overflow-hidden my-px">
           <h3 class="font-medium text-lg text-slate-950 transition duration-200 ease-out group-hover:text-indigo-700 mb-10">Crown Hair Loss</h3>
           <p class="-mt-8 mb-5 text-sm text-slate-500 transition duration-200 ease-out group-hover:text-slate-600">
             Visible thinning or balding at the crown.          </p>
@@ -516,10 +543,9 @@
             <div class="pointer-events-none absolute inset-y-0 left-0 w-30 bg-gradient-to-r from-white to-transparent hidden sm:block"></div>
             <div class="pointer-events-none absolute inset-y-0 right-0 w-30 bg-gradient-to-l from-white to-transparent hidden sm:block"></div>
           </div>
-        </a>
-                <a href="#"
-           class="card group flex flex-col px-4 pt-3 sm:px-6 sm:pt-5 overflow-hidden hover:-translate-y-2 my-px
-                  hover:shadow-xl hover:ring-2 hover:shadow-indigo-300 hover:ring-indigo-600">
+        </div>
+                <div
+           class="card group flex flex-col px-4 pt-3 sm:px-6 sm:pt-5 overflow-hidden my-px">
           <h3 class="font-medium text-lg text-slate-950 transition duration-200 ease-out group-hover:text-indigo-700 mb-10">Excessive Hair Shedding</h3>
           <p class="-mt-8 mb-5 text-sm text-slate-500 transition duration-200 ease-out group-hover:text-slate-600">
             More hair falling out than usual each day.          </p>
@@ -536,29 +562,480 @@
             <div class="pointer-events-none absolute inset-y-0 left-0 w-30 bg-gradient-to-r from-white to-transparent hidden sm:block"></div>
             <div class="pointer-events-none absolute inset-y-0 right-0 w-30 bg-gradient-to-l from-white to-transparent hidden sm:block"></div>
           </div>
-        </a>
+        </div>
                 <a href="#"
            class="card group flex flex-col items-center justify-center p-6 pb-4 my-px
-                  overflow-hidden hover:-translate-y-2 hover:shadow-xl hover:ring-2
-                  hover:shadow-indigo-300 hover:ring-indigo-600">
+                  overflow-hidden hover:-translate-y-2---hover:shadow-xl---hover:ring-2
+                  hover:shadow-indigo-300---hover:ring-indigo-600">
           <span class="font-medium text-lg text-slate-950 transition duration-200 ease-out group-hover:text-indigo-700">View more</span>
           <span class="mt-4 text-slate-900" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="size-6"><path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"/></svg>          </span>
         </a>
       </div>
-
     </div>
     <div aria-hidden="true"
          class="pointer-events-none absolute -inset-y-3 left-0 z-10 w-6 bg-gradient-to-r from-slate-100 to-transparent md:w-15 lg:w-24 hidden sm:block"></div>
     <div aria-hidden="true"
          class="pointer-events-none absolute -inset-y-3 right-0 z-10 w-6 bg-gradient-to-l from-slate-100 to-transparent md:w-15 lg:w-24 hidden sm:block"></div>
+
+    
   </div>
 
-  <div class="container sm:mt-8">
-    <h3 class="hairloss-quote text-xl sm:text-2xl max-w-5xl">
-      <span class="font-medium text-slate-950">Hair loss can show up in everyday ways.</span>
+  <div class="container sm:mt-10 sm:text-center">
+    <div class="hairloss-quote text-base sm:text-xl max-w-3xl mt-5 mx-auto sm:text-center">
+      <span class="font-medium text-slate-600">Hair loss can show up in everyday ways.</span>
       <span class="text-slate-500">From how you style it to how you feel in photos, small changes can become increasingly noticeable over time.</span>
-    </h3>
+    </div>
+    <!-- <h3 class="text-2xl sm:text-2xl sm:leading-11 text-slate-900">What Causes Hair Thinning?</h3> -->
+    <!-- <div class="max-w-3xl sm:mx-auto mt-2">Hair thinning can happen for many reasons. Finding the cause helps you choose the right treatment.</div> -->
+        <div class="hairloss-reasons relative mt-4 sm:mt-10">
+      <div class="sm:grid sm:grid-cols-3 sm:divide-y-0 sm:-mb-10">
+                <details class="reasons-item group py-px sm:hidden js-component-faq-item" open>
+          <summary class="flex bg-slate-200 group-open:bg-slate-700 rounded-lg px-4 py-3 cursor-pointer list-none items-start justify-between gap-6 [&::-webkit-details-marker]:hidden">
+            <h3 class="text-indigo-700 group-open:text-white">Vitamin Deficiencies</h3>
+            <span class="shrink-0 text-slate-400" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="size-6 transition-transform duration-200 ease-out motion-reduce:transition-none js-component-faq-icon"><path d="M11 11V5H13V11H19V13H13V19H11V13H5V11H11Z"/></svg>            </span>
+          </summary>
+          <div class="faq-content text-slate-700 my-4 max-w-3xl space-y-4 border-l border-slate-200 pl-5 js-component-faq-content">
+            <p>Low iron, zinc, biotin, or protein can weaken hair and increase shedding.</p>
+            <div class="aspect-3/2 rounded-xl bg-slate-300 mb-5 w-50 overflow-hidden">
+              <img
+                src="assets/images/hair-loss/reason-vitamin-deficiencies.png"
+                alt="Malay woman checking her hair while sitting down to a balanced meal"
+                width="400"
+                height="200"
+                loading="lazy"
+                decoding="async"
+                class="size-full object-cover"
+              />
+            </div>
+          </div>
+        </details>
+        <div class="hidden sm:block sm:px-5 sm:py-10
+                    sm:border-r sm:border-slate-200                    sm:border-b sm:border-slate-200">
+          <div class="aspect-2/1 rounded-full bg-slate-300 mb-5 w-50 mx-auto overflow-hidden">
+            <img
+              src="assets/images/hair-loss/reason-vitamin-deficiencies.png"
+              alt="Malay woman checking her hair while sitting down to a balanced meal"
+              width="400"
+              height="200"
+              loading="lazy"
+              decoding="async"
+              class="size-full object-cover"
+            />
+          </div>
+          <div class="uppercase text-xs mb-2">Nutrition</div>
+          <h3 class="font-medium text-lg text-slate-900 mb-2">Vitamin Deficiencies</h3>
+          <div class="text-sm text-slate-500">Low iron, zinc, biotin, or protein can weaken hair and increase shedding.</div>
+        </div>
+                <details class="reasons-item group py-px sm:hidden js-component-faq-item" >
+          <summary class="flex bg-slate-200 group-open:bg-slate-700 rounded-lg px-4 py-3 cursor-pointer list-none items-start justify-between gap-6 [&::-webkit-details-marker]:hidden">
+            <h3 class="text-indigo-700 group-open:text-white">Health Conditions &amp; Medications</h3>
+            <span class="shrink-0 text-slate-400" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="size-6 transition-transform duration-200 ease-out motion-reduce:transition-none js-component-faq-icon"><path d="M11 11V5H13V11H19V13H13V19H11V13H5V11H11Z"/></svg>            </span>
+          </summary>
+          <div class="faq-content text-slate-700 my-4 max-w-3xl space-y-4 border-l border-slate-200 pl-5 js-component-faq-content">
+            <p>Chronic conditions, autoimmune disorders, and some medications can cause hair loss.</p>
+            <div class="aspect-3/2 rounded-xl bg-slate-300 mb-5 w-50 overflow-hidden">
+              <img
+                src="assets/images/hair-loss/reason-health-conditions-medications.png"
+                alt="Malay man discussing medication with a doctor"
+                width="400"
+                height="200"
+                loading="lazy"
+                decoding="async"
+                class="size-full object-cover"
+              />
+            </div>
+          </div>
+        </details>
+        <div class="hidden sm:block sm:px-5 sm:py-10
+                    sm:border-r sm:border-slate-200                    sm:border-b sm:border-slate-200">
+          <div class="aspect-2/1 rounded-full bg-slate-300 mb-5 w-50 mx-auto overflow-hidden">
+            <img
+              src="assets/images/hair-loss/reason-health-conditions-medications.png"
+              alt="Malay man discussing medication with a doctor"
+              width="400"
+              height="200"
+              loading="lazy"
+              decoding="async"
+              class="size-full object-cover"
+            />
+          </div>
+          <div class="uppercase text-xs mb-2">Medical</div>
+          <h3 class="font-medium text-lg text-slate-900 mb-2">Health Conditions &amp; Medications</h3>
+          <div class="text-sm text-slate-500">Chronic conditions, autoimmune disorders, and some medications can cause hair loss.</div>
+        </div>
+                <details class="reasons-item group py-px sm:hidden js-component-faq-item" >
+          <summary class="flex bg-slate-200 group-open:bg-slate-700 rounded-lg px-4 py-3 cursor-pointer list-none items-start justify-between gap-6 [&::-webkit-details-marker]:hidden">
+            <h3 class="text-indigo-700 group-open:text-white">Scalp Health Issues</h3>
+            <span class="shrink-0 text-slate-400" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="size-6 transition-transform duration-200 ease-out motion-reduce:transition-none js-component-faq-icon"><path d="M11 11V5H13V11H19V13H13V19H11V13H5V11H11Z"/></svg>            </span>
+          </summary>
+          <div class="faq-content text-slate-700 my-4 max-w-3xl space-y-4 border-l border-slate-200 pl-5 js-component-faq-content">
+            <p>Dandruff, infections, and inflammation can disrupt scalp health and hair growth.</p>
+            <div class="aspect-3/2 rounded-xl bg-slate-300 mb-5 w-50 overflow-hidden">
+              <img
+                src="assets/images/hair-loss/reason-scalp-health.png"
+                alt="Malay man checking a flaky area of his scalp in a mirror"
+                width="400"
+                height="200"
+                loading="lazy"
+                decoding="async"
+                class="size-full object-cover"
+              />
+            </div>
+          </div>
+        </details>
+        <div class="hidden sm:block sm:px-5 sm:py-10
+                                        sm:border-b sm:border-slate-200">
+          <div class="aspect-2/1 rounded-full bg-slate-300 mb-5 w-50 mx-auto overflow-hidden">
+            <img
+              src="assets/images/hair-loss/reason-scalp-health.png"
+              alt="Malay man checking a flaky area of his scalp in a mirror"
+              width="400"
+              height="200"
+              loading="lazy"
+              decoding="async"
+              class="size-full object-cover"
+            />
+          </div>
+          <div class="uppercase text-xs mb-2">Scalp Care</div>
+          <h3 class="font-medium text-lg text-slate-900 mb-2">Scalp Health Issues</h3>
+          <div class="text-sm text-slate-500">Dandruff, infections, and inflammation can disrupt scalp health and hair growth.</div>
+        </div>
+                <details class="reasons-item group py-px sm:hidden js-component-faq-item" >
+          <summary class="flex bg-slate-200 group-open:bg-slate-700 rounded-lg px-4 py-3 cursor-pointer list-none items-start justify-between gap-6 [&::-webkit-details-marker]:hidden">
+            <h3 class="text-indigo-700 group-open:text-white">Family History (Genetics)</h3>
+            <span class="shrink-0 text-slate-400" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="size-6 transition-transform duration-200 ease-out motion-reduce:transition-none js-component-faq-icon"><path d="M11 11V5H13V11H19V13H13V19H11V13H5V11H11Z"/></svg>            </span>
+          </summary>
+          <div class="faq-content text-slate-700 my-4 max-w-3xl space-y-4 border-l border-slate-200 pl-5 js-component-faq-content">
+            <p>Family history can increase your risk of androgenetic alopecia, a common cause of hair loss.</p>
+            <div class="aspect-3/2 rounded-xl bg-slate-300 mb-5 w-50 overflow-hidden">
+              <img
+                src="assets/images/hair-loss/reason-family-history.png"
+                alt="Malay father and son looking through a family photo album"
+                width="400"
+                height="200"
+                loading="lazy"
+                decoding="async"
+                class="size-full object-cover"
+              />
+            </div>
+          </div>
+        </details>
+        <div class="hidden sm:block sm:px-5 sm:py-10
+                    sm:border-r sm:border-slate-200                    ">
+          <div class="aspect-2/1 rounded-full bg-slate-300 mb-5 w-50 mx-auto overflow-hidden">
+            <img
+              src="assets/images/hair-loss/reason-family-history.png"
+              alt="Malay father and son looking through a family photo album"
+              width="400"
+              height="200"
+              loading="lazy"
+              decoding="async"
+              class="size-full object-cover"
+            />
+          </div>
+          <div class="uppercase text-xs mb-2">Inherited</div>
+          <h3 class="font-medium text-lg text-slate-900 mb-2">Family History (Genetics)</h3>
+          <div class="text-sm text-slate-500">Family history can increase your risk of androgenetic alopecia, a common cause of hair loss.</div>
+        </div>
+                <details class="reasons-item group py-px sm:hidden js-component-faq-item" >
+          <summary class="flex bg-slate-200 group-open:bg-slate-700 rounded-lg px-4 py-3 cursor-pointer list-none items-start justify-between gap-6 [&::-webkit-details-marker]:hidden">
+            <h3 class="text-indigo-700 group-open:text-white">Hormonal Changes</h3>
+            <span class="shrink-0 text-slate-400" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="size-6 transition-transform duration-200 ease-out motion-reduce:transition-none js-component-faq-icon"><path d="M11 11V5H13V11H19V13H13V19H11V13H5V11H11Z"/></svg>            </span>
+          </summary>
+          <div class="faq-content text-slate-700 my-4 max-w-3xl space-y-4 border-l border-slate-200 pl-5 js-component-faq-content">
+            <p>Pregnancy, menopause, and thyroid changes can disrupt the hair cycle and increase shedding.</p>
+            <div class="aspect-3/2 rounded-xl bg-slate-300 mb-5 w-50 overflow-hidden">
+              <img
+                src="assets/images/hair-loss/reason-hormonal-changes.png"
+                alt="Pregnant Malay woman checking her hair part in a mirror"
+                width="400"
+                height="200"
+                loading="lazy"
+                decoding="async"
+                class="size-full object-cover"
+              />
+            </div>
+          </div>
+        </details>
+        <div class="hidden sm:block sm:px-5 sm:py-10
+                    sm:border-r sm:border-slate-200                    ">
+          <div class="aspect-2/1 rounded-full bg-slate-300 mb-5 w-50 mx-auto overflow-hidden">
+            <img
+              src="assets/images/hair-loss/reason-hormonal-changes.png"
+              alt="Pregnant Malay woman checking her hair part in a mirror"
+              width="400"
+              height="200"
+              loading="lazy"
+              decoding="async"
+              class="size-full object-cover"
+            />
+          </div>
+          <div class="uppercase text-xs mb-2">Biology</div>
+          <h3 class="font-medium text-lg text-slate-900 mb-2">Hormonal Changes</h3>
+          <div class="text-sm text-slate-500">Pregnancy, menopause, and thyroid changes can disrupt the hair cycle and increase shedding.</div>
+        </div>
+                <details class="reasons-item group py-px sm:hidden js-component-faq-item" >
+          <summary class="flex bg-slate-200 group-open:bg-slate-700 rounded-lg px-4 py-3 cursor-pointer list-none items-start justify-between gap-6 [&::-webkit-details-marker]:hidden">
+            <h3 class="text-indigo-700 group-open:text-white">Physical or Emotional Stress</h3>
+            <span class="shrink-0 text-slate-400" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="size-6 transition-transform duration-200 ease-out motion-reduce:transition-none js-component-faq-icon"><path d="M11 11V5H13V11H19V13H13V19H11V13H5V11H11Z"/></svg>            </span>
+          </summary>
+          <div class="faq-content text-slate-700 my-4 max-w-3xl space-y-4 border-l border-slate-200 pl-5 js-component-faq-content">
+            <p>Physical or emotional stress can trigger telogen effluvium, causing more shedding than usual.</p>
+            <div class="aspect-3/2 rounded-xl bg-slate-300 mb-5 w-50 overflow-hidden">
+              <img
+                src="assets/images/hair-loss/reason-stress.png"
+                alt="Malay woman sitting at her desk beside a hairbrush with loose strands"
+                width="400"
+                height="200"
+                loading="lazy"
+                decoding="async"
+                class="size-full object-cover"
+              />
+            </div>
+          </div>
+        </details>
+        <div class="hidden sm:block sm:px-5 sm:py-10
+                                        ">
+          <div class="aspect-2/1 rounded-full bg-slate-300 mb-5 w-50 mx-auto overflow-hidden">
+            <img
+              src="assets/images/hair-loss/reason-stress.png"
+              alt="Malay woman sitting at her desk beside a hairbrush with loose strands"
+              width="400"
+              height="200"
+              loading="lazy"
+              decoding="async"
+              class="size-full object-cover"
+            />
+          </div>
+          <div class="uppercase text-xs mb-2">Lifestyle</div>
+          <h3 class="font-medium text-lg text-slate-900 mb-2">Physical or Emotional Stress</h3>
+          <div class="text-sm text-slate-500">Physical or emotional stress can trigger telogen effluvium, causing more shedding than usual.</div>
+        </div>
+              </div>
+      <div class="absolute left-0 w-full h-10 bg-gradient-to-b from-slate-100 to-transparent hidden sm:block top-0"></div>
+      <div class="absolute left-0 w-full h-10 bg-gradient-to-t from-slate-100 to-transparent hidden sm:block bottom-0"></div>
+    </div>
+
+    <div class="hairloss-cta mt-10">
+      <div class="text-lg">Not sure about what your hair issue?</div>
+      <div class="sm:flex sm:items-center sm:justify-center gap-2">
+        <a href="/hair-check" class="button-lg bg-gradient-to-br w-full sm:w-auto from-purple-500 via-indigo-600 to-indigo-500 text-white text-shadow-2xs text-shadow-indigo-900/50 ring-1 ring-inset ring-indigo-900/50 inline-flex mt-7 transform duration-200 translate-y-0 hover:-translate-y-1 shadow-lg shadow-slate-400 hover:shadow-3xl hover:shadow-slate-500">
+          <div class="flex-split w-full font-normal text-lg">
+            <div>Start Free Hair Check</div>
+            <div class="size-7 -m-1 -mr-4 ml-5 rounded-full flex items-center justify-center bg-white text-blue-600">
+              <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="size-5"><path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z"></path></svg>          </div>
+          </div>
+        </a>
+        <a href="/hair-check" 
+           class="button-lg w-full sm:w-auto  text-white text-shadow-2xs text-shadow-slate-900/10 mt-7 transform duration-200 translate-y-0 hover:-translate-y-1 shadow-lg shadow-slate-400 hover:shadow-3xl hover:shadow-slate-500
+           bg-gradient-to-br from-lime-500 via-green-600 to-emerald-500
+           ring-1 ring-inset ring-green-900/50 hidden sm:block">
+          <div class="flex-split w-full font-normal text-lg">
+            <div>Chat on WhatsApp</div>
+          </div>
+        </a>
+      </div>
+      <div class="text-xs text-slate-500 mt-5">A short questionnaire to help us understand your concerns. <br>Preview only · Answers are not sent</div>
+    </div>
+  </div>
+</section>
+<section class="section-intro bg-slate-900 text-slate-400 sm:m-4 sm:rounded-lg overflow-hidden pb-2 pt-15">
+  <div class="container">
+    <div class="hero-headline">
+      <div class="headline-topic mb-8 text-xs text-slate-500 text-center uppercase">Our Direction</div>
+      <h2 class="headline-title text-white text-4xl leading-12 text-slate-950 text-center max-w-5xl mx-auto">
+        At RR Hair Clinic, every journey starts with a proper assessment and a 
+        personalised plan — with the right treatment for what your hair actually needs.
+      </h2>
+      <div class="flex items-center justify-center mt-10 hidden">
+        <div class="flex items-center">
+          <div>
+            <div class="size-12 rounded-full bg-slate-400"></div>
+          </div>
+          <div class="pl-3">
+            <h3 class="text-slate-900">Dr Rujhan Raqibi</h3>
+            <div class="text-sm text-slate-500">Lead Surgeon</div>
+          </div>
+        </div>
+      </div>
+      <div class="border border-slate-700 rounded-xl grid md:grid-cols-3 md:text-center mt-20">
+        <div class="py-12">
+          <div class="font-light text-5xl text-slate-100">97.6%</div>
+          <div class="text-sm text-slate-500 mt-2">Graft survival rate at 12 months</div>
+        </div>
+        <div class="py-12 border-l border-slate-700">
+          <div class="font-light text-5xl text-slate-100">10+ yrs</div>
+          <div class="text-sm text-slate-500 mt-2">Surgical practice, one lead surgeon</div>
+        </div>
+        <div class="py-12 border-l border-slate-700">
+          <div class="font-light text-5xl text-slate-100">5/5</div>
+          <div class="text-sm text-slate-500 mt-2">From 500 verified reviews</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="marquee-wrap relative left-1/2 right-1/2 mt-15 w-screen max-w-none -translate-x-1/2">
+    <div class="marquee" aria-label="RR Hair Clinic photo gallery">
+      <div class="marquee-track">
+        <div class="marquee-group">
+          <div class="marquee-photo rounded-lg aspect-[4/5] h-96 w-auto flex items-center justify-center">
+            <img
+              src="/assets/images/clinic-marquee/clinic-marquee-consultation.webp"
+              alt="Doctor consulting with a customer about a hair treatment plan"
+              loading="lazy"
+              decoding="async"
+              class="size-full object-cover rounded-lg"
+            >
+          </div>
+          <div class="marquee-photo rounded-lg aspect-[3/4] h-96 w-auto flex items-center justify-center">
+            <img
+              src="/assets/images/clinic-marquee/clinic-marquee-welcome.webp"
+              alt="Nurse welcoming a customer to the treatment room"
+              loading="lazy"
+              decoding="async"
+              class="size-full object-cover rounded-lg"
+            >
+          </div>
+          <div class="marquee-photo rounded-lg aspect-[1/1] h-96 w-auto flex items-center justify-center">
+            <img
+              src="/assets/images/clinic-marquee/clinic-marquee-scalp-analysis.webp"
+              alt="Clinician performing a scalp analysis for a customer"
+              loading="lazy"
+              decoding="async"
+              class="size-full object-cover rounded-lg"
+            >
+          </div>
+          <div class="marquee-photo rounded-lg aspect-[9/16] h-96 w-auto flex items-center justify-center">
+            <img
+              src="/assets/images/clinic-marquee/clinic-marquee-testimonial.webp"
+              alt="Customer smiling during a post-consultation check-in"
+              loading="lazy"
+              decoding="async"
+              class="size-full object-cover rounded-lg"
+            >
+          </div>
+          <div class="marquee-photo rounded-lg aspect-[5/4] h-96 w-auto flex items-center justify-center">
+            <img
+              src="/assets/images/clinic-marquee/clinic-marquee-treatment-prep.webp"
+              alt="Doctor preparing for a hair treatment with a customer"
+              loading="lazy"
+              decoding="async"
+              class="size-full object-cover rounded-lg"
+            >
+          </div>
+          <div class="marquee-photo rounded-lg aspect-[2/3] h-96 w-auto flex items-center justify-center">
+            <img
+              src="/assets/images/clinic-marquee/clinic-marquee-hairline-plan.webp"
+              alt="Clinician explaining a personalised hairline plan"
+              loading="lazy"
+              decoding="async"
+              class="size-full object-cover rounded-lg"
+            >
+          </div>
+          <div class="marquee-photo rounded-lg aspect-[3/2] h-96 w-auto flex items-center justify-center">
+            <img
+              src="/assets/images/clinic-marquee/clinic-marquee-clinic-team.webp"
+              alt="Clinic team reviewing a customer's scalp analysis"
+              loading="lazy"
+              decoding="async"
+              class="size-full object-cover rounded-lg"
+            >
+          </div>
+          <div class="marquee-photo rounded-lg aspect-[9/16] h-96 w-auto flex items-center justify-center">
+            <img
+              src="/assets/images/clinic-marquee/clinic-marquee-aftercare.webp"
+              alt="Nurse sharing aftercare guidance with a customer"
+              loading="lazy"
+              decoding="async"
+              class="size-full object-cover rounded-lg"
+            >
+          </div>
+        </div>
+
+        <div class="marquee-group" aria-hidden="true">
+          <div class="marquee-photo rounded-lg aspect-[4/5] h-96 w-auto flex items-center justify-center">
+            <img
+              src="/assets/images/clinic-marquee/clinic-marquee-consultation.webp"
+              alt=""
+              loading="lazy"
+              decoding="async"
+              class="size-full object-cover rounded-lg"
+            >
+          </div>
+          <div class="marquee-photo rounded-lg aspect-[3/4] h-96 w-auto flex items-center justify-center">
+            <img
+              src="/assets/images/clinic-marquee/clinic-marquee-welcome.webp"
+              alt=""
+              loading="lazy"
+              decoding="async"
+              class="size-full object-cover rounded-lg"
+            >
+          </div>
+          <div class="marquee-photo rounded-lg aspect-[1/1] h-96 w-auto flex items-center justify-center">
+            <img
+              src="/assets/images/clinic-marquee/clinic-marquee-scalp-analysis.webp"
+              alt=""
+              loading="lazy"
+              decoding="async"
+              class="size-full object-cover rounded-lg"
+            >
+          </div>
+          <div class="marquee-photo rounded-lg aspect-[9/16] h-96 w-auto flex items-center justify-center">
+            <img
+              src="/assets/images/clinic-marquee/clinic-marquee-testimonial.webp"
+              alt=""
+              loading="lazy"
+              decoding="async"
+              class="size-full object-cover rounded-lg"
+            >
+          </div>
+          <div class="marquee-photo rounded-lg aspect-[5/4] h-96 w-auto flex items-center justify-center">
+            <img
+              src="/assets/images/clinic-marquee/clinic-marquee-treatment-prep.webp"
+              alt=""
+              loading="lazy"
+              decoding="async"
+              class="size-full object-cover rounded-lg"
+            >
+          </div>
+          <div class="marquee-photo rounded-lg aspect-[2/3] h-96 w-auto flex items-center justify-center">
+            <img
+              src="/assets/images/clinic-marquee/clinic-marquee-hairline-plan.webp"
+              alt=""
+              loading="lazy"
+              decoding="async"
+              class="size-full object-cover rounded-lg"
+            >
+          </div>
+          <div class="marquee-photo rounded-lg aspect-[3/2] h-96 w-auto flex items-center justify-center">
+            <img
+              src="/assets/images/clinic-marquee/clinic-marquee-clinic-team.webp"
+              alt=""
+              loading="lazy"
+              decoding="async"
+              class="size-full object-cover rounded-lg"
+            >
+          </div>
+          <div class="marquee-photo rounded-lg aspect-[9/16] h-96 w-auto flex items-center justify-center">
+            <img
+              src="/assets/images/clinic-marquee/clinic-marquee-aftercare.webp"
+              alt=""
+              loading="lazy"
+              decoding="async"
+              class="size-full object-cover rounded-lg"
+            >
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 <section class="section section-case-study js-case-study-carousel">
@@ -573,9 +1050,9 @@
     </div>
   </div>
   <div class="container relative">
-    <div class="section-headline max-w-2xl">
+    <div class="section-headline max-w-2xl mx-auto sm:text-center">
     <div class="headline-topic mb-2 sm:mb-5 text-xs text-slate-500 uppercase">Our Results</div>
-    <h2 class="headline-title text-2xl sm:text-4xl sm:leading-11 text-transparent bg-clip-text bg-gradient-to-br from-slate-700 via-slate-800 to-slate-950">
+    <h2 class="headline-title font-medium sm:font-normal text-2xl sm:text-4xl sm:leading-11 text-transparent bg-clip-text bg-gradient-to-br from-slate-700 via-slate-800 to-slate-950">
     Results you can actually see. <br class="hidden md:block" /> Nothing retouched.  </h2>
     <div class="headline-subtitle mt-2 sm:mt-5 hidden">
     Real patients. Real treatment journeys. Real changes over time — with photos that show what progress can actually look like.  </div>
@@ -587,18 +1064,24 @@
 
     
     <div class="mt-5 lg:-mt-12 relative js-case-study-controls" hidden>
-  <div class="flex items-center justify-end gap-2">
+  <div class="flex items-center justify-end gap-1">
     <button type="button"
-            class="flex size-[40px] shrink-0 items-center justify-center rounded-full ring-1 cursor-pointer
-                   focus-visible:outline-2 focus-visible:outline-offset-4 bg-slate-100/0 text-slate-700
-                   ring-slate-300 hover:bg-slate-200 focus-visible:outline-slate-600 js-case-study-prev"
+            class="flex size-9 shrink-0 items-center justify-center rounded-full cursor-pointer
+                   border border-slate-950/60
+                   text-white
+                   bg-gradient-to-br from-slate-400 via-slate-800 to-slate-500
+                   focus-visible:outline-2 focus-visible:outline-offset-4
+                 focus-visible:outline-slate-600 js-case-study-prev"
             aria-label="Previous results slide" aria-controls="case-study-track">
       <span aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="size-5"><path d="M7.82843 10.9999H20V12.9999H7.82843L13.1924 18.3638L11.7782 19.778L4 11.9999L11.7782 4.22168L13.1924 5.63589L7.82843 10.9999Z"/></svg></span>
     </button>
     <button type="button"
-            class="flex size-[40px] shrink-0 items-center justify-center rounded-full ring-1 cursor-pointer
-                   focus-visible:outline-2 focus-visible:outline-offset-4 bg-slate-100/0 text-slate-700
-                   ring-slate-300 hover:bg-slate-200 focus-visible:outline-slate-600 js-case-study-next"
+            class="flex size-9 shrink-0 items-center justify-center rounded-full cursor-pointer
+                   border border-slate-950/60
+                   text-white
+                   bg-gradient-to-br from-slate-400 via-slate-800 to-slate-500
+                   focus-visible:outline-2 focus-visible:outline-offset-4
+                    focus-visible:outline-slate-600 js-case-study-next"
             aria-label="Next results slide" aria-controls="case-study-track">
       <span aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="size-5"><path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"/></svg></span>
     </button>
@@ -613,8 +1096,18 @@
       <div id="case-study-track" class="grid grid-cols-1 gap-2 py-10 md:py-0 px-6 md:px-0 md:grid-cols-3 md:overflow-visible js-case-study-track"
            role="group" aria-label="Treatment results" tabindex="0">
                 <article class="card p-2 my-px">
-          <div class="grid grid-cols-2 gap-px">
-            <figure class="relative overflow-hidden rounded-l-lg bg-slate-200">
+          <div class="p-2 sm:p-4 sm:pt-3">
+            <div class="font-semibold sm:text-lg text-slate-800 tracking-tight">Crown &amp; frontal thinning</div>
+            <div class="mt-1 text-sm sm:flex items-center gap-3">
+              <div>FUE Hair Transplant</div>
+              <div class="w-px h-4 bg-slate-200 hidden sm:block"></div>
+              <div class="text-green-600">3,400 grafts</div>
+            </div>
+            <div class="text-sm text-slate-500 mt-4">Results at 10 months</div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-2 relative">
+            <figure class="relative overflow-hidden rounded-lg bg-slate-200">
               <img
                 src="assets/images/case-studies/case-1-before.png"
                 alt="Before treatment with visible crown and frontal hair thinning"
@@ -624,12 +1117,12 @@
                 decoding="async"
                 class="aspect-[1/2] size-full object-cover"
               />
-              <figcaption class="absolute bottom-2 left-2 rounded-full bg-slate-950/80 px-3 py-1 text-xs font-medium uppercase text-white">
+              <figcaption class="absolute top-2 left-2 rounded-full bg-slate-950/20 px-3 py-1 text-xs uppercase text-white">
                 Before
               </figcaption>
             </figure>
 
-            <figure class="relative overflow-hidden rounded-r-lg bg-slate-200">
+            <figure class="relative overflow-hidden rounded-lg bg-slate-200">
               <img
                 src="assets/images/case-studies/case-1-after.png"
                 alt="After treatment with improved crown and frontal hair density"
@@ -639,25 +1132,30 @@
                 decoding="async"
                 class="aspect-[1/2] size-full object-cover"
               />
-              <figcaption class="absolute bottom-2 left-2 rounded-full bg-teal-700/90 px-3 py-1 text-xs font-medium uppercase text-white">
+              <figcaption class="absolute top-2 right-2 rounded-full bg-slate-950/50 px-3 py-1 text-xs uppercase text-white">
                 After
               </figcaption>
             </figure>
+
+            <figcaption class="absolute bottom-2 left-2 rounded-full bg-teal-700/90 px-3 py-1 text-xs font-medium uppercase text-white">
+              Age 41            </figcaption>
           </div>
 
-          <div class="p-2 sm:p-4 sm:pb-3">
-            <div class="font-semibold sm:text-lg text-slate-800 tracking-tight">Crown &amp; frontal thinning (Age 41)</div>
+          
+        </article>
+                <article class="card p-2 my-px">
+          <div class="p-2 sm:p-4 sm:pt-3">
+            <div class="font-semibold sm:text-lg text-slate-800 tracking-tight">Receding hairline</div>
             <div class="mt-1 text-sm sm:flex items-center gap-3">
               <div>FUE Hair Transplant</div>
               <div class="w-px h-4 bg-slate-200 hidden sm:block"></div>
-              <div class="text-green-600">3,400 grafts</div>
+              <div class="text-green-600">2,800 grafts</div>
             </div>
-            <div class="text-sm text-slate-500 mt-4">Results at 10 months</div>
+            <div class="text-sm text-slate-500 mt-4">Results at 12 months</div>
           </div>
-        </article>
-                <article class="card p-2 my-px">
-          <div class="grid grid-cols-2 gap-px">
-            <figure class="relative overflow-hidden rounded-l-lg bg-slate-200">
+
+          <div class="grid grid-cols-2 gap-2 relative">
+            <figure class="relative overflow-hidden rounded-lg bg-slate-200">
               <img
                 src="assets/images/case-studies/case-2-before.png"
                 alt="Before treatment with receding frontal hairline and temple thinning"
@@ -667,12 +1165,12 @@
                 decoding="async"
                 class="aspect-[1/2] size-full object-cover"
               />
-              <figcaption class="absolute bottom-2 left-2 rounded-full bg-slate-950/80 px-3 py-1 text-xs font-medium uppercase text-white">
+              <figcaption class="absolute top-2 left-2 rounded-full bg-slate-950/20 px-3 py-1 text-xs uppercase text-white">
                 Before
               </figcaption>
             </figure>
 
-            <figure class="relative overflow-hidden rounded-r-lg bg-slate-200">
+            <figure class="relative overflow-hidden rounded-lg bg-slate-200">
               <img
                 src="assets/images/case-studies/case-2-after.png"
                 alt="After treatment with improved frontal hairline and fuller temple coverage"
@@ -682,25 +1180,30 @@
                 decoding="async"
                 class="aspect-[1/2] size-full object-cover"
               />
-              <figcaption class="absolute bottom-2 left-2 rounded-full bg-teal-700/90 px-3 py-1 text-xs font-medium uppercase text-white">
+              <figcaption class="absolute top-2 right-2 rounded-full bg-slate-950/50 px-3 py-1 text-xs uppercase text-white">
                 After
               </figcaption>
             </figure>
+
+            <figcaption class="absolute bottom-2 left-2 rounded-full bg-teal-700/90 px-3 py-1 text-xs font-medium uppercase text-white">
+              Age 35            </figcaption>
           </div>
 
-          <div class="p-2 sm:p-4 sm:pb-3">
-            <div class="font-semibold sm:text-lg text-slate-800 tracking-tight">Receding hairline (Age 35)</div>
+          
+        </article>
+                <article class="card p-2 my-px">
+          <div class="p-2 sm:p-4 sm:pt-3">
+            <div class="font-semibold sm:text-lg text-slate-800 tracking-tight">Crown thinning</div>
             <div class="mt-1 text-sm sm:flex items-center gap-3">
               <div>FUE Hair Transplant</div>
               <div class="w-px h-4 bg-slate-200 hidden sm:block"></div>
-              <div class="text-green-600">2,800 grafts</div>
+              <div class="text-green-600">3,200 grafts</div>
             </div>
-            <div class="text-sm text-slate-500 mt-4">Results at 12 months</div>
+            <div class="text-sm text-slate-500 mt-4">Results at 9 months</div>
           </div>
-        </article>
-                <article class="card p-2 my-px">
-          <div class="grid grid-cols-2 gap-px">
-            <figure class="relative overflow-hidden rounded-l-lg bg-slate-200">
+
+          <div class="grid grid-cols-2 gap-2 relative">
+            <figure class="relative overflow-hidden rounded-lg bg-slate-200">
               <img
                 src="assets/images/case-studies/case-3-before.png"
                 alt="Before treatment with visible crown thinning and reduced top density"
@@ -710,12 +1213,12 @@
                 decoding="async"
                 class="aspect-[1/2] size-full object-cover"
               />
-              <figcaption class="absolute bottom-2 left-2 rounded-full bg-slate-950/80 px-3 py-1 text-xs font-medium uppercase text-white">
+              <figcaption class="absolute top-2 left-2 rounded-full bg-slate-950/20 px-3 py-1 text-xs uppercase text-white">
                 Before
               </figcaption>
             </figure>
 
-            <figure class="relative overflow-hidden rounded-r-lg bg-slate-200">
+            <figure class="relative overflow-hidden rounded-lg bg-slate-200">
               <img
                 src="assets/images/case-studies/case-3-after.png"
                 alt="After treatment with improved crown coverage and top density"
@@ -725,25 +1228,30 @@
                 decoding="async"
                 class="aspect-[1/2] size-full object-cover"
               />
-              <figcaption class="absolute bottom-2 left-2 rounded-full bg-teal-700/90 px-3 py-1 text-xs font-medium uppercase text-white">
+              <figcaption class="absolute top-2 right-2 rounded-full bg-slate-950/50 px-3 py-1 text-xs uppercase text-white">
                 After
               </figcaption>
             </figure>
+
+            <figcaption class="absolute bottom-2 left-2 rounded-full bg-teal-700/90 px-3 py-1 text-xs font-medium uppercase text-white">
+              Age 46            </figcaption>
           </div>
 
-          <div class="p-2 sm:p-4 sm:pb-3">
-            <div class="font-semibold sm:text-lg text-slate-800 tracking-tight">Crown thinning (Age 46)</div>
+          
+        </article>
+                <article class="card p-2 my-px">
+          <div class="p-2 sm:p-4 sm:pt-3">
+            <div class="font-semibold sm:text-lg text-slate-800 tracking-tight">Receding hairline</div>
             <div class="mt-1 text-sm sm:flex items-center gap-3">
               <div>FUE Hair Transplant</div>
               <div class="w-px h-4 bg-slate-200 hidden sm:block"></div>
-              <div class="text-green-600">3,200 grafts</div>
+              <div class="text-green-600">2,800 grafts</div>
             </div>
-            <div class="text-sm text-slate-500 mt-4">Results at 9 months</div>
+            <div class="text-sm text-slate-500 mt-4">Results at 12 months</div>
           </div>
-        </article>
-                <article class="card p-2 my-px">
-          <div class="grid grid-cols-2 gap-px">
-            <figure class="relative overflow-hidden rounded-l-lg bg-slate-200">
+
+          <div class="grid grid-cols-2 gap-2 relative">
+            <figure class="relative overflow-hidden rounded-lg bg-slate-200">
               <img
                 src="assets/images/case-studies/case-2-before.png"
                 alt="Before treatment with receding frontal hairline and temple thinning"
@@ -753,12 +1261,12 @@
                 decoding="async"
                 class="aspect-[1/2] size-full object-cover"
               />
-              <figcaption class="absolute bottom-2 left-2 rounded-full bg-slate-950/80 px-3 py-1 text-xs font-medium uppercase text-white">
+              <figcaption class="absolute top-2 left-2 rounded-full bg-slate-950/20 px-3 py-1 text-xs uppercase text-white">
                 Before
               </figcaption>
             </figure>
 
-            <figure class="relative overflow-hidden rounded-r-lg bg-slate-200">
+            <figure class="relative overflow-hidden rounded-lg bg-slate-200">
               <img
                 src="assets/images/case-studies/case-2-after.png"
                 alt="After treatment with improved frontal hairline and fuller temple coverage"
@@ -768,25 +1276,30 @@
                 decoding="async"
                 class="aspect-[1/2] size-full object-cover"
               />
-              <figcaption class="absolute bottom-2 left-2 rounded-full bg-teal-700/90 px-3 py-1 text-xs font-medium uppercase text-white">
+              <figcaption class="absolute top-2 right-2 rounded-full bg-slate-950/50 px-3 py-1 text-xs uppercase text-white">
                 After
               </figcaption>
             </figure>
+
+            <figcaption class="absolute bottom-2 left-2 rounded-full bg-teal-700/90 px-3 py-1 text-xs font-medium uppercase text-white">
+              Age 35            </figcaption>
           </div>
 
-          <div class="p-2 sm:p-4 sm:pb-3">
-            <div class="font-semibold sm:text-lg text-slate-800 tracking-tight">Receding hairline (Age 35)</div>
+          
+        </article>
+                <article class="card p-2 my-px">
+          <div class="p-2 sm:p-4 sm:pt-3">
+            <div class="font-semibold sm:text-lg text-slate-800 tracking-tight">Crown thinning</div>
             <div class="mt-1 text-sm sm:flex items-center gap-3">
               <div>FUE Hair Transplant</div>
               <div class="w-px h-4 bg-slate-200 hidden sm:block"></div>
-              <div class="text-green-600">2,800 grafts</div>
+              <div class="text-green-600">3,200 grafts</div>
             </div>
-            <div class="text-sm text-slate-500 mt-4">Results at 12 months</div>
+            <div class="text-sm text-slate-500 mt-4">Results at 9 months</div>
           </div>
-        </article>
-                <article class="card p-2 my-px">
-          <div class="grid grid-cols-2 gap-px">
-            <figure class="relative overflow-hidden rounded-l-lg bg-slate-200">
+
+          <div class="grid grid-cols-2 gap-2 relative">
+            <figure class="relative overflow-hidden rounded-lg bg-slate-200">
               <img
                 src="assets/images/case-studies/case-3-before.png"
                 alt="Before treatment with visible crown thinning and reduced top density"
@@ -796,12 +1309,12 @@
                 decoding="async"
                 class="aspect-[1/2] size-full object-cover"
               />
-              <figcaption class="absolute bottom-2 left-2 rounded-full bg-slate-950/80 px-3 py-1 text-xs font-medium uppercase text-white">
+              <figcaption class="absolute top-2 left-2 rounded-full bg-slate-950/20 px-3 py-1 text-xs uppercase text-white">
                 Before
               </figcaption>
             </figure>
 
-            <figure class="relative overflow-hidden rounded-r-lg bg-slate-200">
+            <figure class="relative overflow-hidden rounded-lg bg-slate-200">
               <img
                 src="assets/images/case-studies/case-3-after.png"
                 alt="After treatment with improved crown coverage and top density"
@@ -811,21 +1324,16 @@
                 decoding="async"
                 class="aspect-[1/2] size-full object-cover"
               />
-              <figcaption class="absolute bottom-2 left-2 rounded-full bg-teal-700/90 px-3 py-1 text-xs font-medium uppercase text-white">
+              <figcaption class="absolute top-2 right-2 rounded-full bg-slate-950/50 px-3 py-1 text-xs uppercase text-white">
                 After
               </figcaption>
             </figure>
+
+            <figcaption class="absolute bottom-2 left-2 rounded-full bg-teal-700/90 px-3 py-1 text-xs font-medium uppercase text-white">
+              Age 46            </figcaption>
           </div>
 
-          <div class="p-2 sm:p-4 sm:pb-3">
-            <div class="font-semibold sm:text-lg text-slate-800 tracking-tight">Crown thinning (Age 46)</div>
-            <div class="mt-1 text-sm sm:flex items-center gap-3">
-              <div>FUE Hair Transplant</div>
-              <div class="w-px h-4 bg-slate-200 hidden sm:block"></div>
-              <div class="text-green-600">3,200 grafts</div>
-            </div>
-            <div class="text-sm text-slate-500 mt-4">Results at 9 months</div>
-          </div>
+          
         </article>
                 <a href="#" class="card flex flex-col items-center justify-center gap-5 p-6 text-slate-900">
           <span class="font-medium text-lg">Show all results</span>
@@ -862,7 +1370,7 @@
             </blockquote>
             <figcaption class="mt-6 flex items-center gap-3 md:mt-auto md:pt-8 md:pr-28">
               <img
-                src="/assets/images/customer/2.png"
+                src="/assets/images/customer/2.webp"
                 alt=""
                 width="48"
                 height="48"
@@ -882,7 +1390,7 @@
             </blockquote>
             <figcaption class="mt-6 flex items-center gap-3 md:mt-auto md:pt-8 md:pr-28">
               <img
-                src="/assets/images/customer/5.png"
+                src="/assets/images/customer/5.webp"
                 alt=""
                 width="48"
                 height="48"
@@ -902,7 +1410,7 @@
             </blockquote>
             <figcaption class="mt-6 flex items-center gap-3 md:mt-auto md:pt-8 md:pr-28">
               <img
-                src="/assets/images/customer/8.png"
+                src="/assets/images/customer/8.webp"
                 alt=""
                 width="48"
                 height="48"
@@ -987,11 +1495,11 @@
   <div class="mt-1 text-sm text-slate-600">From 500+ verified Google Reviews</div>
 </div>
       <div class="trust-avatars flex items-center justify-start gap-0 transition-all duration-200 hover:gap-3">
-        <div class="aspect-1/1 size-11 rounded-full border-2 border-white shadow-md -mx-1"><img src="/assets/images/customer/5.png" /></div>
-        <div class="aspect-1/1 size-11 rounded-full border-2 border-white shadow-md -mx-1"><img src="/assets/images/customer/6.png" /></div>
-        <div class="aspect-1/1 size-11 rounded-full border-2 border-white shadow-md -mx-1"><img src="/assets/images/customer/7.png" /></div>
-        <div class="aspect-1/1 size-11 rounded-full border-2 border-white shadow-md -mx-1"><img src="/assets/images/customer/8.png" /></div>
-        <div class="aspect-1/1 size-11 rounded-full border-2 border-white shadow-md -mx-1"><img src="/assets/images/customer/9.png" /></div>
+        <div class="aspect-1/1 size-11 rounded-full border-2 border-white shadow-md -mx-1"><img src="/assets/images/customer/5.webp" class="size-full rounded-full object-cover" /></div>
+        <div class="aspect-1/1 size-11 rounded-full border-2 border-white shadow-md -mx-1"><img src="/assets/images/customer/6.webp" class="size-full rounded-full object-cover" /></div>
+        <div class="aspect-1/1 size-11 rounded-full border-2 border-white shadow-md -mx-1"><img src="/assets/images/customer/7.webp" class="size-full rounded-full object-cover" /></div>
+        <div class="aspect-1/1 size-11 rounded-full border-2 border-white shadow-md -mx-1"><img src="/assets/images/customer/8.webp" class="size-full rounded-full object-cover" /></div>
+        <div class="aspect-1/1 size-11 rounded-full border-2 border-white shadow-md -mx-1"><img src="/assets/images/customer/9.webp" class="size-full rounded-full object-cover" /></div>
       </div>
     </div>
 
@@ -1037,7 +1545,7 @@
     </div>
         <div class="grid grid-cols-3 gap-3 mt-8 text-white">
             <div class="card bg-slate-900 bg-cover bg-center px-6 py-5"
-           style="background-image: linear-gradient(to bottom, rgba(15, 23, 42, .9), rgba(15, 23, 42, .65) 35%, transparent 70%), url('assets/images/treatment-hair-loss-consultation.png');">
+           style="background-image: linear-gradient(to bottom, rgba(15, 23, 42, .9), rgba(15, 23, 42, .65) 35%, transparent 70%), url('assets/images/treatment/treatment-hair-loss-consultation.webp');">
         <div class="treatment-name text-lg text-white mb-4">Hair Loss Consultation</div>
         <div class="treatment-brief text-sm text-slate-300">A detailed assessment to identify the cause of hair loss and build a personalised treatment plan.</div>
         <div class="flex-split mt-80">
@@ -1046,7 +1554,7 @@
         </div>
       </div>
             <div class="card bg-slate-900 bg-cover bg-center px-6 py-5"
-           style="background-image: linear-gradient(to bottom, rgba(15, 23, 42, .9), rgba(15, 23, 42, .65) 35%, transparent 70%), url('assets/images/treatment-medical-hair-loss.png');">
+           style="background-image: linear-gradient(to bottom, rgba(15, 23, 42, .9), rgba(15, 23, 42, .65) 35%, transparent 70%), url('assets/images/treatment/treatment-medical-hair-loss.webp');">
         <div class="treatment-name text-lg text-white mb-4">Medical Hair Loss Treatment</div>
         <div class="treatment-brief text-sm text-slate-300">Doctor-guided treatment to slow hair loss and help preserve existing hair.</div>
         <div class="flex-split mt-80">
@@ -1055,7 +1563,7 @@
         </div>
       </div>
             <div class="card bg-slate-900 bg-cover bg-center px-6 py-5"
-           style="background-image: linear-gradient(to bottom, rgba(15, 23, 42, .9), rgba(15, 23, 42, .65) 35%, transparent 70%), url('assets/images/treatment-prp-hair.png');">
+           style="background-image: linear-gradient(to bottom, rgba(15, 23, 42, .9), rgba(15, 23, 42, .65) 35%, transparent 70%), url('assets/images/treatment/treatment-prp-hair.webp');">
         <div class="treatment-name text-lg text-white mb-4">PRP Hair Treatment</div>
         <div class="treatment-brief text-sm text-slate-300">Regenerative treatment to support follicles, reduce shedding and improve hair density.</div>
         <div class="flex-split mt-80">
@@ -1223,27 +1731,33 @@
 </section>
  <section class="section section-products bg-white sm:m-4 sm:rounded-lg js-component-products-carousel">
   <div class="container">
-    <div class="section-headline max-w-2xl">
+    <div class="section-headline max-w-2xl mx-auto sm:text-center">
     <div class="headline-topic mb-2 sm:mb-5 text-xs text-slate-500 uppercase">Hair Care Products</div>
-    <h2 class="headline-title text-2xl sm:text-4xl sm:leading-11 text-transparent bg-clip-text bg-gradient-to-br from-slate-700 via-slate-800 to-slate-950">
+    <h2 class="headline-title font-medium sm:font-normal text-2xl sm:text-4xl sm:leading-11 text-transparent bg-clip-text bg-gradient-to-br from-slate-700 via-slate-800 to-slate-950">
     Support your treatment with doctor-guided hair care.  </h2>
     <div class="headline-subtitle mt-2 sm:mt-5 hidden">
     Explore selected RR Hair Clinic products for scalp care, hair growth support and ongoing maintenance.  </div>
   </div>
 
     <div class="mt-5 lg:-mt-12 relative js-component-products-controls" hidden>
-  <div class="flex items-center justify-end gap-2">
+  <div class="flex items-center justify-end gap-1">
     <button type="button"
-            class="flex size-[40px] shrink-0 items-center justify-center rounded-full ring-1 cursor-pointer
-                   focus-visible:outline-2 focus-visible:outline-offset-4 bg-slate-100/0 text-slate-700
-                   ring-slate-300 hover:bg-slate-200 focus-visible:outline-slate-600 js-component-products-prev"
+            class="flex size-9 shrink-0 items-center justify-center rounded-full cursor-pointer
+                   border border-slate-950/60
+                   text-white
+                   bg-gradient-to-br from-slate-400 via-slate-800 to-slate-500
+                   focus-visible:outline-2 focus-visible:outline-offset-4
+                 focus-visible:outline-slate-600 js-component-products-prev"
             aria-label="Previous product slide" aria-controls="component-products-track">
       <span aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="size-5"><path d="M7.82843 10.9999H20V12.9999H7.82843L13.1924 18.3638L11.7782 19.778L4 11.9999L11.7782 4.22168L13.1924 5.63589L7.82843 10.9999Z"/></svg></span>
     </button>
     <button type="button"
-            class="flex size-[40px] shrink-0 items-center justify-center rounded-full ring-1 cursor-pointer
-                   focus-visible:outline-2 focus-visible:outline-offset-4 bg-slate-100/0 text-slate-700
-                   ring-slate-300 hover:bg-slate-200 focus-visible:outline-slate-600 js-component-products-next"
+            class="flex size-9 shrink-0 items-center justify-center rounded-full cursor-pointer
+                   border border-slate-950/60
+                   text-white
+                   bg-gradient-to-br from-slate-400 via-slate-800 to-slate-500
+                   focus-visible:outline-2 focus-visible:outline-offset-4
+                    focus-visible:outline-slate-600 js-component-products-next"
             aria-label="Next product slide" aria-controls="component-products-track">
       <span aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="size-5"><path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"/></svg></span>
     </button>
@@ -1260,7 +1774,7 @@
                         hover:-translate-y-2 hover:shadow-xl hover:ring-2
                         hover:shadow-blue-300 hover:ring-blue-600">
           <div class="relative aspect-1/1 -m-4">
-                        <img src="assets/images/products/finas-blue-100-capsule.png" class="rounded-lg" alt="Finas Blue 100 Capsules" loading="lazy" decoding="async" />
+                        <img src="assets/images/products/finas-blue-100-capsule.webp" class="rounded-lg" alt="Finas Blue 100 Capsules" loading="lazy" decoding="async" />
           </div>
           <div class="flex grow flex-col pt-7">
             <h3 class="font-medium text-base text-slate-950 tracking-tight transition duration-200 ease-out group-hover:text-blue-700">Finas Blue 100 Capsules</h3>
@@ -1274,7 +1788,7 @@
                         hover:-translate-y-2 hover:shadow-xl hover:ring-2
                         hover:shadow-blue-300 hover:ring-blue-600">
           <div class="relative aspect-1/1 -m-4">
-                        <img src="assets/images/products/finas-blue-100-capsule.png" class="rounded-lg" alt="Finas Blue 30 Capsules" loading="lazy" decoding="async" />
+                        <img src="assets/images/products/finas-blue-100-capsule.webp" class="rounded-lg" alt="Finas Blue 30 Capsules" loading="lazy" decoding="async" />
           </div>
           <div class="flex grow flex-col pt-7">
             <h3 class="font-medium text-base text-slate-950 tracking-tight transition duration-200 ease-out group-hover:text-blue-700">Finas Blue 30 Capsules</h3>
@@ -1290,7 +1804,7 @@
           <div class="relative aspect-1/1 -m-4">
                           <div class="absolute bottom-3 left-3 rounded-md bg-slate-950 px-2.5 py-1.5 text-xs text-white">
                 Dutasteride              </div>
-                        <img src="assets/images/products/finas-blue-100-capsule.png" class="rounded-lg" alt="Finox Pro 100 Capsules" loading="lazy" decoding="async" />
+                        <img src="assets/images/products/finas-blue-100-capsule.webp" class="rounded-lg" alt="Finox Pro 100 Capsules" loading="lazy" decoding="async" />
           </div>
           <div class="flex grow flex-col pt-7">
             <h3 class="font-medium text-base text-slate-950 tracking-tight transition duration-200 ease-out group-hover:text-blue-700">Finox Pro 100 Capsules</h3>
@@ -1306,7 +1820,7 @@
           <div class="relative aspect-1/1 -m-4">
                           <div class="absolute bottom-3 left-3 rounded-md bg-slate-950 px-2.5 py-1.5 text-xs text-white">
                 Dutasteride              </div>
-                        <img src="assets/images/products/finas-blue-100-capsule.png" class="rounded-lg" alt="Finox Pro 30 Capsules" loading="lazy" decoding="async" />
+                        <img src="assets/images/products/finas-blue-100-capsule.webp" class="rounded-lg" alt="Finox Pro 30 Capsules" loading="lazy" decoding="async" />
           </div>
           <div class="flex grow flex-col pt-7">
             <h3 class="font-medium text-base text-slate-950 tracking-tight transition duration-200 ease-out group-hover:text-blue-700">Finox Pro 30 Capsules</h3>
@@ -1320,7 +1834,7 @@
                         hover:-translate-y-2 hover:shadow-xl hover:ring-2
                         hover:shadow-blue-300 hover:ring-blue-600">
           <div class="relative aspect-1/1 -m-4">
-                        <img src="assets/images/products/finas-blue-100-capsule.png" class="rounded-lg" alt="Finox Red 100 Capsules" loading="lazy" decoding="async" />
+                        <img src="assets/images/products/finas-blue-100-capsule.webp" class="rounded-lg" alt="Finox Red 100 Capsules" loading="lazy" decoding="async" />
           </div>
           <div class="flex grow flex-col pt-7">
             <h3 class="font-medium text-base text-slate-950 tracking-tight transition duration-200 ease-out group-hover:text-blue-700">Finox Red 100 Capsules</h3>
@@ -1334,7 +1848,7 @@
                         hover:-translate-y-2 hover:shadow-xl hover:ring-2
                         hover:shadow-blue-300 hover:ring-blue-600">
           <div class="relative aspect-1/1 -m-4">
-                        <img src="assets/images/products/finas-blue-100-capsule.png" class="rounded-lg" alt="Finox Red 30 Capsules" loading="lazy" decoding="async" />
+                        <img src="assets/images/products/finas-blue-100-capsule.webp" class="rounded-lg" alt="Finox Red 30 Capsules" loading="lazy" decoding="async" />
           </div>
           <div class="flex grow flex-col pt-7">
             <h3 class="font-medium text-base text-slate-950 tracking-tight transition duration-200 ease-out group-hover:text-blue-700">Finox Red 30 Capsules</h3>
@@ -1348,7 +1862,7 @@
                         hover:-translate-y-2 hover:shadow-xl hover:ring-2
                         hover:shadow-blue-300 hover:ring-blue-600">
           <div class="relative aspect-1/1 -m-4">
-                        <img src="assets/images/products/finas-blue-100-capsule.png" class="rounded-lg" alt="Finox+ Grey 100 Capsules" loading="lazy" decoding="async" />
+                        <img src="assets/images/products/finas-blue-100-capsule.webp" class="rounded-lg" alt="Finox+ Grey 100 Capsules" loading="lazy" decoding="async" />
           </div>
           <div class="flex grow flex-col pt-7">
             <h3 class="font-medium text-base text-slate-950 tracking-tight transition duration-200 ease-out group-hover:text-blue-700">Finox+ Grey 100 Capsules</h3>
@@ -1799,7 +2313,7 @@
 </section>
 <section class="section section-cta bg-slate-900">
     <img
-    src="/assets/images/cta-doctor-phone-assessment-v2.png"
+    src="/assets/images/hero-footer-cta.webp"
     alt=""
     loading="lazy"
     decoding="async"
@@ -1821,7 +2335,7 @@
         <a href="#" class="button bg-slate-100 text-slate-900 inline-flex">
           <div class="flex-split">
             <div>Get Free Hair Analysis</div>
-            <div class="size-7 -m-1 -mr-4 ml-5 rounded-full flex items-center justify-center bg-blue-600 text-slate-100">
+            <div class="size-7 -m-1 -mr-4 ml-5 rounded-full flex items-center justify-center text-white bg-gradient-to-br from-purple-500 via-indigo-600 to-indigo-500">
               <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="size-5"><path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z"></path></svg>          </div>
           </div>  
         </a>
@@ -1924,8 +2438,8 @@
   target="_blank"
   rel="noopener noreferrer"
   class="whatsapp-button fixed bottom-6 right-6 z-40 flex size-16 items-center justify-center rounded-full
-    bg-gradient-to-br from-green-500 to-green-600
-    ring-1 ring-inset ring-green-700/50
+    bg-gradient-to-br from-lime-500 via-green-600 to-emerald-500
+    ring-1 ring-inset ring-green-900/50
     shadow-xl shadow-slate-900/40
     text-white transition-colors hover:bg-green-700 focus-visible:outline-2
     focus-visible:outline-offset-2 focus-visible:outline-green-700 js-whatsapp-consultation-link"

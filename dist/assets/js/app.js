@@ -39,14 +39,38 @@
   });
 })();
 
+// Navbar drawer: data-drawer-open/close and .js-component-navbar-drawer-panel.
+// Keeps focus inside the modal and restores background interaction and scroll state on close.
 (() => {
   const drawerTriggers = document.querySelectorAll('[data-drawer-open]');
   const drawerClosers = document.querySelectorAll('[data-drawer-close]');
+  const backgroundElements = new Map();
   let activeDrawer = null;
   let activeTrigger = null;
+  let wasScrollLocked = false;
+
+  const setBackgroundInert = (drawer) => {
+    let branch = drawer;
+
+    while (branch.parentElement) {
+      for (const sibling of branch.parentElement.children) {
+        if (sibling === branch || !(sibling instanceof HTMLElement)) {
+          continue;
+        }
+
+        backgroundElements.set(sibling, sibling.inert);
+        sibling.inert = true;
+      }
+
+      branch = branch.parentElement;
+      if (branch === document.body) {
+        break;
+      }
+    }
+  };
 
   const setDrawerState = (drawer, isOpen) => {
-    const panel = drawer.querySelector('.js-site-drawer-panel');
+    const panel = drawer.querySelector('.js-component-navbar-drawer-panel');
 
     drawer.classList.toggle('pointer-events-none', !isOpen);
     drawer.classList.toggle('opacity-0', !isOpen);
@@ -58,8 +82,6 @@
       panel.classList.toggle('translate-x-full', !isOpen);
       panel.classList.toggle('translate-x-0', isOpen);
     }
-
-    document.body.classList.toggle('overflow-hidden', isOpen);
   };
 
   const closeDrawer = () => {
@@ -67,13 +89,18 @@
       return;
     }
 
-    setDrawerState(activeDrawer, false);
+    backgroundElements.forEach((wasInert, element) => {
+      element.inert = wasInert;
+    });
+    backgroundElements.clear();
+    document.body.classList.toggle('overflow-hidden', wasScrollLocked);
 
-    if (activeTrigger) {
+    if (activeTrigger?.isConnected) {
       activeTrigger.setAttribute('aria-expanded', 'false');
-      activeTrigger.focus();
+      activeTrigger.focus({ preventScroll: true });
     }
 
+    setDrawerState(activeDrawer, false);
     activeDrawer = null;
     activeTrigger = null;
   };
@@ -81,20 +108,21 @@
   drawerTriggers.forEach((trigger) => {
     trigger.addEventListener('click', () => {
       const drawer = document.getElementById(trigger.dataset.drawerOpen);
+      const panel = drawer?.querySelector('.js-component-navbar-drawer-panel');
 
-      if (!drawer) {
+      if (!panel || activeDrawer === drawer) {
         return;
       }
 
+      closeDrawer();
       activeDrawer = drawer;
       activeTrigger = trigger;
+      wasScrollLocked = document.body.classList.contains('overflow-hidden');
+      document.body.classList.add('overflow-hidden');
       trigger.setAttribute('aria-expanded', 'true');
       setDrawerState(drawer, true);
-
-      const closeButton = drawer.querySelector('.js-site-drawer-panel [data-drawer-close]');
-      if (closeButton) {
-        closeButton.focus();
-      }
+      (panel.querySelector('[data-drawer-close]') || panel).focus({ preventScroll: true });
+      setBackgroundInert(drawer);
     });
   });
 
@@ -102,9 +130,47 @@
     closer.addEventListener('click', closeDrawer);
   });
 
+  document.querySelectorAll('.js-component-navbar-drawer-panel').forEach((panel) => {
+    panel.addEventListener('click', (event) => {
+      if (event.target.closest('a[href]') && !event.ctrlKey && !event.metaKey && !event.shiftKey) {
+        closeDrawer();
+      }
+    });
+  });
+
   document.addEventListener('keydown', (event) => {
+    if (!activeDrawer) {
+      return;
+    }
+
     if (event.key === 'Escape') {
+      event.preventDefault();
       closeDrawer();
+      return;
+    }
+
+    if (event.key !== 'Tab') {
+      return;
+    }
+
+    const panel = activeDrawer.querySelector('.js-component-navbar-drawer-panel');
+    const focusable = Array.from(panel.querySelectorAll(
+      'a[href], button, summary, input, select, textarea, [tabindex]',
+    )).filter((element) => element.tabIndex >= 0 && !element.disabled
+      && !element.closest('[inert]') && element.getClientRects().length > 0);
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    const focused = document.activeElement;
+
+    if (!first) {
+      event.preventDefault();
+      panel.focus({ preventScroll: true });
+      return;
+    }
+
+    if (!focusable.includes(focused) || (event.shiftKey ? focused === first : focused === last)) {
+      event.preventDefault();
+      (event.shiftKey ? last : first).focus({ preventScroll: true });
     }
   });
 
