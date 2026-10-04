@@ -10,7 +10,7 @@
 ?>
 <header
   class="fixed inset-x-0 top-0 z-40 bg-slate-100 transition-transform duration-300 ease-out
-    motion-reduce:transition-none lg:static lg:translate-y-0 lg:transition-none js-site-mobile-navbar"
+    motion-reduce:transition-none lg:relative lg:translate-y-0 lg:transition-none js-site-mobile-navbar"
 >
   <div class="flex h-18 items-center justify-between px-4 lg:h-auto lg:px-6 lg:py-4">
     <a href="<?= asset_url(''); ?>" class="text-xl tracking-tight text-slate-800 tracking-tight flex items-center">

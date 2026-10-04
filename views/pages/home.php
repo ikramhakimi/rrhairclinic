@@ -9,7 +9,7 @@ component('navbar');
 section('hero');
 
 section('hair-loss');
-section('intro');
+// section('intro');
 section('case-study');
 section('treatments');
 // section('treatments_');

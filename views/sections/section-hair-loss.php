@@ -3,7 +3,7 @@
     <?php
     component('section-headline', [
       'topic'    => 'Hair Loss Issues',
-      'title'    => "Understand what your hair\nis trying to tell you.",
+      'title'    => 'Understand your hair loss before choosing a treatment',
       'subtitle' => "Different patterns of hair loss need different treatment plans.\n"
         . 'Start by identifying what you are experiencing.',
     ]);
@@ -133,17 +133,18 @@
   </div>
 
   <div class="container sm:mt-10 sm:text-center">
-    <div class="hairloss-quote text-base sm:text-xl max-w-3xl mt-5 mx-auto sm:text-center">
-      <span class="font-medium text-slate-600">Hair loss can show up in everyday ways.</span>
-      <span class="text-slate-500">From how you style it to how you feel in photos, small changes can become increasingly noticeable over time.</span>
+    <div class="hairloss-quote text-base sm:text-xl max-w-3xl mt-5 mx-auto">
+      <h2 class="font-medium text-slate-600 sm:inline">What can cause hair loss?</h2>
+      <p class="text-slate-500 sm:inline">
+        These patterns can have different causes, from genetics and hormonal changes to stress or scalp health.
+        Finding the cause helps guide the right treatment.
+      </p>
     </div>
-    <!-- <h3 class="text-2xl sm:text-2xl sm:leading-11 text-slate-900">What Causes Hair Thinning?</h3> -->
-    <!-- <div class="max-w-3xl sm:mx-auto mt-2">Hair thinning can happen for many reasons. Finding the cause helps you choose the right treatment.</div> -->
     <?php
     $hairloss_reasons = [
       [
         'category'    => 'Nutrition',
-        'title'       => 'Vitamin Deficiencies',
+        'title'       => 'Nutritional Deficiencies',
         'description' => 'Low iron, zinc, biotin, or protein can weaken hair and increase shedding.',
         'image'       => 'assets/images/hair-loss/reason-vitamin-deficiencies.webp',
         'image_alt'   => 'Malay woman checking her hair while sitting down to a balanced meal',
@@ -190,7 +191,7 @@
         <?php foreach ($hairloss_reasons as $index => $hairloss_reason) { ?>
         <details class="reasons-item group py-px sm:hidden js-component-faq-item" <?= $index === 0 ? 'open' : ''; ?>>
           <summary class="flex bg-slate-200 group-open:bg-slate-700 rounded-lg px-4 py-3 cursor-pointer list-none items-start justify-between gap-6 [&::-webkit-details-marker]:hidden">
-            <h3 class="text-indigo-700 group-open:text-white"><?= e($hairloss_reason['title']); ?></h3>
+            <span class="text-indigo-700 group-open:text-white"><?= e($hairloss_reason['title']); ?></span>
             <span class="shrink-0 text-slate-400" aria-hidden="true">
               <?php svg(
                 'add-line',
@@ -228,9 +229,9 @@
               class="size-full object-cover"
             />
           </div>
-          <div class="uppercase text-xs mb-2"><?= e($hairloss_reason['category']); ?></div>
+          <div class="uppercase text-xs mb-2 text-slate-500"><?= e($hairloss_reason['category']); ?></div>
           <h3 class="font-medium text-lg text-slate-900 mb-2"><?= e($hairloss_reason['title']); ?></h3>
-          <div class="text-sm text-slate-500"><?= e($hairloss_reason['description']); ?></div>
+          <div class="text-sm"><?= e($hairloss_reason['description']); ?></div>
         </div>
         <?php } ?>
       </div>
@@ -238,7 +239,7 @@
       <div class="absolute left-0 w-full h-10 bg-gradient-to-t from-slate-100 to-transparent hidden sm:block bottom-0"></div>
     </div>
 
-    <div class="hairloss-cta mt-10">
+    <div class="hairloss-cta mt-15">
       <div class="text-lg">Not sure about what your hair issue?</div>
       <div class="sm:flex sm:items-center sm:justify-center gap-2">
         <a href="<?= asset_url('hair-check'); ?>" class="button-lg bg-gradient-to-br w-full sm:w-auto from-purple-500 via-indigo-600 to-indigo-500 text-white text-shadow-2xs text-shadow-indigo-900/50 ring-1 ring-inset ring-indigo-900/50 inline-flex mt-7 transform duration-200 translate-y-0 hover:-translate-y-1 shadow-lg shadow-slate-400 hover:shadow-3xl hover:shadow-slate-500">

@@ -29,9 +29,7 @@
     <div class="md:text-center">
       <div class="headline-topic mb-8 text-xs text-slate-300 uppercase">Free · No obligation · Response within 24 hours</div>
       <h2 class="headline-title text-2xl md:text-4xl md:leading-12 text-slate-100 max-w-5xl mx-auto">
-        <span class="md:text-5xl">Send two photos.</span> 
-        <br>
-        Get a <span class="underline underline-offset-6">personalised</span> treatment plan & quote.
+        Send your photos for an initial hair assessment
       </h2>
       <div class="sm:flex md:justify-center gap-3 mt-10">
         <a href="<?= e($consultation_url ?? '#'); ?>" class="button bg-slate-100 text-slate-900 inline-flex">

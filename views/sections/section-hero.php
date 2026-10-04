@@ -1,4 +1,4 @@
-<section class="section section-hero bg-slate-700 min-h-dvh sm:min-h-[800px] flex flex-col rounded-md sm:rounded-none relative" style="--hero-image: url(<?= asset_url('assets/images/hero.webp'); ?>); --hero-mobile-image: url(<?= asset_url('assets/images/hero-mobile.webp'); ?>);">
+<section class="section section-hero bg-slate-700 min-h-dvh sm:min-h-[800px] mt-18 lg:mt-0 flex flex-col rounded-md sm:rounded-none relative" style="--hero-image: url(<?= asset_url('assets/images/hero.webp'); ?>); --hero-mobile-image: url(<?= asset_url('assets/images/hero-mobile.webp'); ?>);">
   <div class="bg-gradient-to-b from-slate-100 via-slate-100 to-transparent absolute w-full h-40 sm:h-70 top-0 left-0"></div>
   <div class="bg-gradient-to-t from-slate-100 to-transparent absolute w-full h-40 bottom-0 left-0"></div>
   
