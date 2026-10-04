@@ -27,8 +27,8 @@
     // Mockup data for the current case-study cards.
     $case_studies = [
       [
-        'before_image' => 'assets/images/case-studies/case-1-before.png',
-        'after_image'  => 'assets/images/case-studies/case-1-after.png',
+        'before_image' => 'assets/images/case-studies/case-1-before.webp',
+        'after_image'  => 'assets/images/case-studies/case-1-after.webp',
         'before_alt'   => 'Before treatment with visible crown and frontal hair thinning',
         'after_alt'    => 'After treatment with improved crown and frontal hair density',
         'hair_issue'   => 'Crown & frontal thinning',
@@ -38,8 +38,8 @@
         'grafts'       => '3,400',
       ],
       [
-        'before_image' => 'assets/images/case-studies/case-2-before.png',
-        'after_image'  => 'assets/images/case-studies/case-2-after.png',
+        'before_image' => 'assets/images/case-studies/case-2-before.webp',
+        'after_image'  => 'assets/images/case-studies/case-2-after.webp',
         'before_alt'   => 'Before treatment with receding frontal hairline and temple thinning',
         'after_alt'    => 'After treatment with improved frontal hairline and fuller temple coverage',
         'hair_issue'   => 'Receding hairline',
@@ -49,8 +49,8 @@
         'grafts'       => '2,800',
       ],
       [
-        'before_image' => 'assets/images/case-studies/case-3-before.png',
-        'after_image'  => 'assets/images/case-studies/case-3-after.png',
+        'before_image' => 'assets/images/case-studies/case-3-before.webp',
+        'after_image'  => 'assets/images/case-studies/case-3-after.webp',
         'before_alt'   => 'Before treatment with visible crown thinning and reduced top density',
         'after_alt'    => 'After treatment with improved crown coverage and top density',
         'hair_issue'   => 'Crown thinning',
@@ -60,8 +60,8 @@
         'grafts'       => '3,200',
       ],
       [
-        'before_image' => 'assets/images/case-studies/case-2-before.png',
-        'after_image'  => 'assets/images/case-studies/case-2-after.png',
+        'before_image' => 'assets/images/case-studies/case-2-before.webp',
+        'after_image'  => 'assets/images/case-studies/case-2-after.webp',
         'before_alt'   => 'Before treatment with receding frontal hairline and temple thinning',
         'after_alt'    => 'After treatment with improved frontal hairline and fuller temple coverage',
         'hair_issue'   => 'Receding hairline',
@@ -71,8 +71,8 @@
         'grafts'       => '2,800',
       ],
       [
-        'before_image' => 'assets/images/case-studies/case-3-before.png',
-        'after_image'  => 'assets/images/case-studies/case-3-after.png',
+        'before_image' => 'assets/images/case-studies/case-3-before.webp',
+        'after_image'  => 'assets/images/case-studies/case-3-after.webp',
         'before_alt'   => 'Before treatment with visible crown thinning and reduced top density',
         'after_alt'    => 'After treatment with improved crown coverage and top density',
         'hair_issue'   => 'Crown thinning',
@@ -115,11 +115,11 @@
               <img
                 src="<?= e($case_study['before_image']); ?>"
                 alt="<?= e($case_study['before_alt']); ?>"
-                width="1122"
-                height="1402"
+                width="600"
+                height="750"
                 loading="lazy"
                 decoding="async"
-                class="aspect-[1/2] size-full object-cover"
+                class="aspect-[4/5] size-full object-contain"
               />
               <figcaption class="absolute top-2 left-2 rounded-full bg-slate-950/20 px-3 py-1 text-xs uppercase text-white">
                 Before
@@ -130,11 +130,11 @@
               <img
                 src="<?= e($case_study['after_image']); ?>"
                 alt="<?= e($case_study['after_alt']); ?>"
-                width="1122"
-                height="1402"
+                width="600"
+                height="750"
                 loading="lazy"
                 decoding="async"
-                class="aspect-[1/2] size-full object-cover"
+                class="aspect-[4/5] size-full object-contain"
               />
               <figcaption class="absolute top-2 right-2 rounded-full bg-slate-950/50 px-3 py-1 text-xs uppercase text-white">
                 After
