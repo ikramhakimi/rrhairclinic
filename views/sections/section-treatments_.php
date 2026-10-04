@@ -106,7 +106,7 @@
 
       <?php foreach($treatments as $index => $treatment) { ?>
       <article
-        class="card flex flex-col overflow-hidden rounded-2xl bg-white ring-1 ring-slate-200
+        class="card flex flex-col overflow-hidden rounded-2xl
                md:flex-row lg:col-span-3 lg:flex-col"
       >
         <div class="relative min-h-72 flex-1 overflow-hidden bg-slate-100 lg:flex-none">
@@ -172,7 +172,7 @@
 
     <div class="mt-5 grid grid-cols-1 gap-5 md:grid-cols-2">
       <?php foreach($treatment_groups as $group_index => $group) { ?>
-      <article class="card rounded-xl bg-white p-6 ring-1 ring-slate-200 md:p-8">
+      <article class="card p-6 md:p-8">
         <div class="flex gap-5">
           <div class="flex size-16 shrink-0 items-center justify-center rounded-full bg-slate-900 text-sm text-white">
             0<?= e($group_index + 1); ?>

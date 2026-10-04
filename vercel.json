@@ -1,4 +1,7 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "outputDirectory": "dist"
+  "installCommand": "dnf install -y php-cli php-xml",
+  "buildCommand": "php ./scripts/export-static.php",
+  "outputDirectory": "dist",
+  "cleanUrls": true
 }

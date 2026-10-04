@@ -1,407 +1,263 @@
-<section class="section section-hair-loss py-25 px-6 md:px-10 overflow-hidden js-hair-loss-carousel">
+<section class="section section-hairloss js-hair-loss-carousel">
   <div class="container">
-    <div class="section-headline max-w-2xl">
-      <div class="headline-topic mb-5 text-xs text-slate-500 uppercase">Hair Loss Issues</div>
-      <h2 class="headline-title text-4xl text-slate-950">
-        Understand what your hair<br> is trying to tell you.
-      </h2>
-      <div class="headline-subtitle mt-5">
-        Different patterns of hair loss need different treatment plans. Start by identifying what you are experiencing.
-      </div>
-    </div>
+    <?php
+    component('section-headline', [
+      'topic'    => 'Hair Loss Issues',
+      'title'    => "Understand what your hair\nis trying to tell you.",
+      'subtitle' => "Different patterns of hair loss need different treatment plans.\n"
+        . 'Start by identifying what you are experiencing.',
+    ]);
+    ?>
 
-    <div class="relative -mt-15 js-hair-loss-controls" hidden>
-      <div class="flex items-center justify-end gap-3">
-        <button type="button" class="flex size-14 items-center justify-center rounded-full bg-white text-slate-900 ring-1 ring-slate-300 cursor-pointer js-hair-loss-prev"
-                aria-label="Previous hair loss slide" aria-controls="hair-loss-track">
-          <span aria-hidden="true"><?php svg('arrow-left-line', 'size-7'); ?></span>
-        </button>
-        <button type="button" class="flex size-14 items-center justify-center rounded-full bg-white text-slate-900 ring-1 ring-slate-300 cursor-pointer js-hair-loss-next"
-                aria-label="Next hair loss slide" aria-controls="hair-loss-track">
-          <span aria-hidden="true"><?php svg('arrow-right-line', 'size-7'); ?></span>
-        </button>
-      </div>
-      <p class="sr-only js-hair-loss-status" role="status" aria-live="polite" aria-atomic="true"></p>
-    </div>
+    <?php
+    $hair_loss_cards = [
+      [
+        'title'       => 'Hair Loss',
+        'title_class' => 'font-medium text-lg text-slate-950 transition duration-200 ease-out group-hover:text-indigo-700',
+        'description' => 'Changes in hair density, growth or shedding.',
+        'image'       => 'assets/images/hair-loss/hair-loss-thinning-hair.png',
+        'image_alt'   => 'Thinning hair with reduced density across the scalp',
+        'fade_width'  => 'w-30',
+        'lazy_loading' => false,
+      ],
+      [
+        'title'       => 'Male Pattern Baldness',
+        'title_class' => 'font-medium text-lg text-slate-950 transition duration-200 ease-out group-hover:text-indigo-700',
+        'description' => 'Gradual thinning at the temples, crown or hairline.',
+        'image'       => 'assets/images/hair-loss/hair-loss-male-pattern-baldness.png',
+        'image_alt'   => 'Male pattern baldness hair loss with visible crown thinning',
+        'fade_width'  => 'w-1/3',
+        'lazy_loading' => true,
+      ],
+      [
+        'title'       => 'Female Pattern Hair Loss',
+        'title_class' => 'font-medium text-lg text-slate-950 transition duration-200 ease-out group-hover:text-indigo-700',
+        'description' => 'Thinning across the scalp, wider parting or reduced volume.',
+        'image'       => 'assets/images/hair-loss/hair-loss-female-hair-loss.png',
+        'image_alt'   => 'Female hair loss with diffuse thinning and wider centre parting',
+        'fade_width'  => 'w-30',
+        'lazy_loading' => true,
+      ],
+      [
+        'title'       => 'Receding Hairline',
+        'title_class' => 'font-medium text-lg text-slate-950 transition duration-200 ease-out group-hover:text-indigo-700',
+        'description' => 'Hairline moving back at the temples or forehead.',
+        'image'       => 'assets/images/hair-loss/hair-loss-receding-hairline.png',
+        'image_alt'   => 'Receding hairline with temple and frontal hair loss',
+        'fade_width'  => 'w-30',
+        'lazy_loading' => true,
+      ],
+      [
+        'title'       => 'Thinning Hair',
+        'title_class' => 'font-medium text-lg text-slate-950 transition duration-200 ease-out group-hover:text-indigo-700',
+        'description' => 'Reduced density or weaker strands that leave hair looking finer.',
+        'image'       => 'assets/images/hair-loss/hair-loss-thinning-hair.png',
+        'image_alt'   => 'Thinning hair with reduced density across the scalp',
+        'fade_width'  => 'w-30',
+        'lazy_loading' => true,
+      ],
+      [
+        'title'       => 'Crown Hair Loss',
+        'title_class' => 'font-medium text-lg text-slate-950 transition duration-200 ease-out group-hover:text-indigo-700',
+        'description' => 'Visible thinning or balding at the crown.',
+        'image'       => 'assets/images/hair-loss/hair-loss-crown-hair-loss.png',
+        'image_alt'   => 'Crown hair loss with visible thinning around the vertex',
+        'fade_width'  => 'w-30',
+        'lazy_loading' => true,
+      ],
+      [
+        'title'       => 'Excessive Hair Shedding',
+        'title_class' => 'font-medium text-lg text-slate-950 transition duration-200 ease-out group-hover:text-indigo-700',
+        'description' => 'More hair falling out than usual each day.',
+        'image'       => 'assets/images/hair-loss/hair-loss-hair-shedding.png',
+        'image_alt'   => 'Hair shedding with subtle loose strands and reduced hair density',
+        'fade_width'  => 'w-30',
+        'lazy_loading' => true,
+      ],
+    ];
+    ?>
   </div>
 
-  <div class="relative mt-15 -mx-6 md:-mx-10">
-    <div class="container w-[calc(100%-3rem)] md:w-[calc(100%-5rem)]">
-      <div id="hair-loss-track" class="grid grid-cols-1 gap-3 md:grid-cols-4 js-hair-loss-track"
+  <div class="carousel-hairloss relative -mx-6 md:mx-0 mt-5 sm:-mt-5">
+    <div class="container md:w-[calc(100%-5rem)]">
+      <?php
+      component('carousel-controls', [
+        'hook'          => 'hair-loss',
+        'slide_label'   => 'hair loss',
+        'wrapper_class' => 'relative mb-5',
+      ]);
+      ?>
+      <div id="hair-loss-track" class="grid grid-cols-1 gap-2 md:grid-cols-4 md:py-0 px-6 md:px-0 js-hair-loss-track"
            role="group" aria-roledescription="carousel" aria-label="Hair loss issues">
-        <a href="#"
-           class="card group flex flex-col bg-white ring-1 ring-slate-200 px-6 pt-5 rounded-2xl overflow-hidden transition duration-200 ease-out hover:-translate-y-2
-                  hover:shadow-xl hover:ring-2 hover:shadow-blue-300 hover:ring-blue-600">
-          <h3 class="text-lg text-red-600 transition duration-200 ease-out group-hover:text-red-700">Hair Loss</h3>
-          <p class="mt-3 text-sm text-slate-500 transition duration-200 ease-out group-hover:text-slate-600">
-            A general change in hair density, growth or shedding that can have several underlying causes.
+        <?php foreach ($hair_loss_cards as $hair_loss_card) { ?>
+        <div
+           class="card group flex flex-col px-4 pt-3 sm:px-6 sm:pt-5 overflow-hidden my-px">
+          <h3 class="<?= e($hair_loss_card['title_class']); ?> mb-10"><?= e($hair_loss_card['title']); ?></h3>
+          <p class="-mt-8 mb-5 text-sm text-slate-500 transition duration-200 ease-out group-hover:text-slate-600">
+            <?= e($hair_loss_card['description']); ?>
           </p>
           <div class="relative aspect-4/3 bg-white rounded-xl mt-auto -mx-6 overflow-hidden">
             <img
-              src="assets/images/hair-loss/hair-loss-thinning-hair.png"
-              alt="Thinning hair with reduced density across the scalp"
+              src="<?= e($hair_loss_card['image']); ?>"
+              alt="<?= e($hair_loss_card['image_alt']); ?>"
               width="1448"
               height="1086"
-              decoding="async"
-              class="size-full object-cover transition duration-200 ease-out opacity-90 group-hover:opacity-100"
-            />
-            <div class="pointer-events-none absolute inset-y-0 left-0 w-30 bg-gradient-to-r from-white to-transparent"></div>
-            <div class="pointer-events-none absolute inset-y-0 right-0 w-30 bg-gradient-to-l from-white to-transparent"></div>
-          </div>
-        </a>
-
-        <a href="#"
-           class="card group flex flex-col bg-white ring-1 ring-slate-200 px-6 pt-5 rounded-2xl overflow-hidden transition duration-200 ease-out hover:-translate-y-2
-                  hover:shadow-xl hover:ring-2 hover:shadow-blue-300 hover:ring-blue-600">
-          <h3 class="text-lg text-slate-950 transition duration-200 ease-out group-hover:text-blue-700">Male Pattern Baldness</h3>
-          <p class="mt-3 text-sm text-slate-500 transition duration-200 ease-out group-hover:text-slate-600">
-            Gradual thinning at the temples, crown or hairline caused by progressive follicle miniaturisation.
-          </p>
-          <div class="relative aspect-4/3 bg-white rounded-xl mt-auto -mx-6 overflow-hidden">
-            <img
-              src="assets/images/hair-loss/hair-loss-male-pattern-baldness.png"
-              alt="Male pattern baldness hair loss with visible crown thinning"
-              width="1448"
-              height="1086"
+              <?php if ($hair_loss_card['lazy_loading']) { ?>
               loading="lazy"
+              <?php } ?>
               decoding="async"
-              class="size-full object-cover transition duration-200 ease-out opacity-90 group-hover:opacity-100"
+              class="size-full object-cover transition duration-200 ease-out"
             />
-            <div class="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-white to-transparent"></div>
-            <div class="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white to-transparent"></div>
-          </div>
-        </a>
-
-        <a href="#"
-           class="card group flex flex-col bg-white ring-1 ring-slate-200 px-6 pt-5 rounded-2xl overflow-hidden transition duration-200 ease-out hover:-translate-y-2
-                  hover:shadow-xl hover:ring-2 hover:shadow-blue-300 hover:ring-blue-600">
-          <h3 class="text-lg text-slate-950 transition duration-200 ease-out group-hover:text-blue-700">Female Pattern Hair Loss</h3>
-          <p class="mt-3 text-sm text-slate-500 transition duration-200 ease-out group-hover:text-slate-600">
-            Diffuse thinning, wider parting or reduced volume that may need medical, hormonal or scalp assessment.
-          </p>
-          <div class="relative aspect-4/3 bg-white rounded-xl mt-auto -mx-6 overflow-hidden">
-            <img
-              src="assets/images/hair-loss/hair-loss-female-hair-loss.png"
-              alt="Female hair loss with diffuse thinning and wider centre parting"
-              width="1448"
-              height="1086"
-              loading="lazy"
-              decoding="async"
-              class="size-full object-cover transition duration-200 ease-out opacity-90 group-hover:opacity-100"
-            />
-            <div class="pointer-events-none absolute inset-y-0 left-0 w-30 bg-gradient-to-r from-white to-transparent"></div>
-            <div class="pointer-events-none absolute inset-y-0 right-0 w-30 bg-gradient-to-l from-white to-transparent"></div>
-          </div>
-        </a>
-
-        <a href="#"
-           class="card group flex flex-col bg-white ring-1 ring-slate-200 px-6 pt-5 rounded-2xl overflow-hidden transition duration-200 ease-out hover:-translate-y-2
-                  hover:shadow-xl hover:ring-2 hover:shadow-blue-300 hover:ring-blue-600">
-          <h3 class="text-lg text-slate-950 transition duration-200 ease-out group-hover:text-blue-700">Receding Hairline</h3>
-          <p class="mt-3 text-sm text-slate-500 transition duration-200 ease-out group-hover:text-slate-600">
-            Hairline recession around the temples or frontal area, often best managed early before it progresses.
-          </p>
-          <div class="relative aspect-4/3 bg-white rounded-xl mt-auto -mx-6 overflow-hidden">
-            <img
-              src="assets/images/hair-loss/hair-loss-receding-hairline.png"
-              alt="Receding hairline with temple and frontal hair loss"
-              width="1448"
-              height="1086"
-              loading="lazy"
-              decoding="async"
-              class="size-full object-cover transition duration-200 ease-out opacity-90 group-hover:opacity-100"
-            />
-            <div class="pointer-events-none absolute inset-y-0 left-0 w-30 bg-gradient-to-r from-white to-transparent"></div>
-            <div class="pointer-events-none absolute inset-y-0 right-0 w-30 bg-gradient-to-l from-white to-transparent"></div>
-          </div>
-        </a>
-
-        <a href="#"
-           class="card group flex flex-col bg-white ring-1 ring-slate-200 px-6 pt-5 rounded-2xl overflow-hidden transition duration-200 ease-out hover:-translate-y-2
-                  hover:shadow-xl hover:ring-2 hover:shadow-blue-300 hover:ring-blue-600">
-          <h3 class="text-lg text-slate-950 transition duration-200 ease-out group-hover:text-blue-700">Thinning Hair</h3>
-          <p class="mt-3 text-sm text-slate-500 transition duration-200 ease-out group-hover:text-slate-600">
-            Reduced density, weaker strands or flatter volume that can affect the overall appearance of fullness.
-          </p>
-          <div class="relative aspect-4/3 bg-white rounded-xl mt-auto -mx-6 overflow-hidden">
-            <img
-              src="assets/images/hair-loss/hair-loss-thinning-hair.png"
-              alt="Thinning hair with reduced density across the scalp"
-              width="1448"
-              height="1086"
-              loading="lazy"
-              decoding="async"
-              class="size-full object-cover transition duration-200 ease-out opacity-90 group-hover:opacity-100"
-            />
-            <div class="pointer-events-none absolute inset-y-0 left-0 w-30 bg-gradient-to-r from-white to-transparent"></div>
-            <div class="pointer-events-none absolute inset-y-0 right-0 w-30 bg-gradient-to-l from-white to-transparent"></div>
-          </div>
-        </a>
-
-        <a href="#"
-           class="card group flex flex-col bg-white ring-1 ring-slate-200 px-6 pt-5 rounded-2xl overflow-hidden transition duration-200 ease-out hover:-translate-y-2
-                  hover:shadow-xl hover:ring-2 hover:shadow-blue-300 hover:ring-blue-600">
-          <h3 class="text-lg text-slate-950 transition duration-200 ease-out group-hover:text-blue-700">Crown Hair Loss</h3>
-          <p class="mt-3 text-sm text-slate-500 transition duration-200 ease-out group-hover:text-slate-600">
-            Visible thinning or balding around the crown area that may continue expanding without treatment.
-          </p>
-          <div class="relative aspect-4/3 bg-white rounded-xl mt-auto -mx-6 overflow-hidden">
-            <img
-              src="assets/images/hair-loss/hair-loss-crown-hair-loss.png"
-              alt="Crown hair loss with visible thinning around the vertex"
-              width="1448"
-              height="1086"
-              loading="lazy"
-              decoding="async"
-              class="size-full object-cover transition duration-200 ease-out opacity-90 group-hover:opacity-100"
-            />
-            <div class="pointer-events-none absolute inset-y-0 left-0 w-30 bg-gradient-to-r from-white to-transparent"></div>
-            <div class="pointer-events-none absolute inset-y-0 right-0 w-30 bg-gradient-to-l from-white to-transparent"></div>
-          </div>
-        </a>
-
-        <a href="#"
-           class="card group flex flex-col bg-white ring-1 ring-slate-200 px-6 pt-5 rounded-2xl overflow-hidden transition duration-200 ease-out hover:-translate-y-2
-                  hover:shadow-xl hover:ring-2 hover:shadow-blue-300 hover:ring-blue-600">
-          <h3 class="text-lg text-slate-950 transition duration-200 ease-out group-hover:text-blue-700">Excessive Hair Shedding</h3>
-          <p class="mt-3 text-sm text-slate-500 transition duration-200 ease-out group-hover:text-slate-600">
-            Increased daily hair fall that may be linked to stress, nutrition, scalp health or medical triggers.
-          </p>
-          <div class="relative aspect-4/3 bg-white rounded-xl mt-auto -mx-6 overflow-hidden">
-            <img
-              src="assets/images/hair-loss/hair-loss-hair-shedding.png"
-              alt="Hair shedding with subtle loose strands and reduced hair density"
-              width="1448"
-              height="1086"
-              loading="lazy"
-              decoding="async"
-              class="size-full object-cover transition duration-200 ease-out opacity-90 group-hover:opacity-100"
-            />
-            <div class="pointer-events-none absolute inset-y-0 left-0 w-30 bg-gradient-to-r from-white to-transparent"></div>
-            <div class="pointer-events-none absolute inset-y-0 right-0 w-30 bg-gradient-to-l from-white to-transparent"></div>
-          </div>
-        </a>
-
-        <a href="#"
-           class="card group flex flex-col bg-white ring-1 ring-slate-200 px-6 pt-5 rounded-2xl overflow-hidden transition duration-200 ease-out hover:-translate-y-2
-                  hover:shadow-xl hover:ring-2 hover:shadow-blue-300 hover:ring-blue-600">
-          <h3 class="text-lg text-red-600 transition duration-200 ease-out group-hover:text-red-700">Alopecia Areata</h3>
-          <p class="mt-3 text-sm text-slate-500 transition duration-200 ease-out group-hover:text-slate-600">
-            Sudden, clearly defined patches of hair loss that may appear on the scalp or other areas.
-          </p>
-          <div class="relative aspect-4/3 bg-white rounded-xl mt-auto -mx-6 overflow-hidden">
-            <img
-              src="assets/images/hair-loss/hair-loss-crown-hair-loss.png"
-              alt="Crown hair loss with visible thinning around the vertex"
-              width="1448"
-              height="1086"
-              loading="lazy"
-              decoding="async"
-              class="size-full object-cover transition duration-200 ease-out opacity-90 group-hover:opacity-100"
-            />
-            <div class="pointer-events-none absolute inset-y-0 left-0 w-30 bg-gradient-to-r from-white to-transparent"></div>
-            <div class="pointer-events-none absolute inset-y-0 right-0 w-30 bg-gradient-to-l from-white to-transparent"></div>
-          </div>
-        </a>
-
-        <a href="#"
-           class="card group flex flex-col bg-white ring-1 ring-slate-200 px-6 pt-5 rounded-2xl overflow-hidden transition duration-200 ease-out hover:-translate-y-2
-                  hover:shadow-xl hover:ring-2 hover:shadow-blue-300 hover:ring-blue-600">
-          <h3 class="text-lg text-red-600 transition duration-200 ease-out group-hover:text-red-700">Telogen Effluvium</h3>
-          <p class="mt-3 text-sm text-slate-500 transition duration-200 ease-out group-hover:text-slate-600">
-            Temporary, widespread shedding that can follow illness, stress, weight changes or medication.
-          </p>
-          <div class="relative aspect-4/3 bg-white rounded-xl mt-auto -mx-6 overflow-hidden">
-            <img
-              src="assets/images/hair-loss/hair-loss-hair-shedding.png"
-              alt="Hair shedding with subtle loose strands and reduced hair density"
-              width="1448"
-              height="1086"
-              loading="lazy"
-              decoding="async"
-              class="size-full object-cover transition duration-200 ease-out opacity-90 group-hover:opacity-100"
-            />
-            <div class="pointer-events-none absolute inset-y-0 left-0 w-30 bg-gradient-to-r from-white to-transparent"></div>
-            <div class="pointer-events-none absolute inset-y-0 right-0 w-30 bg-gradient-to-l from-white to-transparent"></div>
-          </div>
-        </a>
-
-        <a href="#"
-           class="card group flex flex-col bg-white ring-1 ring-slate-200 px-6 pt-5 rounded-2xl overflow-hidden transition duration-200 ease-out hover:-translate-y-2
-                  hover:shadow-xl hover:ring-2 hover:shadow-blue-300 hover:ring-blue-600">
-          <h3 class="text-lg text-red-600 transition duration-200 ease-out group-hover:text-red-700">Postpartum Hair Loss</h3>
-          <p class="mt-3 text-sm text-slate-500 transition duration-200 ease-out group-hover:text-slate-600">
-            Increased shedding after childbirth as hormone levels and the natural hair cycle readjust.
-          </p>
-          <div class="relative aspect-4/3 bg-white rounded-xl mt-auto -mx-6 overflow-hidden">
-            <img
-              src="assets/images/hair-loss/hair-loss-female-hair-loss.png"
-              alt="Female hair loss with diffuse thinning and wider centre parting"
-              width="1448"
-              height="1086"
-              loading="lazy"
-              decoding="async"
-              class="size-full object-cover transition duration-200 ease-out opacity-90 group-hover:opacity-100"
-            />
-            <div class="pointer-events-none absolute inset-y-0 left-0 w-30 bg-gradient-to-r from-white to-transparent"></div>
-            <div class="pointer-events-none absolute inset-y-0 right-0 w-30 bg-gradient-to-l from-white to-transparent"></div>
-          </div>
-        </a>
-
-        <a href="#"
-           class="card group flex flex-col bg-white ring-1 ring-slate-200 px-6 pt-5 rounded-2xl overflow-hidden transition duration-200 ease-out hover:-translate-y-2
-                  hover:shadow-xl hover:ring-2 hover:shadow-blue-300 hover:ring-blue-600">
-          <h3 class="text-lg text-red-600 transition duration-200 ease-out group-hover:text-red-700">Stress-Related Hair Loss</h3>
-          <p class="mt-3 text-sm text-slate-500 transition duration-200 ease-out group-hover:text-slate-600">
-            Noticeable shedding or thinning that may develop after physical or emotional stress.
-          </p>
-          <div class="relative aspect-4/3 bg-white rounded-xl mt-auto -mx-6 overflow-hidden">
-            <img
-              src="assets/images/hair-loss/hair-loss-hair-shedding.png"
-              alt="Hair shedding with subtle loose strands and reduced hair density"
-              width="1448"
-              height="1086"
-              loading="lazy"
-              decoding="async"
-              class="size-full object-cover transition duration-200 ease-out opacity-90 group-hover:opacity-100"
-            />
-            <div class="pointer-events-none absolute inset-y-0 left-0 w-30 bg-gradient-to-r from-white to-transparent"></div>
-            <div class="pointer-events-none absolute inset-y-0 right-0 w-30 bg-gradient-to-l from-white to-transparent"></div>
-          </div>
-        </a>
-
-        <a href="#"
-           class="card group flex flex-col bg-white ring-1 ring-slate-200 px-6 pt-5 rounded-2xl overflow-hidden transition duration-200 ease-out hover:-translate-y-2
-                  hover:shadow-xl hover:ring-2 hover:shadow-blue-300 hover:ring-blue-600">
-          <h3 class="text-lg text-red-600 transition duration-200 ease-out group-hover:text-red-700">Hormonal Hair Loss</h3>
-          <p class="mt-3 text-sm text-slate-500 transition duration-200 ease-out group-hover:text-slate-600">
-            Hair thinning or shedding associated with hormonal shifts, imbalances or life-stage changes.
-          </p>
-          <div class="relative aspect-4/3 bg-white rounded-xl mt-auto -mx-6 overflow-hidden">
-            <img
-              src="assets/images/hair-loss/hair-loss-female-hair-loss.png"
-              alt="Female hair loss with diffuse thinning and wider centre parting"
-              width="1448"
-              height="1086"
-              loading="lazy"
-              decoding="async"
-              class="size-full object-cover transition duration-200 ease-out opacity-90 group-hover:opacity-100"
-            />
-            <div class="pointer-events-none absolute inset-y-0 left-0 w-30 bg-gradient-to-r from-white to-transparent"></div>
-            <div class="pointer-events-none absolute inset-y-0 right-0 w-30 bg-gradient-to-l from-white to-transparent"></div>
-          </div>
-        </a>
-
-        <a href="#"
-           class="card group flex flex-col bg-white ring-1 ring-slate-200 px-6 pt-5 rounded-2xl overflow-hidden transition duration-200 ease-out hover:-translate-y-2
-                  hover:shadow-xl hover:ring-2 hover:shadow-blue-300 hover:ring-blue-600">
-          <h3 class="text-lg text-red-600 transition duration-200 ease-out group-hover:text-red-700">Bald Spots / Patchy Hair Loss</h3>
-          <p class="mt-3 text-sm text-slate-500 transition duration-200 ease-out group-hover:text-slate-600">
-            Localised areas of visible scalp where hair has thinned significantly or stopped growing.
-          </p>
-          <div class="relative aspect-4/3 bg-white rounded-xl mt-auto -mx-6 overflow-hidden">
-            <img
-              src="assets/images/hair-loss/hair-loss-crown-hair-loss.png"
-              alt="Crown hair loss with visible thinning around the vertex"
-              width="1448"
-              height="1086"
-              loading="lazy"
-              decoding="async"
-              class="size-full object-cover transition duration-200 ease-out opacity-90 group-hover:opacity-100"
-            />
-            <div class="pointer-events-none absolute inset-y-0 left-0 w-30 bg-gradient-to-r from-white to-transparent"></div>
-            <div class="pointer-events-none absolute inset-y-0 right-0 w-30 bg-gradient-to-l from-white to-transparent"></div>
-          </div>
-        </a>
-
-        <a href="#"
-           class="card group flex flex-col bg-white ring-1 ring-slate-200 px-6 pt-5 rounded-2xl overflow-hidden transition duration-200 ease-out hover:-translate-y-2
-                  hover:shadow-xl hover:ring-2 hover:shadow-blue-300 hover:ring-blue-600">
-          <h3 class="text-lg text-red-600 transition duration-200 ease-out group-hover:text-red-700">Diffuse Hair Thinning</h3>
-          <p class="mt-3 text-sm text-slate-500 transition duration-200 ease-out group-hover:text-slate-600">
-            Evenly reduced density across the scalp rather than thinning in one distinct area.
-          </p>
-          <div class="relative aspect-4/3 bg-white rounded-xl mt-auto -mx-6 overflow-hidden">
-            <img
-              src="assets/images/hair-loss/hair-loss-thinning-hair.png"
-              alt="Thinning hair with reduced density across the scalp"
-              width="1448"
-              height="1086"
-              loading="lazy"
-              decoding="async"
-              class="size-full object-cover transition duration-200 ease-out opacity-90 group-hover:opacity-100"
-            />
-            <div class="pointer-events-none absolute inset-y-0 left-0 w-30 bg-gradient-to-r from-white to-transparent"></div>
-            <div class="pointer-events-none absolute inset-y-0 right-0 w-30 bg-gradient-to-l from-white to-transparent"></div>
-          </div>
-        </a>
-
-        <a href="#"
-           class="card group flex flex-col bg-white ring-1 ring-slate-200 px-6 pt-5 rounded-2xl overflow-hidden transition duration-200 ease-out hover:-translate-y-2
-                  hover:shadow-xl hover:ring-2 hover:shadow-blue-300 hover:ring-blue-600">
-          <h3 class="text-lg text-red-600 transition duration-200 ease-out group-hover:text-red-700">Hairline Thinning</h3>
-          <p class="mt-3 text-sm text-slate-500 transition duration-200 ease-out group-hover:text-slate-600">
-            Reduced density along the frontal hairline that can make the scalp or temples more visible.
-          </p>
-          <div class="relative aspect-4/3 bg-white rounded-xl mt-auto -mx-6 overflow-hidden">
-            <img
-              src="assets/images/hair-loss/hair-loss-receding-hairline.png"
-              alt="Receding hairline with temple and frontal hair loss"
-              width="1448"
-              height="1086"
-              loading="lazy"
-              decoding="async"
-              class="size-full object-cover transition duration-200 ease-out opacity-90 group-hover:opacity-100"
-            />
-            <div class="pointer-events-none absolute inset-y-0 left-0 w-30 bg-gradient-to-r from-white to-transparent"></div>
-            <div class="pointer-events-none absolute inset-y-0 right-0 w-30 bg-gradient-to-l from-white to-transparent"></div>
-          </div>
-        </a>
-
-        <a href="#"
-           class="card group flex flex-col bg-white ring-1 ring-slate-200 px-6 pt-5 rounded-2xl overflow-hidden transition duration-200 ease-out hover:-translate-y-2
-                  hover:shadow-xl hover:ring-2 hover:shadow-blue-300 hover:ring-blue-600">
-          <h3 class="text-lg text-red-600 transition duration-200 ease-out group-hover:text-red-700">Traction Alopecia</h3>
-          <p class="mt-3 text-sm text-slate-500 transition duration-200 ease-out group-hover:text-slate-600">
-            Hair loss caused by repeated pulling from tight hairstyles, extensions or prolonged tension.
-          </p>
-          <div class="relative aspect-4/3 bg-white rounded-xl mt-auto -mx-6 overflow-hidden">
-            <img
-              src="assets/images/hair-loss/hair-loss-female-hair-loss.png"
-              alt="Female hair loss with diffuse thinning and wider centre parting"
-              width="1448"
-              height="1086"
-              loading="lazy"
-              decoding="async"
-              class="size-full object-cover transition duration-200 ease-out opacity-90 group-hover:opacity-100"
-            />
-            <div class="pointer-events-none absolute inset-y-0 left-0 w-30 bg-gradient-to-r from-white to-transparent"></div>
-            <div class="pointer-events-none absolute inset-y-0 right-0 w-30 bg-gradient-to-l from-white to-transparent"></div>
-          </div>
-        </a>
-      </div>
-
-    </div>
-    <div aria-hidden="true"
-         class="pointer-events-none absolute -inset-y-3 left-0 z-10 w-6 bg-gradient-to-r from-slate-100 to-transparent md:w-15 lg:w-24"></div>
-    <div aria-hidden="true"
-         class="pointer-events-none absolute -inset-y-3 right-0 z-10 w-6 bg-gradient-to-l from-slate-100 to-transparent md:w-15 lg:w-24"></div>
-  </div>
-
-  <div class="container">
-    <div class="mt-15 flex flex-col gap-4 border-t border-slate-200 pt-10 md:flex-row md:items-center md:justify-between">
-      <div>
-        <h3 class="text-2xl text-slate-950">Not sure what type of hair loss you have?</h3>
-        <div class="text-sm text-slate-500 mt-2">Get a private photo-based review from our medical team.</div>
-      </div>
-      <a href="#" class="button bg-slate-900 text-white md:shrink-0">
-        <div class="flex-split">
-          <div>Get Free Hair Analysis</div>
-          <div class="size-7 -m-1 -mr-4 ml-5 rounded-full flex items-center justify-center bg-white text-slate-900">
-            <?php svg('arrow-right-up-line', 'size-5'); ?>
+            <div class="pointer-events-none absolute inset-y-0 left-0 <?= e($hair_loss_card['fade_width']); ?> bg-gradient-to-r from-white to-transparent hidden sm:block"></div>
+            <div class="pointer-events-none absolute inset-y-0 right-0 <?= e($hair_loss_card['fade_width']); ?> bg-gradient-to-l from-white to-transparent hidden sm:block"></div>
           </div>
         </div>
-      </a>
+        <?php } ?>
+        <a href="#"
+           class="card group flex flex-col items-center justify-center p-6 pb-4 my-px
+                  overflow-hidden hover:-translate-y-2---hover:shadow-xl---hover:ring-2
+                  hover:shadow-indigo-300---hover:ring-indigo-600">
+          <span class="font-medium text-lg text-slate-950 transition duration-200 ease-out group-hover:text-indigo-700">View more</span>
+          <span class="mt-4 text-slate-900" aria-hidden="true">
+            <?php svg('arrow-right-line', 'size-6'); ?>
+          </span>
+        </a>
+      </div>
+    </div>
+    <div aria-hidden="true"
+         class="pointer-events-none absolute -inset-y-3 left-0 z-10 w-6 bg-gradient-to-r from-slate-100 to-transparent md:w-15 lg:w-24 hidden sm:block"></div>
+    <div aria-hidden="true"
+         class="pointer-events-none absolute -inset-y-3 right-0 z-10 w-6 bg-gradient-to-l from-slate-100 to-transparent md:w-15 lg:w-24 hidden sm:block"></div>
+
+    
+  </div>
+
+  <div class="container sm:mt-10 sm:text-center">
+    <div class="hairloss-quote text-base sm:text-xl max-w-3xl mt-5 mx-auto sm:text-center">
+      <span class="font-medium text-slate-600">Hair loss can show up in everyday ways.</span>
+      <span class="text-slate-500">From how you style it to how you feel in photos, small changes can become increasingly noticeable over time.</span>
+    </div>
+    <!-- <h3 class="text-2xl sm:text-2xl sm:leading-11 text-slate-900">What Causes Hair Thinning?</h3> -->
+    <!-- <div class="max-w-3xl sm:mx-auto mt-2">Hair thinning can happen for many reasons. Finding the cause helps you choose the right treatment.</div> -->
+    <?php
+    $hairloss_reasons = [
+      [
+        'category'    => 'Nutrition',
+        'title'       => 'Vitamin Deficiencies',
+        'description' => 'Low iron, zinc, biotin, or protein can weaken hair and increase shedding.',
+        'image'       => 'assets/images/hair-loss/reason-vitamin-deficiencies.png',
+        'image_alt'   => 'Malay woman checking her hair while sitting down to a balanced meal',
+      ],
+      [
+        'category'    => 'Medical',
+        'title'       => 'Health Conditions & Medications',
+        'description' => 'Chronic conditions, autoimmune disorders, and some medications can cause hair loss.',
+        'image'       => 'assets/images/hair-loss/reason-health-conditions-medications.png',
+        'image_alt'   => 'Malay man discussing medication with a doctor',
+      ],
+      [
+        'category'    => 'Scalp Care',
+        'title'       => 'Scalp Health Issues',
+        'description' => 'Dandruff, infections, and inflammation can disrupt scalp health and hair growth.',
+        'image'       => 'assets/images/hair-loss/reason-scalp-health.png',
+        'image_alt'   => 'Malay man checking a flaky area of his scalp in a mirror',
+      ],
+      [
+        'category'    => 'Inherited',
+        'title'       => 'Family History (Genetics)',
+        'description' => 'Family history can increase your risk of androgenetic alopecia, a common cause of hair loss.',
+        'image'       => 'assets/images/hair-loss/reason-family-history.png',
+        'image_alt'   => 'Malay father and son looking through a family photo album',
+      ],
+      [
+        'category'    => 'Biology',
+        'title'       => 'Hormonal Changes',
+        'description' => 'Pregnancy, menopause, and thyroid changes can disrupt the hair cycle and increase shedding.',
+        'image'       => 'assets/images/hair-loss/reason-hormonal-changes.png',
+        'image_alt'   => 'Pregnant Malay woman checking her hair part in a mirror',
+      ],
+      [
+        'category'    => 'Lifestyle',
+        'title'       => 'Physical or Emotional Stress',
+        'description' => 'Physical or emotional stress can trigger telogen effluvium, causing more shedding than usual.',
+        'image'       => 'assets/images/hair-loss/reason-stress.png',
+        'image_alt'   => 'Malay woman sitting at her desk beside a hairbrush with loose strands',
+      ],
+    ];
+    ?>
+    <div class="hairloss-reasons relative mt-4 sm:mt-10">
+      <div class="sm:grid sm:grid-cols-3 sm:divide-y-0 sm:-mb-10">
+        <?php foreach ($hairloss_reasons as $index => $hairloss_reason) { ?>
+        <details class="reasons-item group py-px sm:hidden js-component-faq-item" <?= $index === 0 ? 'open' : ''; ?>>
+          <summary class="flex bg-slate-200 group-open:bg-slate-700 rounded-lg px-4 py-3 cursor-pointer list-none items-start justify-between gap-6 [&::-webkit-details-marker]:hidden">
+            <h3 class="text-indigo-700 group-open:text-white"><?= e($hairloss_reason['title']); ?></h3>
+            <span class="shrink-0 text-slate-400" aria-hidden="true">
+              <?php svg(
+                'add-line',
+                'size-6 transition-transform duration-200 ease-out motion-reduce:transition-none '
+                  . 'js-component-faq-icon',
+              ); ?>
+            </span>
+          </summary>
+          <div class="faq-content text-slate-700 my-4 max-w-3xl space-y-4 border-l border-slate-200 pl-5 js-component-faq-content">
+            <p><?= e($hairloss_reason['description']); ?></p>
+            <div class="aspect-3/2 rounded-xl bg-slate-300 mb-5 w-50 overflow-hidden">
+              <img
+                src="<?= e($hairloss_reason['image']); ?>"
+                alt="<?= e($hairloss_reason['image_alt']); ?>"
+                width="400"
+                height="200"
+                loading="lazy"
+                decoding="async"
+                class="size-full object-cover"
+              />
+            </div>
+          </div>
+        </details>
+        <div class="hidden sm:block sm:px-5 sm:py-10
+                    <?= $index % 3 !== 2 ? 'sm:border-r sm:border-slate-200' : ''; ?>
+                    <?= $index < 3 ? 'sm:border-b sm:border-slate-200' : ''; ?>">
+          <div class="aspect-2/1 rounded-full bg-slate-300 mb-5 w-50 mx-auto overflow-hidden">
+            <img
+              src="<?= e($hairloss_reason['image']); ?>"
+              alt="<?= e($hairloss_reason['image_alt']); ?>"
+              width="400"
+              height="200"
+              loading="lazy"
+              decoding="async"
+              class="size-full object-cover"
+            />
+          </div>
+          <div class="uppercase text-xs mb-2"><?= e($hairloss_reason['category']); ?></div>
+          <h3 class="font-medium text-lg text-slate-900 mb-2"><?= e($hairloss_reason['title']); ?></h3>
+          <div class="text-sm text-slate-500"><?= e($hairloss_reason['description']); ?></div>
+        </div>
+        <?php } ?>
+      </div>
+      <div class="absolute left-0 w-full h-10 bg-gradient-to-b from-slate-100 to-transparent hidden sm:block top-0"></div>
+      <div class="absolute left-0 w-full h-10 bg-gradient-to-t from-slate-100 to-transparent hidden sm:block bottom-0"></div>
+    </div>
+
+    <div class="hairloss-cta mt-10">
+      <div class="text-lg">Not sure about what your hair issue?</div>
+      <div class="sm:flex sm:items-center sm:justify-center gap-2">
+        <a href="<?= asset_url('hair-check'); ?>" class="button-lg bg-gradient-to-br w-full sm:w-auto from-purple-500 via-indigo-600 to-indigo-500 text-white text-shadow-2xs text-shadow-indigo-900/50 ring-1 ring-inset ring-indigo-900/50 inline-flex mt-7 transform duration-200 translate-y-0 hover:-translate-y-1 shadow-lg shadow-slate-400 hover:shadow-3xl hover:shadow-slate-500">
+          <div class="flex-split w-full font-normal text-lg">
+            <div>Start Free Hair Check</div>
+            <div class="size-7 -m-1 -mr-4 ml-5 rounded-full flex items-center justify-center bg-white text-blue-600">
+              <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="size-5"><path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z"></path></svg>          </div>
+          </div>
+        </a>
+        <a href="<?= asset_url('hair-check'); ?>" 
+           class="button-lg w-full sm:w-auto  text-white text-shadow-2xs text-shadow-slate-900/10 mt-7 transform duration-200 translate-y-0 hover:-translate-y-1 shadow-lg shadow-slate-400 hover:shadow-3xl hover:shadow-slate-500
+           bg-gradient-to-br from-lime-500 via-green-600 to-emerald-500
+           ring-1 ring-inset ring-green-900/50 hidden sm:block">
+          <div class="flex-split w-full font-normal text-lg">
+            <div>Chat on WhatsApp</div>
+          </div>
+        </a>
+      </div>
+      <div class="text-xs text-slate-500 mt-5">A short questionnaire to help us understand your concerns. <br>Preview only · Answers are not sent</div>
     </div>
   </div>
 </section>

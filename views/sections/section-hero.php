@@ -1,216 +1,92 @@
-<section class="section pt-30 pb-20 px-6" style="background: url(<?= asset_url('assets/images/hero-v2.png'); ?>) center bottom / cover no-repeat;">
-  <div class="container">
-    <div class="hero-headline md:text-center">
-      <!-- <div class="headline-topic mb-8 text-xs text-slate-500 uppercase hidden md:block">Hair Loss Treatment & Hair Transplant in Malaysia</div> -->
-      <div class="headline-title font-semibold text-4xl text-slate-900 tracking-tight">
+<section class="section section-hero bg-slate-700 min-h-dvh sm:min-h-[800px] flex flex-col rounded-md sm:rounded-none relative" style="--hero-image: url(<?= asset_url('assets/images/hero.webp'); ?>); --hero-mobile-image: url(<?= asset_url('assets/images/hero-mobile.webp'); ?>);">
+  <div class="bg-gradient-to-b from-slate-100 via-slate-100 to-transparent absolute w-full h-40 sm:h-70 top-0 left-0"></div>
+  <div class="bg-gradient-to-t from-slate-100 to-transparent absolute w-full h-40 bottom-0 left-0"></div>
+  
+  <div class="hero-badges pointer-events-none absolute inset-x-0 top-[58%] z-10 container hidden sm:blocks">
+    <div class="absolute left-0 top-0 flex max-w-60 items-center gap-3 rounded-lg border border-white/40 bg-white/20 pl-3 pr-4 py-2 shadow-lg shadow-slate-900/10 backdrop-blur-xs">
+      <div class="flex size-6 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-green-500 to-teal-700 text-slate-700">
+        <?php // svg('stethoscope-line', 'size-5'); ?>
+      </div>
+      <div>
+        <div class="text-sm font-semibold text-slate-800">ISO 2026 Certified</div>
+      </div>
+    </div>
+    <div class="absolute right-0 top-16 flex max-w-60 items-center gap-3 rounded-2xl border border-white/70 bg-white/65 px-4 py-3 shadow-lg shadow-slate-900/10 backdrop-blur-md">
+      <div class="flex size-10 shrink-0 items-center justify-center rounded-full bg-white/70 text-slate-700">
+        <?php svg('time-line', 'size-5'); ?>
+      </div>
+      <div>
+        <div class="text-sm font-semibold text-slate-800">Within 24 hours</div>
+        <div class="text-xs text-slate-600">Assessment response</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container relative flex flex-1 flex-col justify-end sm:justify-start gap-8">
+    <div class="hero-headline md:text-center mt-10">
+      <div class="headline-title text-3xl sm:text-5xl tracking-tight  text-transparent bg-clip-text bg-gradient-to-br from-slate-700 via-slate-800 to-slate-950 leading-9 sm:leading-15">
         Better hair starts with the right plan.
       </div>
-      <h1 class="headline-subtitle text-xl mt-6 max-w-3xl mx-auto">
+      <h1 class="headline-subtitle text-sm leading-6 sm:leading-7 sm:text-xl mt-3 sm:mt-2 max-w-2xl mx-auto">
         Personalised, doctor-led treatment for thinning hair, receding hairlines and advanced hair loss.
       </h1>
-      <div class="headline-reviews mt-10 mb-10">
-        <div class="flex md:justify-center text-amber-600" role="img" aria-label="5 stars">
-          <?php svg('star-s-fill', 'size-6'); ?>
-          <?php svg('star-s-fill', 'size-6'); ?>
-          <?php svg('star-s-fill', 'size-6'); ?>
-          <?php svg('star-s-fill', 'size-6'); ?>
-          <?php svg('star-s-fill', 'size-6'); ?>
+      <a href="<?= asset_url('hair-check'); ?>" class="button-lg bg-gradient-to-br w-full sm:w-auto from-purple-500 via-indigo-600 to-indigo-500 text-white text-shadow-2xs text-shadow-indigo-900/50 ring-1 ring-inset ring-indigo-900/50 inline-flex mt-7 transform duration-200 translate-y-0 hover:-translate-y-1 shadow-lg shadow-slate-400 hover:shadow-3xl hover:shadow-slate-500">
+        <div class="flex-split w-full font-normal text-lg">
+          <div>Start Free Hair Check</div>
+          <div class="size-7 -m-1 -mr-4 ml-5 rounded-full flex items-center justify-center bg-white text-blue-600">
+            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="size-5"><path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z"></path></svg>          </div>
         </div>
-        <div class="text-sm text-slate-500 mt-1">From 500+ verified Google Reviews</div>
-      </div>
-    </div>
-
-    <div class="hero-direction hidden md:grid grid-cols-8 items-end gap-3 mt-8">
-      <div class="hero-action h-100 px-6 py-5 flex flex-col bg-white rounded-xl ring-1 ring-slate-200 col-span-2">
-        <h3 class="font-medium md:text-lg text-slate-900">Start Hair Analysis</h3>
-        <div class="mt-2">Get a personalised treatment plan & quote.</div>
-        <div class="text-sm flex flex-inline items-center mt-auto">
-          <div>Learn More</div>
-          <div class="size-5 -m-1 -mr-4 ml-3 rounded-full flex items-center justify-center bg-slate-900 text-white">
-            <?php svg('arrow-right-up-line', 'size-4'); ?>
+      </a>
+      <div class="text-xs text-slate-500 mt-5 hidden sm:block">A short questionnaire to help us understand your concerns. <br>Preview only · Answers are not sent</div>
+      <div class="sm:hidden mb-6 mt-5">
+          <?php
+          component('google-review-rating', [
+            'rating'        => 4.5,
+            'wrapper_class' => 'mb-3 sm:flex-col sm:items-start sm:gap-0',
+          ]);
+          ?>
+          <div class="trust-avatars flex gap-0">
+            <div class="aspect-1/1 size-10 rounded-full border-2 border-white shadow-md -mx-1"><img src="<?= asset_url('assets/images/customer/5.webp'); ?>" class="size-full rounded-full object-cover" /></div>
+            <div class="aspect-1/1 size-10 rounded-full border-2 border-white shadow-md -mx-1"><img src="<?= asset_url('assets/images/customer/6.webp'); ?>" class="size-full rounded-full object-cover" /></div>
+            <div class="aspect-1/1 size-10 rounded-full border-2 border-white shadow-md -mx-1"><img src="<?= asset_url('assets/images/customer/7.webp'); ?>" class="size-full rounded-full object-cover" /></div>
+            <div class="aspect-1/1 size-10 rounded-full border-2 border-white shadow-md -mx-1"><img src="<?= asset_url('assets/images/customer/8.webp'); ?>" class="size-full rounded-full object-cover" /></div>
+            <div class="aspect-1/1 size-10 rounded-full border-2 border-white shadow-md -mx-1"><img src="<?= asset_url('assets/images/customer/9.webp'); ?>" class="size-full rounded-full object-cover" /></div>
           </div>
         </div>
-      </div>
-      <div class="hero-action h-70 px-6 py-5 bg-white rounded-xl ring-1 ring-slate-200 text-center col-span-1">
-        <h3 class="font-medium text-2xl text-slate-900">1500+</h3>
-        <div class="mt-1">Our Esteemed Clients </div>
-      </div>
-      <div class="hero-action h-40 px-6 py-5 flex flex-col bg-white rounded-xl ring-1 ring-slate-200 col-span-2">
-        <h3 class="font-medium text-lg text-slate-900">Graft Survival</h3>
-        <div class="mt-auto">
-          <div class="text-4xl font-light text-green-700">97.5%</div>
-          <div class="text-sm mt-1">25,000+ restored hairline</div>
+    </div>
+  </div>
+  <div class="hero-supplements absolute bottom-6 left-0 right-0 hidden sm:block">
+    <div class="container flex justify-between items-end">
+      <div class="w-80">
+        <?php
+        component('google-review-rating', [
+          'rating'        => 5,
+          'wrapper_class' => 'mb-3 sm:flex-col sm:items-start sm:gap-0',
+        ]);
+        ?>
+        <div class="trust-avatars flex gap-0">
+          <div class="aspect-1/1 size-10 rounded-full border-2 border-white shadow-md -mx-1"><img src="<?= asset_url('assets/images/customer/5.webp'); ?>" class="size-full rounded-full object-cover" /></div>
+          <div class="aspect-1/1 size-10 rounded-full border-2 border-white shadow-md -mx-1"><img src="<?= asset_url('assets/images/customer/6.webp'); ?>" class="size-full rounded-full object-cover" /></div>
+          <div class="aspect-1/1 size-10 rounded-full border-2 border-white shadow-md -mx-1"><img src="<?= asset_url('assets/images/customer/7.webp'); ?>" class="size-full rounded-full object-cover" /></div>
+          <div class="aspect-1/1 size-10 rounded-full border-2 border-white shadow-md -mx-1"><img src="<?= asset_url('assets/images/customer/8.webp'); ?>" class="size-full rounded-full object-cover" /></div>
+          <div class="aspect-1/1 size-10 rounded-full border-2 border-white shadow-md -mx-1"><img src="<?= asset_url('assets/images/customer/9.webp'); ?>" class="size-full rounded-full object-cover" /></div>
         </div>
       </div>
-      <div class="hero-action h-70 px-6 py-5 bg-white rounded-xl ring-1 ring-slate-200 text-center col-span-1">
-        <h3 class="font-medium text-2xl text-slate-900">10+ </h3>
-        <div class="mt-1">Years of Dedicated Service</div>
-      </div>
-      <div class="hero-action h-100 px-6 py-5 flex flex-col bg-white rounded-xl ring-1 ring-slate-200 col-span-2">
-        <h3 class="font-medium text-lg text-slate-900">Discover Treatments</h3>
-        <div class="mt-2">Restoring hair with precision care.</div>
-        <div class="text-sm flex flex-inline items-center mt-auto">
-          <div>Learn More</div>
-          <div class="size-5 -m-1 -mr-4 ml-3 rounded-full flex items-center justify-center bg-slate-900 text-white">
-            <?php svg('arrow-right-up-line', 'size-4'); ?>
+      <div class="w-110">
+        <div class="text-xs uppercase mb-3 text-right text-slate-500">As Featured On</div>
+        <div class="grid grid-cols-3 gap-2 flex items-center">
+          <div class="bg-slate-900/20 rounded-lg">
+            <img src="assets/images/featured/astro-awani.webp" class="block rounded-lg">
+          </div>
+          <div class="bg-slate-900/20 rounded-lg">
+            <img src="assets/images/featured/mlstudiosmy.webp" class="block rounded-lg">
+          </div>
+          <div class="bg-slate-900/20 rounded-lg">
+            <img src="assets/images/featured/maskulinmag.webp" class="block rounded-lg">
           </div>
         </div>
       </div>
     </div>
   </div>
+  
 </section>
-<div class="marquee-wrap relative left-1/2 right-1/2 mt-10 w-screen max-w-none -translate-x-1/2">
-  <div class="marquee" aria-label="RR Hair Clinic photo gallery">
-    <div class="marquee-track">
-      <div class="marquee-group">
-        <div class="marquee-photo aspect-[4/5] h-96 w-auto bg-slate-200 flex items-center justify-center">
-          <img
-            src="<?= asset_url('assets/images/clinic-marquee/clinic-marquee-consultation.png'); ?>"
-            alt="Doctor consulting with a customer about a hair treatment plan"
-            loading="lazy"
-            decoding="async"
-            class="size-full object-cover rounded-lg"
-          >
-        </div>
-        <div class="marquee-photo aspect-[3/4] h-96 w-auto bg-slate-200 flex items-center justify-center">
-          <img
-            src="<?= asset_url('assets/images/clinic-marquee/clinic-marquee-welcome.png'); ?>"
-            alt="Nurse welcoming a customer to the treatment room"
-            loading="lazy"
-            decoding="async"
-            class="size-full object-cover rounded-lg"
-          >
-        </div>
-        <div class="marquee-photo aspect-[1/1] h-96 w-auto bg-slate-200 flex items-center justify-center">
-          <img
-            src="<?= asset_url('assets/images/clinic-marquee/clinic-marquee-scalp-analysis.png'); ?>"
-            alt="Clinician performing a scalp analysis for a customer"
-            loading="lazy"
-            decoding="async"
-            class="size-full object-cover rounded-lg"
-          >
-        </div>
-        <div class="marquee-photo aspect-[9/16] h-96 w-auto bg-slate-200 flex items-center justify-center">
-          <img
-            src="<?= asset_url('assets/images/clinic-marquee/clinic-marquee-testimonial.png'); ?>"
-            alt="Customer smiling during a post-consultation check-in"
-            loading="lazy"
-            decoding="async"
-            class="size-full object-cover rounded-lg"
-          >
-        </div>
-        <div class="marquee-photo aspect-[5/4] h-96 w-auto bg-slate-200 flex items-center justify-center">
-          <img
-            src="<?= asset_url('assets/images/clinic-marquee/clinic-marquee-treatment-prep.png'); ?>"
-            alt="Doctor preparing for a hair treatment with a customer"
-            loading="lazy"
-            decoding="async"
-            class="size-full object-cover rounded-lg"
-          >
-        </div>
-        <div class="marquee-photo aspect-[2/3] h-96 w-auto bg-slate-200 flex items-center justify-center">
-          <img
-            src="<?= asset_url('assets/images/clinic-marquee/clinic-marquee-hairline-plan.png'); ?>"
-            alt="Clinician explaining a personalised hairline plan"
-            loading="lazy"
-            decoding="async"
-            class="size-full object-cover rounded-lg"
-          >
-        </div>
-        <div class="marquee-photo aspect-[3/2] h-96 w-auto bg-slate-200 flex items-center justify-center">
-          <img
-            src="<?= asset_url('assets/images/clinic-marquee/clinic-marquee-clinic-team.png'); ?>"
-            alt="Clinic team reviewing a customer's scalp analysis"
-            loading="lazy"
-            decoding="async"
-            class="size-full object-cover rounded-lg"
-          >
-        </div>
-        <div class="marquee-photo aspect-[9/16] h-96 w-auto bg-slate-200 flex items-center justify-center">
-          <img
-            src="<?= asset_url('assets/images/clinic-marquee/clinic-marquee-aftercare.png'); ?>"
-            alt="Nurse sharing aftercare guidance with a customer"
-            loading="lazy"
-            decoding="async"
-            class="size-full object-cover rounded-lg"
-          >
-        </div>
-      </div>
-
-      <div class="marquee-group" aria-hidden="true">
-        <div class="marquee-photo aspect-[4/5] h-96 w-auto bg-slate-200 flex items-center justify-center">
-          <img
-            src="<?= asset_url('assets/images/clinic-marquee/clinic-marquee-consultation.png'); ?>"
-            alt=""
-            loading="lazy"
-            decoding="async"
-            class="size-full object-cover rounded-lg"
-          >
-        </div>
-        <div class="marquee-photo aspect-[3/4] h-96 w-auto bg-slate-200 flex items-center justify-center">
-          <img
-            src="<?= asset_url('assets/images/clinic-marquee/clinic-marquee-welcome.png'); ?>"
-            alt=""
-            loading="lazy"
-            decoding="async"
-            class="size-full object-cover rounded-lg"
-          >
-        </div>
-        <div class="marquee-photo aspect-[1/1] h-96 w-auto bg-slate-200 flex items-center justify-center">
-          <img
-            src="<?= asset_url('assets/images/clinic-marquee/clinic-marquee-scalp-analysis.png'); ?>"
-            alt=""
-            loading="lazy"
-            decoding="async"
-            class="size-full object-cover rounded-lg"
-          >
-        </div>
-        <div class="marquee-photo aspect-[9/16] h-96 w-auto bg-slate-200 flex items-center justify-center">
-          <img
-            src="<?= asset_url('assets/images/clinic-marquee/clinic-marquee-testimonial.png'); ?>"
-            alt=""
-            loading="lazy"
-            decoding="async"
-            class="size-full object-cover rounded-lg"
-          >
-        </div>
-        <div class="marquee-photo aspect-[5/4] h-96 w-auto bg-slate-200 flex items-center justify-center">
-          <img
-            src="<?= asset_url('assets/images/clinic-marquee/clinic-marquee-treatment-prep.png'); ?>"
-            alt=""
-            loading="lazy"
-            decoding="async"
-            class="size-full object-cover rounded-lg"
-          >
-        </div>
-        <div class="marquee-photo aspect-[2/3] h-96 w-auto bg-slate-200 flex items-center justify-center">
-          <img
-            src="<?= asset_url('assets/images/clinic-marquee/clinic-marquee-hairline-plan.png'); ?>"
-            alt=""
-            loading="lazy"
-            decoding="async"
-            class="size-full object-cover rounded-lg"
-          >
-        </div>
-        <div class="marquee-photo aspect-[3/2] h-96 w-auto bg-slate-200 flex items-center justify-center">
-          <img
-            src="<?= asset_url('assets/images/clinic-marquee/clinic-marquee-clinic-team.png'); ?>"
-            alt=""
-            loading="lazy"
-            decoding="async"
-            class="size-full object-cover rounded-lg"
-          >
-        </div>
-        <div class="marquee-photo aspect-[9/16] h-96 w-auto bg-slate-200 flex items-center justify-center">
-          <img
-            src="<?= asset_url('assets/images/clinic-marquee/clinic-marquee-aftercare.png'); ?>"
-            alt=""
-            loading="lazy"
-            decoding="async"
-            class="size-full object-cover rounded-lg"
-          >
-        </div>
-      </div>
-    </div>
-  </div>
-</div>

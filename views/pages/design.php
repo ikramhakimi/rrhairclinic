@@ -1,4 +1,16 @@
 <section class="section py-20">
+  <div class="container space-y-6">
+    <div class="text-xs">From hairline design to the final graft, no delegation, no assembly lines.</div>
+    <div class="text-sm">From hairline design to the final graft, no delegation, no assembly lines.</div>
+    <div class="text-base">From hairline design to the final graft, no delegation, no assembly lines.</div>
+    <div class="text-lg">From hairline design to the final graft, no delegation, no assembly lines.</div>
+    <div class="text-xl">From hairline design to the final graft, no delegation, no assembly lines.</div>
+    <div class="text-2xl">From hairline design to the final graft, no delegation, no assembly lines.</div>
+    <div class="text-3xl">From hairline design to the final graft, no delegation, no assembly lines.</div>
+    <div class="text-4xl">From hairline design to the final graft, no delegation, no assembly lines.</div>
+  </div>
+</section>
+<section class="section py-20">
   <div class="container">
     <div class="hero-headline max-w-4xl">
       <div class="headline-topic mb-8 text-xs text-slate-500 uppercase">Our Treatments</div>

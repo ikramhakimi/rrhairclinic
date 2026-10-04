@@ -59,7 +59,7 @@
         <div class="marquee-group">
           <div class="marquee-photo aspect-[4/5] h-96 w-auto bg-slate-200 flex items-center justify-center">
             <img
-              src="<?= asset_url('assets/images/clinic-marquee/clinic-marquee-consultation.png'); ?>"
+              src="<?= asset_url('assets/images/clinic-marquee/clinic-marquee-consultation.webp'); ?>"
               alt="Doctor consulting with a customer about a hair treatment plan"
               loading="lazy"
               decoding="async"
@@ -68,7 +68,7 @@
           </div>
           <div class="marquee-photo aspect-[3/4] h-96 w-auto bg-slate-200 flex items-center justify-center">
             <img
-              src="<?= asset_url('assets/images/clinic-marquee/clinic-marquee-welcome.png'); ?>"
+              src="<?= asset_url('assets/images/clinic-marquee/clinic-marquee-welcome.webp'); ?>"
               alt="Nurse welcoming a customer to the treatment room"
               loading="lazy"
               decoding="async"
@@ -77,7 +77,7 @@
           </div>
           <div class="marquee-photo aspect-[1/1] h-96 w-auto bg-slate-200 flex items-center justify-center">
             <img
-              src="<?= asset_url('assets/images/clinic-marquee/clinic-marquee-scalp-analysis.png'); ?>"
+              src="<?= asset_url('assets/images/clinic-marquee/clinic-marquee-scalp-analysis.webp'); ?>"
               alt="Clinician performing a scalp analysis for a customer"
               loading="lazy"
               decoding="async"
@@ -86,7 +86,7 @@
           </div>
           <div class="marquee-photo aspect-[9/16] h-96 w-auto bg-slate-200 flex items-center justify-center">
             <img
-              src="<?= asset_url('assets/images/clinic-marquee/clinic-marquee-testimonial.png'); ?>"
+              src="<?= asset_url('assets/images/clinic-marquee/clinic-marquee-testimonial.webp'); ?>"
               alt="Customer smiling during a post-consultation check-in"
               loading="lazy"
               decoding="async"
@@ -95,7 +95,7 @@
           </div>
           <div class="marquee-photo aspect-[5/4] h-96 w-auto bg-slate-200 flex items-center justify-center">
             <img
-              src="<?= asset_url('assets/images/clinic-marquee/clinic-marquee-treatment-prep.png'); ?>"
+              src="<?= asset_url('assets/images/clinic-marquee/clinic-marquee-treatment-prep.webp'); ?>"
               alt="Doctor preparing for a hair treatment with a customer"
               loading="lazy"
               decoding="async"
@@ -104,7 +104,7 @@
           </div>
           <div class="marquee-photo aspect-[2/3] h-96 w-auto bg-slate-200 flex items-center justify-center">
             <img
-              src="<?= asset_url('assets/images/clinic-marquee/clinic-marquee-hairline-plan.png'); ?>"
+              src="<?= asset_url('assets/images/clinic-marquee/clinic-marquee-hairline-plan.webp'); ?>"
               alt="Clinician explaining a personalised hairline plan"
               loading="lazy"
               decoding="async"
@@ -113,7 +113,7 @@
           </div>
           <div class="marquee-photo aspect-[3/2] h-96 w-auto bg-slate-200 flex items-center justify-center">
             <img
-              src="<?= asset_url('assets/images/clinic-marquee/clinic-marquee-clinic-team.png'); ?>"
+              src="<?= asset_url('assets/images/clinic-marquee/clinic-marquee-clinic-team.webp'); ?>"
               alt="Clinic team reviewing a customer's scalp analysis"
               loading="lazy"
               decoding="async"
@@ -122,7 +122,7 @@
           </div>
           <div class="marquee-photo aspect-[9/16] h-96 w-auto bg-slate-200 flex items-center justify-center">
             <img
-              src="<?= asset_url('assets/images/clinic-marquee/clinic-marquee-aftercare.png'); ?>"
+              src="<?= asset_url('assets/images/clinic-marquee/clinic-marquee-aftercare.webp'); ?>"
               alt="Nurse sharing aftercare guidance with a customer"
               loading="lazy"
               decoding="async"
@@ -134,7 +134,7 @@
         <div class="marquee-group" aria-hidden="true">
           <div class="marquee-photo aspect-[4/5] h-96 w-auto bg-slate-200 flex items-center justify-center">
             <img
-              src="<?= asset_url('assets/images/clinic-marquee/clinic-marquee-consultation.png'); ?>"
+              src="<?= asset_url('assets/images/clinic-marquee/clinic-marquee-consultation.webp'); ?>"
               alt=""
               loading="lazy"
               decoding="async"
@@ -143,7 +143,7 @@
           </div>
           <div class="marquee-photo aspect-[3/4] h-96 w-auto bg-slate-200 flex items-center justify-center">
             <img
-              src="<?= asset_url('assets/images/clinic-marquee/clinic-marquee-welcome.png'); ?>"
+              src="<?= asset_url('assets/images/clinic-marquee/clinic-marquee-welcome.webp'); ?>"
               alt=""
               loading="lazy"
               decoding="async"
@@ -152,7 +152,7 @@
           </div>
           <div class="marquee-photo aspect-[1/1] h-96 w-auto bg-slate-200 flex items-center justify-center">
             <img
-              src="<?= asset_url('assets/images/clinic-marquee/clinic-marquee-scalp-analysis.png'); ?>"
+              src="<?= asset_url('assets/images/clinic-marquee/clinic-marquee-scalp-analysis.webp'); ?>"
               alt=""
               loading="lazy"
               decoding="async"
@@ -161,7 +161,7 @@
           </div>
           <div class="marquee-photo aspect-[9/16] h-96 w-auto bg-slate-200 flex items-center justify-center">
             <img
-              src="<?= asset_url('assets/images/clinic-marquee/clinic-marquee-testimonial.png'); ?>"
+              src="<?= asset_url('assets/images/clinic-marquee/clinic-marquee-testimonial.webp'); ?>"
               alt=""
               loading="lazy"
               decoding="async"
@@ -170,7 +170,7 @@
           </div>
           <div class="marquee-photo aspect-[5/4] h-96 w-auto bg-slate-200 flex items-center justify-center">
             <img
-              src="<?= asset_url('assets/images/clinic-marquee/clinic-marquee-treatment-prep.png'); ?>"
+              src="<?= asset_url('assets/images/clinic-marquee/clinic-marquee-treatment-prep.webp'); ?>"
               alt=""
               loading="lazy"
               decoding="async"
@@ -179,7 +179,7 @@
           </div>
           <div class="marquee-photo aspect-[2/3] h-96 w-auto bg-slate-200 flex items-center justify-center">
             <img
-              src="<?= asset_url('assets/images/clinic-marquee/clinic-marquee-hairline-plan.png'); ?>"
+              src="<?= asset_url('assets/images/clinic-marquee/clinic-marquee-hairline-plan.webp'); ?>"
               alt=""
               loading="lazy"
               decoding="async"
@@ -188,7 +188,7 @@
           </div>
           <div class="marquee-photo aspect-[3/2] h-96 w-auto bg-slate-200 flex items-center justify-center">
             <img
-              src="<?= asset_url('assets/images/clinic-marquee/clinic-marquee-clinic-team.png'); ?>"
+              src="<?= asset_url('assets/images/clinic-marquee/clinic-marquee-clinic-team.webp'); ?>"
               alt=""
               loading="lazy"
               decoding="async"
@@ -197,7 +197,7 @@
           </div>
           <div class="marquee-photo aspect-[9/16] h-96 w-auto bg-slate-200 flex items-center justify-center">
             <img
-              src="<?= asset_url('assets/images/clinic-marquee/clinic-marquee-aftercare.png'); ?>"
+              src="<?= asset_url('assets/images/clinic-marquee/clinic-marquee-aftercare.webp'); ?>"
               alt=""
               loading="lazy"
               decoding="async"

@@ -9,22 +9,22 @@
         </div>
 
         <div class="mt-10 grid grid-cols-1 gap-3 sm:grid-cols-2">
-          <div class="card bg-slate-100 ring-1 ring-slate-300 p-5 rounded-lg">
+          <div class="card bg-slate-100 ring-slate-300 p-5 rounded-lg">
             <h3 class="font-semibold text-slate-800">MMC Registered</h3>
             <p class="mt-2 text-sm text-slate-600">Registered medical practitioner in Malaysia</p>
           </div>
 
-          <div class="card bg-slate-100 ring-1 ring-slate-300 p-5 rounded-lg">
+          <div class="card bg-slate-100 ring-slate-300 p-5 rounded-lg">
             <h3 class="font-semibold text-slate-800">Hair Restoration</h3>
             <p class="mt-2 text-sm text-slate-600">10+ years of clinical experience</p>
           </div>
 
-          <div class="card bg-slate-100 ring-1 ring-slate-300 p-5 rounded-lg">
+          <div class="card bg-slate-100 ring-slate-300 p-5 rounded-lg">
             <h3 class="font-semibold text-slate-800">Natural Hairline Design</h3>
             <p class="mt-2 text-sm text-slate-600">Individual mapping based on facial proportions</p>
           </div>
 
-          <div class="card bg-slate-100 ring-1 ring-slate-300 p-5 rounded-lg">
+          <div class="card bg-slate-100 ring-slate-300 p-5 rounded-lg">
             <h3 class="font-semibold text-slate-800">Aesthetic Medicine</h3>
             <p class="mt-2 text-sm text-slate-600">Advanced training in aesthetic & regenerative treatments</p>
           </div>

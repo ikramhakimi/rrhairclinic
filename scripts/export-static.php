@@ -170,10 +170,26 @@ function collect_asset_paths(string $html): array
 ensure_directory($dist_root);
 delete_directory_contents($dist_root);
 
+$pages_root = $project_root . '/views/pages';
+$page_files = glob($pages_root . '/*.php');
+if (!is_array($page_files)) {
+  fail_export('Unable to read page templates: ' . $pages_root);
+}
+
 $pages = [
-  '/'    => $dist_root . '/index.html',
-  '/404' => $dist_root . '/404.html',
+  '/' => $dist_root . '/index.html',
 ];
+
+foreach ($page_files as $page_file) {
+  $page_name = basename($page_file, '.php');
+  if ($page_name === 'home' || $page_name === '404') {
+    continue;
+  }
+
+  $pages['/' . $page_name] = $dist_root . '/' . $page_name . '.html';
+}
+
+$pages['/404'] = $dist_root . '/404.html';
 
 $asset_paths = [];
 
