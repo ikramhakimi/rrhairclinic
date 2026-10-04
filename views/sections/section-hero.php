@@ -46,11 +46,11 @@
           ]);
           ?>
           <div class="trust-avatars flex gap-0">
-            <div class="aspect-1/1 size-10 rounded-full border-2 border-white shadow-md -mx-1"><img src="<?= asset_url('assets/images/customer/5.webp'); ?>" class="size-full rounded-full object-cover" /></div>
-            <div class="aspect-1/1 size-10 rounded-full border-2 border-white shadow-md -mx-1"><img src="<?= asset_url('assets/images/customer/6.webp'); ?>" class="size-full rounded-full object-cover" /></div>
-            <div class="aspect-1/1 size-10 rounded-full border-2 border-white shadow-md -mx-1"><img src="<?= asset_url('assets/images/customer/7.webp'); ?>" class="size-full rounded-full object-cover" /></div>
-            <div class="aspect-1/1 size-10 rounded-full border-2 border-white shadow-md -mx-1"><img src="<?= asset_url('assets/images/customer/8.webp'); ?>" class="size-full rounded-full object-cover" /></div>
-            <div class="aspect-1/1 size-10 rounded-full border-2 border-white shadow-md -mx-1"><img src="<?= asset_url('assets/images/customer/9.webp'); ?>" class="size-full rounded-full object-cover" /></div>
+            <div class="aspect-1/1 size-10 rounded-full border-2 border-white shadow-md -mx-1"><img src="<?= asset_url('assets/images/customer/avatar-sm-5.webp'); ?>" alt="" class="size-full rounded-full object-cover" /></div>
+            <div class="aspect-1/1 size-10 rounded-full border-2 border-white shadow-md -mx-1"><img src="<?= asset_url('assets/images/customer/avatar-sm-6.webp'); ?>" alt="" class="size-full rounded-full object-cover" /></div>
+            <div class="aspect-1/1 size-10 rounded-full border-2 border-white shadow-md -mx-1"><img src="<?= asset_url('assets/images/customer/avatar-sm-7.webp'); ?>" alt="" class="size-full rounded-full object-cover" /></div>
+            <div class="aspect-1/1 size-10 rounded-full border-2 border-white shadow-md -mx-1"><img src="<?= asset_url('assets/images/customer/avatar-sm-8.webp'); ?>" alt="" class="size-full rounded-full object-cover" /></div>
+            <div class="aspect-1/1 size-10 rounded-full border-2 border-white shadow-md -mx-1"><img src="<?= asset_url('assets/images/customer/avatar-sm-9.webp'); ?>" alt="" class="size-full rounded-full object-cover" /></div>
           </div>
         </div>
     </div>
@@ -65,24 +65,24 @@
         ]);
         ?>
         <div class="trust-avatars flex gap-0">
-          <div class="aspect-1/1 size-10 rounded-full border-2 border-white shadow-md -mx-1"><img src="<?= asset_url('assets/images/customer/5.webp'); ?>" class="size-full rounded-full object-cover" /></div>
-          <div class="aspect-1/1 size-10 rounded-full border-2 border-white shadow-md -mx-1"><img src="<?= asset_url('assets/images/customer/6.webp'); ?>" class="size-full rounded-full object-cover" /></div>
-          <div class="aspect-1/1 size-10 rounded-full border-2 border-white shadow-md -mx-1"><img src="<?= asset_url('assets/images/customer/7.webp'); ?>" class="size-full rounded-full object-cover" /></div>
-          <div class="aspect-1/1 size-10 rounded-full border-2 border-white shadow-md -mx-1"><img src="<?= asset_url('assets/images/customer/8.webp'); ?>" class="size-full rounded-full object-cover" /></div>
-          <div class="aspect-1/1 size-10 rounded-full border-2 border-white shadow-md -mx-1"><img src="<?= asset_url('assets/images/customer/9.webp'); ?>" class="size-full rounded-full object-cover" /></div>
+          <div class="aspect-1/1 size-10 rounded-full border-2 border-white shadow-md -mx-1"><img src="<?= asset_url('assets/images/customer/avatar-sm-5.webp'); ?>" alt="" class="size-full rounded-full object-cover" /></div>
+          <div class="aspect-1/1 size-10 rounded-full border-2 border-white shadow-md -mx-1"><img src="<?= asset_url('assets/images/customer/avatar-sm-6.webp'); ?>" alt="" class="size-full rounded-full object-cover" /></div>
+          <div class="aspect-1/1 size-10 rounded-full border-2 border-white shadow-md -mx-1"><img src="<?= asset_url('assets/images/customer/avatar-sm-7.webp'); ?>" alt="" class="size-full rounded-full object-cover" /></div>
+          <div class="aspect-1/1 size-10 rounded-full border-2 border-white shadow-md -mx-1"><img src="<?= asset_url('assets/images/customer/avatar-sm-8.webp'); ?>" alt="" class="size-full rounded-full object-cover" /></div>
+          <div class="aspect-1/1 size-10 rounded-full border-2 border-white shadow-md -mx-1"><img src="<?= asset_url('assets/images/customer/avatar-sm-9.webp'); ?>" alt="" class="size-full rounded-full object-cover" /></div>
         </div>
       </div>
       <div class="w-110">
         <div class="text-xs uppercase mb-3 text-right text-slate-500">As Featured On</div>
         <div class="grid grid-cols-3 gap-2 flex items-center">
           <div class="bg-slate-900/20 rounded-lg">
-            <img src="assets/images/featured/astro-awani.webp" class="block rounded-lg">
+            <img src="assets/images/featured/astro-awani.webp" alt="Astro Awani" class="block rounded-lg">
           </div>
           <div class="bg-slate-900/20 rounded-lg">
-            <img src="assets/images/featured/mlstudiosmy.webp" class="block rounded-lg">
+            <img src="assets/images/featured/mlstudiosmy.webp" alt="ML Studios MY" class="block rounded-lg">
           </div>
           <div class="bg-slate-900/20 rounded-lg">
-            <img src="assets/images/featured/maskulinmag.webp" class="block rounded-lg">
+            <img src="assets/images/featured/maskulinmag.webp" alt="Maskulin" class="block rounded-lg">
           </div>
         </div>
       </div>
