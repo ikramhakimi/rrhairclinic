@@ -4,21 +4,26 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Hair Loss Treatments | RR Hair Clinic</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/build/app.css?v=1791095535">
-  <script src="/assets/js/app.js?v=1791095500" defer></script>
-
+    <link rel="preload" href="/assets/fonts/lexend-latin-variable.woff2"
+        as="font" type="font/woff2" crossorigin>
   <style>
+    @font-face {
+      font-family: "Lexend";
+      font-style: normal;
+      font-weight: 100 900;
+      font-display: swap;
+      src: url("/assets/fonts/lexend-latin-variable.woff2") format("woff2");
+    }
   </style>
+  <link rel="stylesheet" href="/assets/build/app.css?v=1791224680">
+  <script src="/assets/js/app.js?v=1791199805" defer></script>
 </head>
-<body class="bg-slate-100 text-base text-slate-600 tracking-[-1%]">
+<body class="bg-slate-100 text-base text-slate-600 tracking-[-2.5%]">
     
   <main>
     <header
   class="fixed inset-x-0 top-0 z-40 bg-slate-100 transition-transform duration-300 ease-out
-    motion-reduce:transition-none lg:static lg:translate-y-0 lg:transition-none js-site-mobile-navbar"
+    motion-reduce:transition-none lg:relative lg:translate-y-0 lg:transition-none js-site-mobile-navbar"
 >
   <div class="flex h-18 items-center justify-between px-4 lg:h-auto lg:px-6 lg:py-4">
     <a href="/" class="text-xl tracking-tight text-slate-800 tracking-tight flex items-center">
@@ -308,7 +313,7 @@
         <div class="min-w-0 md:group-even:order-1">
           <div class="mb-3 text-xs text-slate-500">01</div>
           <div class="section-headline max-w-2xl mx-auto sm:text-center">
-    <h2 class="headline-title font-medium sm:font-normal text-2xl sm:text-4xl sm:leading-11 text-transparent bg-clip-text bg-gradient-to-br from-slate-700 via-slate-800 to-slate-950">
+    <h2 class="headline-title font-semibold text-2xl sm:text-4xl sm:leading-11 text-transparent bg-clip-text bg-gradient-to-br from-slate-500 via-slate-900 to-slate-500">
     Hair Transplant  </h2>
   </div>
           <p class="mt-4">Explore a personalised approach to hair restoration, from assessing your donor area to planning your hairline and follow-up care.</p>
@@ -343,7 +348,7 @@
         <div class="min-w-0 md:group-even:order-1">
           <div class="mb-3 text-xs text-slate-500">02</div>
           <div class="section-headline max-w-2xl mx-auto sm:text-center">
-    <h2 class="headline-title font-medium sm:font-normal text-2xl sm:text-4xl sm:leading-11 text-transparent bg-clip-text bg-gradient-to-br from-slate-700 via-slate-800 to-slate-950">
+    <h2 class="headline-title font-semibold text-2xl sm:text-4xl sm:leading-11 text-transparent bg-clip-text bg-gradient-to-br from-slate-500 via-slate-900 to-slate-500">
     Medical Hair Loss Treatment  </h2>
   </div>
           <p class="mt-4">Discuss medical treatment options with your doctor, including suitability, ongoing care and what to expect from your plan.</p>
@@ -378,7 +383,7 @@
         <div class="min-w-0 md:group-even:order-1">
           <div class="mb-3 text-xs text-slate-500">03</div>
           <div class="section-headline max-w-2xl mx-auto sm:text-center">
-    <h2 class="headline-title font-medium sm:font-normal text-2xl sm:text-4xl sm:leading-11 text-transparent bg-clip-text bg-gradient-to-br from-slate-700 via-slate-800 to-slate-950">
+    <h2 class="headline-title font-semibold text-2xl sm:text-4xl sm:leading-11 text-transparent bg-clip-text bg-gradient-to-br from-slate-500 via-slate-900 to-slate-500">
     PRP Hair Treatment  </h2>
   </div>
           <p class="mt-4">Find out where PRP may fit within your hair care plan. Your consultation covers the procedure, suitability and follow-up appointments.</p>
@@ -413,7 +418,7 @@
         <div class="min-w-0 md:group-even:order-1">
           <div class="mb-3 text-xs text-slate-500">04</div>
           <div class="section-headline max-w-2xl mx-auto sm:text-center">
-    <h2 class="headline-title font-medium sm:font-normal text-2xl sm:text-4xl sm:leading-11 text-transparent bg-clip-text bg-gradient-to-br from-slate-700 via-slate-800 to-slate-950">
+    <h2 class="headline-title font-semibold text-2xl sm:text-4xl sm:leading-11 text-transparent bg-clip-text bg-gradient-to-br from-slate-500 via-slate-900 to-slate-500">
     Scalp &amp; Hair Growth Treatment  </h2>
   </div>
           <p class="mt-4">Talk through your scalp concerns and daily hair care routine, then discuss the care options available for your needs.</p>
@@ -1077,9 +1082,7 @@
     <div class="md:text-center">
       <div class="headline-topic mb-8 text-xs text-slate-300 uppercase">Free · No obligation · Response within 24 hours</div>
       <h2 class="headline-title text-2xl md:text-4xl md:leading-12 text-slate-100 max-w-5xl mx-auto">
-        <span class="md:text-5xl">Send two photos.</span> 
-        <br>
-        Get a <span class="underline underline-offset-6">personalised</span> treatment plan & quote.
+        Send your photos for an initial hair assessment
       </h2>
       <div class="sm:flex md:justify-center gap-3 mt-10">
         <a href="https://wa.me/601116741858" class="button bg-slate-100 text-slate-900 inline-flex">
@@ -1187,11 +1190,12 @@
   href="https://wa.me/601116741858"
   target="_blank"
   rel="noopener noreferrer"
-  class="whatsapp-button fixed bottom-6 right-6 z-40 flex size-16 items-center justify-center rounded-full
+  class="whatsapp-button fixed bottom-6 right-5 z-40 flex size-16 items-center justify-center rounded-full
     bg-gradient-to-br from-lime-500 via-green-600 to-emerald-500
     ring-1 ring-inset ring-green-900/50
     shadow-xl shadow-slate-900/40
-    text-white transition-colors hover:bg-green-700 focus-visible:outline-2
+    text-white transition-all duration-300 ease-out motion-reduce:transition-none
+    hover:bg-green-700 focus-visible:outline-2
     focus-visible:outline-offset-2 focus-visible:outline-green-700 js-whatsapp-consultation-link"
   aria-label="Chat with RR Hair Clinic on WhatsApp (opens in a new tab)"
 >

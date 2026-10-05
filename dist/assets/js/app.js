@@ -39,6 +39,48 @@
   });
 })();
 
+// Desktop navbar dropdowns: hover on the Main navigation details; native details handles keyboard and touch.
+(() => {
+  const hoverQuery = window.matchMedia('(min-width: 1024px) and (hover: hover)');
+  const dropdowns = document.querySelectorAll('.js-site-mobile-navbar nav[aria-label="Main navigation"] > details');
+
+  dropdowns.forEach((dropdown) => {
+    let closeTimer;
+
+    dropdown.addEventListener('mouseenter', () => {
+      if (!hoverQuery.matches) {
+        return;
+      }
+
+      window.clearTimeout(closeTimer);
+      dropdowns.forEach((other) => {
+        if (other !== dropdown) {
+          other.open = false;
+        }
+      });
+      dropdown.open = true;
+    });
+
+    dropdown.addEventListener('mouseleave', () => {
+      if (!hoverQuery.matches) {
+        return;
+      }
+
+      closeTimer = window.setTimeout(() => {
+        if (!dropdown.querySelector('div')?.contains(document.activeElement)) {
+          dropdown.open = false;
+        }
+      }, 150);
+    });
+
+    dropdown.querySelector('summary')?.addEventListener('click', (event) => {
+      if (hoverQuery.matches && dropdown.open && event.detail > 0) {
+        event.preventDefault();
+      }
+    });
+  });
+})();
+
 // Navbar drawer: data-drawer-open/close and .js-component-navbar-drawer-panel.
 // Keeps focus inside the modal and restores background interaction and scroll state on close.
 (() => {
@@ -175,12 +217,55 @@
   });
 
   let lastScrollY = Math.max(0, window.scrollY);
+  let scrollDirection = 0;
+  let directionStartY = lastScrollY;
   const navActions = document.querySelectorAll('.js-site-nav-action');
   const mobileNavbar = document.querySelector('.js-site-mobile-navbar');
+  const whatsappButton = document.querySelector('.js-whatsapp-consultation-link');
+  const hero = document.querySelector('.section-hero');
+  const desktopHoverQuery = window.matchMedia('(min-width: 1024px) and (hover: hover)');
+  let whatsappHiddenByScroll = false;
+  let isHoveringWhatsappCorner = false;
+
+  const updateWhatsappVisibility = () => {
+    if (!whatsappButton) {
+      return;
+    }
+
+    const isFocused = whatsappButton.contains(document.activeElement);
+    const isHidden = whatsappHiddenByScroll && !isHoveringWhatsappCorner && !isFocused;
+    whatsappButton.classList.toggle('translate-y-[calc(100%+1.5rem)]', isHidden);
+    whatsappButton.classList.toggle('pointer-events-none', isHidden);
+  };
 
   // The fixed .js-site-mobile-navbar hides downward and returns upward or when keyboard-focused.
   mobileNavbar?.addEventListener('focusin', () => {
     mobileNavbar.classList.remove('-translate-y-full');
+  });
+  whatsappButton?.addEventListener('focusin', () => {
+    updateWhatsappVisibility();
+  });
+
+  // Reveal the .js-whatsapp-consultation-link when a desktop cursor enters the bottom-right corner.
+  window.addEventListener('pointermove', (event) => {
+    const isInCorner = desktopHoverQuery.matches
+      && event.clientX >= window.innerWidth - 120
+      && event.clientY >= window.innerHeight - 120;
+
+    if (isInCorner !== isHoveringWhatsappCorner) {
+      isHoveringWhatsappCorner = isInCorner;
+      updateWhatsappVisibility();
+    }
+  }, { passive: true });
+
+  document.addEventListener('pointerleave', () => {
+    isHoveringWhatsappCorner = false;
+    updateWhatsappVisibility();
+  });
+
+  desktopHoverQuery.addEventListener('change', () => {
+    isHoveringWhatsappCorner = false;
+    updateWhatsappVisibility();
   });
 
   const updateNavActions = () => {
@@ -189,20 +274,41 @@
       return;
     }
 
-    const isScrollingDown = currentScrollY > lastScrollY && currentScrollY > 80;
+    const currentDirection = Math.sign(currentScrollY - lastScrollY);
+    if (currentDirection !== scrollDirection) {
+      scrollDirection = currentDirection;
+      directionStartY = lastScrollY;
+    }
+
+    lastScrollY = currentScrollY;
+
+    const isPastHero = hero && hero.getBoundingClientRect().bottom <= 0;
+    if (hero && !isPastHero) {
+      whatsappHiddenByScroll = false;
+      updateWhatsappVisibility();
+    }
+
+    if (currentScrollY > 80 && Math.abs(currentScrollY - directionStartY) < 16) {
+      return;
+    }
+
+    const isScrollingDown = currentDirection > 0 && currentScrollY > 80;
 
     mobileNavbar?.classList.toggle(
       '-translate-y-full',
       isScrollingDown && !activeDrawer && !mobileNavbar.contains(document.activeElement),
     );
 
+    if (hero && whatsappButton) {
+      whatsappHiddenByScroll = isPastHero && isScrollingDown;
+      updateWhatsappVisibility();
+    }
+
     navActions.forEach((action) => {
       action.classList.toggle('opacity-0', isScrollingDown);
       action.classList.toggle('pointer-events-none', isScrollingDown);
       action.classList.toggle('translate-y-2', isScrollingDown);
     });
-
-    lastScrollY = currentScrollY;
   };
 
   updateNavActions();

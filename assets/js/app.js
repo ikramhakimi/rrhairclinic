@@ -223,13 +223,49 @@
   const mobileNavbar = document.querySelector('.js-site-mobile-navbar');
   const whatsappButton = document.querySelector('.js-whatsapp-consultation-link');
   const hero = document.querySelector('.section-hero');
+  const desktopHoverQuery = window.matchMedia('(min-width: 1024px) and (hover: hover)');
+  let whatsappHiddenByScroll = false;
+  let isHoveringWhatsappCorner = false;
+
+  const updateWhatsappVisibility = () => {
+    if (!whatsappButton) {
+      return;
+    }
+
+    const isFocused = whatsappButton.contains(document.activeElement);
+    const isHidden = whatsappHiddenByScroll && !isHoveringWhatsappCorner && !isFocused;
+    whatsappButton.classList.toggle('translate-y-[calc(100%+1.5rem)]', isHidden);
+    whatsappButton.classList.toggle('pointer-events-none', isHidden);
+  };
 
   // The fixed .js-site-mobile-navbar hides downward and returns upward or when keyboard-focused.
   mobileNavbar?.addEventListener('focusin', () => {
     mobileNavbar.classList.remove('-translate-y-full');
   });
   whatsappButton?.addEventListener('focusin', () => {
-    whatsappButton.classList.remove('translate-y-[calc(100%+1.5rem)]', 'pointer-events-none');
+    updateWhatsappVisibility();
+  });
+
+  // Reveal the .js-whatsapp-consultation-link when a desktop cursor enters the bottom-right corner.
+  window.addEventListener('pointermove', (event) => {
+    const isInCorner = desktopHoverQuery.matches
+      && event.clientX >= window.innerWidth - 120
+      && event.clientY >= window.innerHeight - 120;
+
+    if (isInCorner !== isHoveringWhatsappCorner) {
+      isHoveringWhatsappCorner = isInCorner;
+      updateWhatsappVisibility();
+    }
+  }, { passive: true });
+
+  document.addEventListener('pointerleave', () => {
+    isHoveringWhatsappCorner = false;
+    updateWhatsappVisibility();
+  });
+
+  desktopHoverQuery.addEventListener('change', () => {
+    isHoveringWhatsappCorner = false;
+    updateWhatsappVisibility();
   });
 
   const updateNavActions = () => {
@@ -248,7 +284,8 @@
 
     const isPastHero = hero && hero.getBoundingClientRect().bottom <= 0;
     if (hero && !isPastHero) {
-      whatsappButton?.classList.remove('translate-y-[calc(100%+1.5rem)]', 'pointer-events-none');
+      whatsappHiddenByScroll = false;
+      updateWhatsappVisibility();
     }
 
     if (currentScrollY > 80 && Math.abs(currentScrollY - directionStartY) < 16) {
@@ -263,10 +300,8 @@
     );
 
     if (hero && whatsappButton) {
-      const hideWhatsapp = isPastHero && isScrollingDown
-        && !whatsappButton.contains(document.activeElement);
-      whatsappButton.classList.toggle('translate-y-[calc(100%+1.5rem)]', hideWhatsapp);
-      whatsappButton.classList.toggle('pointer-events-none', hideWhatsapp);
+      whatsappHiddenByScroll = isPastHero && isScrollingDown;
+      updateWhatsappVisibility();
     }
 
     navActions.forEach((action) => {

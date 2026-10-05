@@ -21,7 +21,7 @@
   <link rel="stylesheet" href="<?= asset_url('assets/build/app.css'); ?>?v=<?= filemtime(__DIR__ . '/assets/build/app.css'); ?>">
   <script src="<?= asset_url('assets/js/app.js'); ?>?v=<?= filemtime(__DIR__ . '/assets/js/app.js'); ?>" defer></script>
 </head>
-<body class="bg-slate-100 text-base text-slate-600 tracking-[-1%]">
+<body class="bg-slate-100 text-base text-slate-600 tracking-[-2.5%]">
   <?php // component('component/nav'); ?>
   <?php // component('component/nav-mobile'); ?>
 

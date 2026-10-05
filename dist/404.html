@@ -4,16 +4,21 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Page Not Found</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/build/app.css?v=1791095535">
-  <script src="/assets/js/app.js?v=1791095500" defer></script>
-
+    <link rel="preload" href="/assets/fonts/lexend-latin-variable.woff2"
+        as="font" type="font/woff2" crossorigin>
   <style>
+    @font-face {
+      font-family: "Lexend";
+      font-style: normal;
+      font-weight: 100 900;
+      font-display: swap;
+      src: url("/assets/fonts/lexend-latin-variable.woff2") format("woff2");
+    }
   </style>
+  <link rel="stylesheet" href="/assets/build/app.css?v=1791224680">
+  <script src="/assets/js/app.js?v=1791199805" defer></script>
 </head>
-<body class="bg-slate-100 text-base text-slate-600 tracking-[-1%]">
+<body class="bg-slate-100 text-base text-slate-600 tracking-[-2.5%]">
     
   <main>
     
@@ -33,11 +38,12 @@
   href="https://wa.me/601116741858"
   target="_blank"
   rel="noopener noreferrer"
-  class="whatsapp-button fixed bottom-6 right-6 z-40 flex size-16 items-center justify-center rounded-full
+  class="whatsapp-button fixed bottom-6 right-5 z-40 flex size-16 items-center justify-center rounded-full
     bg-gradient-to-br from-lime-500 via-green-600 to-emerald-500
     ring-1 ring-inset ring-green-900/50
     shadow-xl shadow-slate-900/40
-    text-white transition-colors hover:bg-green-700 focus-visible:outline-2
+    text-white transition-all duration-300 ease-out motion-reduce:transition-none
+    hover:bg-green-700 focus-visible:outline-2
     focus-visible:outline-offset-2 focus-visible:outline-green-700 js-whatsapp-consultation-link"
   aria-label="Chat with RR Hair Clinic on WhatsApp (opens in a new tab)"
 >

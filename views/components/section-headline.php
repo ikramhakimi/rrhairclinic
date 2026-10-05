@@ -13,7 +13,7 @@
   <?php if (($topic ?? '') !== '') { ?>
   <div class="headline-topic mb-2 sm:mb-5 text-xs text-slate-500 uppercase"><?= e($topic); ?></div>
   <?php } ?>
-  <h2 class="headline-title font-medium sm:font-normal text-2xl sm:text-4xl sm:leading-11 text-transparent bg-clip-text bg-gradient-to-br from-slate-700 via-slate-800 to-slate-950">
+  <h2 class="headline-title font-semibold text-2xl sm:text-4xl sm:leading-11 text-transparent bg-clip-text bg-gradient-to-br from-slate-500 via-slate-900 to-slate-500">
     <?= str_replace("\n", ' <br class="hidden md:block" /> ', e($title ?? '')); ?>
   </h2>
   <?php if (($subtitle ?? '') !== '') { ?>

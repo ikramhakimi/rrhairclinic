@@ -218,7 +218,7 @@
         <div class="hidden sm:block sm:px-5 sm:py-10
                     <?= $index % 3 !== 2 ? 'sm:border-r sm:border-slate-200' : ''; ?>
                     <?= $index < 3 ? 'sm:border-b sm:border-slate-200' : ''; ?>">
-          <div class="aspect-2/1 rounded-full bg-slate-300 mb-5 w-50 mx-auto overflow-hidden">
+          <div class="aspect-2/1 rounded-xl bg-slate-300 mb-5 w-60 mx-auto overflow-hidden shadow-sm shadow-slate-300">
             <img
               src="<?= e($hairloss_reason['image']); ?>"
               alt="<?= e($hairloss_reason['image_alt']); ?>"

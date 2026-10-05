@@ -24,7 +24,7 @@
 
   <div class="container relative flex flex-1 flex-col justify-end sm:justify-start gap-8">
     <div class="hero-headline md:text-center mt-10">
-      <div class="headline-title text-3xl sm:text-5xl tracking-tight  text-transparent bg-clip-text bg-gradient-to-br from-slate-700 via-slate-800 to-slate-950 leading-9 sm:leading-15">
+      <div class="headline-title font-bold text-3xl sm:text-5xl text-transparent bg-clip-text bg-gradient-to-br from-slate-700 via-slate-800 to-slate-950 leading-9 sm:leading-15">
         Better hair starts with the right plan.
       </div>
       <h1 class="headline-subtitle text-sm leading-6 sm:leading-7 sm:text-xl mt-3 sm:mt-2 max-w-2xl mx-auto">
