@@ -1,5 +1,17 @@
-<section class="section section-hero bg-slate-700 min-h-dvh sm:min-h-[800px] mt-18 lg:mt-0 flex flex-col rounded-md sm:rounded-none relative" style="--hero-image: url(<?= asset_url('assets/images/hero.webp'); ?>); --hero-mobile-image: url(<?= asset_url('assets/images/hero-mobile.webp'); ?>);">
-  <div class="bg-gradient-to-b from-slate-100 via-slate-100 to-transparent absolute w-full h-40 sm:h-70 top-0 left-0"></div>
+<?php
+$mobile_review_rating = [
+  'rating'        => 4.5,
+  'wrapper_class' => 'mb-3 sm:flex-col sm:items-start sm:gap-0',
+];
+
+$desktop_review_rating = [
+  'rating'        => 5,
+  'wrapper_class' => 'mb-3 sm:flex-col sm:items-start sm:gap-0',
+];
+?>
+
+<section class="section section-hero bg-slate-700 min-h-[calc(100dvh-4.5rem)] sm:min-h-[800px] mt-18 lg:mt-0 flex flex-col rounded-md sm:rounded-none relative" style="--hero-image: url(<?= asset_url('assets/images/hero.webp'); ?>); --hero-mobile-image: url(<?= asset_url('assets/images/hero-mobile.webp'); ?>);">
+  <div class="bg-gradient-to-b from-slate-100 sm:via-slate-100 to-transparent absolute w-full h-20 sm:h-70 top-0 left-0"></div>
   <div class="bg-gradient-to-t from-slate-100 to-transparent absolute w-full h-40 bottom-0 left-0"></div>
   
   <div class="hero-badges pointer-events-none absolute inset-x-0 top-[58%] z-10 container hidden sm:blocks">
@@ -40,10 +52,7 @@
       <div class="text-xs text-slate-500 mt-5 hidden sm:block">A short questionnaire to help us understand your concerns. <br>Preview only · Answers are not sent</div>
       <div class="sm:hidden mb-6 mt-5">
           <?php
-          component('google-review-rating', [
-            'rating'        => 4.5,
-            'wrapper_class' => 'mb-3 sm:flex-col sm:items-start sm:gap-0',
-          ]);
+          component('google-review-rating', $mobile_review_rating);
           ?>
           <div class="trust-avatars flex gap-0">
             <div class="aspect-1/1 size-10 rounded-full border-2 border-white shadow-md -mx-1"><img src="<?= asset_url('assets/images/customer/avatar-sm-5.webp'); ?>" alt="" class="size-full rounded-full object-cover" /></div>
@@ -59,10 +68,7 @@
     <div class="container flex justify-between items-end">
       <div class="w-80">
         <?php
-        component('google-review-rating', [
-          'rating'        => 5,
-          'wrapper_class' => 'mb-3 sm:flex-col sm:items-start sm:gap-0',
-        ]);
+        component('google-review-rating', $desktop_review_rating);
         ?>
         <div class="trust-avatars flex gap-0">
           <div class="aspect-1/1 size-10 rounded-full border-2 border-white shadow-md -mx-1"><img src="<?= asset_url('assets/images/customer/avatar-sm-5.webp'); ?>" alt="" class="size-full rounded-full object-cover" /></div>

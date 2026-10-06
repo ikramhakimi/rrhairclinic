@@ -129,7 +129,7 @@
 
 @layer components {
   .card {
-    @apply rounded-xl bg-white ring-1 ring-slate-500/5 transition duration-200 ease-out;
+    @apply rounded-xl bg-white ring-1 ring-slate-500/10 transition duration-200 ease-out;
     /* corner-shape: squircle; */
   }
 
