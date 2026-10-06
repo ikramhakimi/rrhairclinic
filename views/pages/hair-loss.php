@@ -3,8 +3,7 @@
 $page_title   = 'Hair Loss Concerns | RR Hair Clinic';
 $page_current = 'hair-loss';
 
-component('navbar');
-component('service-listing', [
+$service_listing = [
   'topic' => 'Hair Loss Concerns',
   'title' => 'Understand the changes in your hair.',
   'intro' => 'A changing hairline, reduced volume or more shedding can raise a lot of questions. '
@@ -65,8 +64,13 @@ component('service-listing', [
       'href'        => asset_url('treatments'),
     ],
   ],
-]);
-section('footer', [
+];
+
+$footer_options = [
   'placeholder_images' => true,
   'consultation_url'   => 'https://wa.me/601116741858',
-]);
+];
+
+component('navbar');
+component('service-listing', $service_listing);
+section('footer', $footer_options);

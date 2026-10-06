@@ -1,92 +1,137 @@
+<?php
+$section_headline = [
+  'topic'    => 'Hair Loss Issues',
+  'title'    => 'Understand your hair loss before choosing a treatment',
+  'subtitle' => "Different patterns of hair loss need different treatment plans.\n"
+    . 'Start by identifying what you are experiencing.',
+];
+
+$hair_loss_cards = [
+  [
+    'title'       => 'Hair Loss',
+    'title_class' => 'font-medium text-lg text-slate-950 transition duration-200 ease-out group-hover:text-indigo-700',
+    'description' => 'Changes in hair density, growth or shedding.',
+    'image'       => 'assets/images/hair-loss/hair-loss-thinning-hair.webp',
+    'image_alt'   => 'Thinning hair with reduced density across the scalp',
+    'fade_width'  => 'w-30',
+    'lazy_loading' => false,
+  ],
+  [
+    'title'       => 'Male Pattern Baldness',
+    'title_class' => 'font-medium text-lg text-slate-950 transition duration-200 ease-out group-hover:text-indigo-700',
+    'description' => 'Gradual thinning at the temples, crown or hairline.',
+    'image'       => 'assets/images/hair-loss/hair-loss-male-pattern-baldness.webp',
+    'image_alt'   => 'Male pattern baldness hair loss with visible crown thinning',
+    'fade_width'  => 'w-1/3',
+    'lazy_loading' => true,
+  ],
+  [
+    'title'       => 'Female Pattern Hair Loss',
+    'title_class' => 'font-medium text-lg text-slate-950 transition duration-200 ease-out group-hover:text-indigo-700',
+    'description' => 'Thinning across the scalp, wider parting or reduced volume.',
+    'image'       => 'assets/images/hair-loss/hair-loss-female-hair-loss.webp',
+    'image_alt'   => 'Female hair loss with diffuse thinning and wider centre parting',
+    'fade_width'  => 'w-30',
+    'lazy_loading' => true,
+  ],
+  [
+    'title'       => 'Receding Hairline',
+    'title_class' => 'font-medium text-lg text-slate-950 transition duration-200 ease-out group-hover:text-indigo-700',
+    'description' => 'Hairline moving back at the temples or forehead.',
+    'image'       => 'assets/images/hair-loss/hair-loss-receding-hairline.webp',
+    'image_alt'   => 'Receding hairline with temple and frontal hair loss',
+    'fade_width'  => 'w-30',
+    'lazy_loading' => true,
+  ],
+  [
+    'title'       => 'Thinning Hair',
+    'title_class' => 'font-medium text-lg text-slate-950 transition duration-200 ease-out group-hover:text-indigo-700',
+    'description' => 'Reduced density or weaker strands that leave hair looking finer.',
+    'image'       => 'assets/images/hair-loss/hair-loss-thinning-hair.webp',
+    'image_alt'   => 'Thinning hair with reduced density across the scalp',
+    'fade_width'  => 'w-30',
+    'lazy_loading' => true,
+  ],
+  [
+    'title'       => 'Crown Hair Loss',
+    'title_class' => 'font-medium text-lg text-slate-950 transition duration-200 ease-out group-hover:text-indigo-700',
+    'description' => 'Visible thinning or balding at the crown.',
+    'image'       => 'assets/images/hair-loss/hair-loss-crown-hair-loss.webp',
+    'image_alt'   => 'Crown hair loss with visible thinning around the vertex',
+    'fade_width'  => 'w-30',
+    'lazy_loading' => true,
+  ],
+  [
+    'title'       => 'Excessive Hair Shedding',
+    'title_class' => 'font-medium text-lg text-slate-950 transition duration-200 ease-out group-hover:text-indigo-700',
+    'description' => 'More hair falling out than usual each day.',
+    'image'       => 'assets/images/hair-loss/hair-loss-hair-shedding.webp',
+    'image_alt'   => 'Hair shedding with subtle loose strands and reduced hair density',
+    'fade_width'  => 'w-30',
+    'lazy_loading' => true,
+  ],
+];
+
+$carousel_controls = [
+  'hook'          => 'hair-loss',
+  'slide_label'   => 'hair loss',
+  'wrapper_class' => 'relative mb-5',
+];
+
+$hairloss_reasons = [
+  [
+    'category'    => 'Nutrition',
+    'title'       => 'Nutritional Deficiencies',
+    'description' => 'Low iron, zinc, biotin, or protein can weaken hair and increase shedding.',
+    'image'       => 'assets/images/hair-loss/reason-vitamin-deficiencies.webp',
+    'image_alt'   => 'Malay woman checking her hair while sitting down to a balanced meal',
+  ],
+  [
+    'category'    => 'Medical',
+    'title'       => 'Health Conditions & Medications',
+    'description' => 'Chronic conditions, autoimmune disorders, and some medications can cause hair loss.',
+    'image'       => 'assets/images/hair-loss/reason-health-conditions-medications.webp',
+    'image_alt'   => 'Malay man discussing medication with a doctor',
+  ],
+  [
+    'category'    => 'Scalp Care',
+    'title'       => 'Scalp Health Issues',
+    'description' => 'Dandruff, infections, and inflammation can disrupt scalp health and hair growth.',
+    'image'       => 'assets/images/hair-loss/reason-scalp-health.webp',
+    'image_alt'   => 'Malay man checking a flaky area of his scalp in a mirror',
+  ],
+  [
+    'category'    => 'Inherited',
+    'title'       => 'Family History (Genetics)',
+    'description' => 'Family history can increase your risk of androgenetic alopecia, a common cause of hair loss.',
+    'image'       => 'assets/images/hair-loss/reason-family-history.webp',
+    'image_alt'   => 'Malay father and son looking through a family photo album',
+  ],
+  [
+    'category'    => 'Biology',
+    'title'       => 'Hormonal Changes',
+    'description' => 'Pregnancy, menopause, and thyroid changes can disrupt the hair cycle and increase shedding.',
+    'image'       => 'assets/images/hair-loss/reason-hormonal-changes.webp',
+    'image_alt'   => 'Pregnant Malay woman checking her hair part in a mirror',
+  ],
+  [
+    'category'    => 'Lifestyle',
+    'title'       => 'Physical or Emotional Stress',
+    'description' => 'Physical or emotional stress can trigger telogen effluvium, causing more shedding than usual.',
+    'image'       => 'assets/images/hair-loss/reason-stress.webp',
+    'image_alt'   => 'Malay woman sitting at her desk beside a hairbrush with loose strands',
+  ],
+];
+?>
+
 <section class="section section-hairloss js-hair-loss-carousel">
   <div class="container">
-    <?php
-    component('section-headline', [
-      'topic'    => 'Hair Loss Issues',
-      'title'    => 'Understand your hair loss before choosing a treatment',
-      'subtitle' => "Different patterns of hair loss need different treatment plans.\n"
-        . 'Start by identifying what you are experiencing.',
-    ]);
-    ?>
-
-    <?php
-    $hair_loss_cards = [
-      [
-        'title'       => 'Hair Loss',
-        'title_class' => 'font-medium text-lg text-slate-950 transition duration-200 ease-out group-hover:text-indigo-700',
-        'description' => 'Changes in hair density, growth or shedding.',
-        'image'       => 'assets/images/hair-loss/hair-loss-thinning-hair.webp',
-        'image_alt'   => 'Thinning hair with reduced density across the scalp',
-        'fade_width'  => 'w-30',
-        'lazy_loading' => false,
-      ],
-      [
-        'title'       => 'Male Pattern Baldness',
-        'title_class' => 'font-medium text-lg text-slate-950 transition duration-200 ease-out group-hover:text-indigo-700',
-        'description' => 'Gradual thinning at the temples, crown or hairline.',
-        'image'       => 'assets/images/hair-loss/hair-loss-male-pattern-baldness.webp',
-        'image_alt'   => 'Male pattern baldness hair loss with visible crown thinning',
-        'fade_width'  => 'w-1/3',
-        'lazy_loading' => true,
-      ],
-      [
-        'title'       => 'Female Pattern Hair Loss',
-        'title_class' => 'font-medium text-lg text-slate-950 transition duration-200 ease-out group-hover:text-indigo-700',
-        'description' => 'Thinning across the scalp, wider parting or reduced volume.',
-        'image'       => 'assets/images/hair-loss/hair-loss-female-hair-loss.webp',
-        'image_alt'   => 'Female hair loss with diffuse thinning and wider centre parting',
-        'fade_width'  => 'w-30',
-        'lazy_loading' => true,
-      ],
-      [
-        'title'       => 'Receding Hairline',
-        'title_class' => 'font-medium text-lg text-slate-950 transition duration-200 ease-out group-hover:text-indigo-700',
-        'description' => 'Hairline moving back at the temples or forehead.',
-        'image'       => 'assets/images/hair-loss/hair-loss-receding-hairline.webp',
-        'image_alt'   => 'Receding hairline with temple and frontal hair loss',
-        'fade_width'  => 'w-30',
-        'lazy_loading' => true,
-      ],
-      [
-        'title'       => 'Thinning Hair',
-        'title_class' => 'font-medium text-lg text-slate-950 transition duration-200 ease-out group-hover:text-indigo-700',
-        'description' => 'Reduced density or weaker strands that leave hair looking finer.',
-        'image'       => 'assets/images/hair-loss/hair-loss-thinning-hair.webp',
-        'image_alt'   => 'Thinning hair with reduced density across the scalp',
-        'fade_width'  => 'w-30',
-        'lazy_loading' => true,
-      ],
-      [
-        'title'       => 'Crown Hair Loss',
-        'title_class' => 'font-medium text-lg text-slate-950 transition duration-200 ease-out group-hover:text-indigo-700',
-        'description' => 'Visible thinning or balding at the crown.',
-        'image'       => 'assets/images/hair-loss/hair-loss-crown-hair-loss.webp',
-        'image_alt'   => 'Crown hair loss with visible thinning around the vertex',
-        'fade_width'  => 'w-30',
-        'lazy_loading' => true,
-      ],
-      [
-        'title'       => 'Excessive Hair Shedding',
-        'title_class' => 'font-medium text-lg text-slate-950 transition duration-200 ease-out group-hover:text-indigo-700',
-        'description' => 'More hair falling out than usual each day.',
-        'image'       => 'assets/images/hair-loss/hair-loss-hair-shedding.webp',
-        'image_alt'   => 'Hair shedding with subtle loose strands and reduced hair density',
-        'fade_width'  => 'w-30',
-        'lazy_loading' => true,
-      ],
-    ];
-    ?>
+    <?php component('section-headline', $section_headline); ?>
   </div>
 
   <div class="carousel-hairloss relative -mx-6 md:mx-0 mt-5 sm:-mt-5">
     <div class="container md:w-[calc(100%-5rem)]">
-      <?php
-      component('carousel-controls', [
-        'hook'          => 'hair-loss',
-        'slide_label'   => 'hair loss',
-        'wrapper_class' => 'relative mb-5',
-      ]);
-      ?>
+      <?php component('carousel-controls', $carousel_controls); ?>
       <div id="hair-loss-track" class="grid grid-cols-1 gap-2 md:grid-cols-4 md:py-0 px-6 md:px-0 js-hair-loss-track"
            role="group" aria-roledescription="carousel" aria-label="Hair loss issues">
         <?php foreach ($hair_loss_cards as $hair_loss_card) { ?>
@@ -129,63 +174,17 @@
     <div aria-hidden="true"
          class="pointer-events-none absolute -inset-y-3 right-0 z-10 w-6 bg-gradient-to-l from-slate-100 to-transparent md:w-15 lg:w-24 hidden sm:block"></div>
 
-    
+
   </div>
 
   <div class="container sm:mt-10 sm:text-center">
     <div class="hairloss-quote text-base sm:text-xl max-w-3xl mt-5 mx-auto">
       <h2 class="font-medium text-slate-600 sm:inline">What can cause hair loss?</h2>
-      <p class="text-slate-500 sm:inline">
+      <p class="text-slate-500 text-sm sm:text-base sm:inline mt-2 sm:mt-0">
         These patterns can have different causes, from genetics and hormonal changes to stress or scalp health.
         Finding the cause helps guide the right treatment.
       </p>
     </div>
-    <?php
-    $hairloss_reasons = [
-      [
-        'category'    => 'Nutrition',
-        'title'       => 'Nutritional Deficiencies',
-        'description' => 'Low iron, zinc, biotin, or protein can weaken hair and increase shedding.',
-        'image'       => 'assets/images/hair-loss/reason-vitamin-deficiencies.webp',
-        'image_alt'   => 'Malay woman checking her hair while sitting down to a balanced meal',
-      ],
-      [
-        'category'    => 'Medical',
-        'title'       => 'Health Conditions & Medications',
-        'description' => 'Chronic conditions, autoimmune disorders, and some medications can cause hair loss.',
-        'image'       => 'assets/images/hair-loss/reason-health-conditions-medications.webp',
-        'image_alt'   => 'Malay man discussing medication with a doctor',
-      ],
-      [
-        'category'    => 'Scalp Care',
-        'title'       => 'Scalp Health Issues',
-        'description' => 'Dandruff, infections, and inflammation can disrupt scalp health and hair growth.',
-        'image'       => 'assets/images/hair-loss/reason-scalp-health.webp',
-        'image_alt'   => 'Malay man checking a flaky area of his scalp in a mirror',
-      ],
-      [
-        'category'    => 'Inherited',
-        'title'       => 'Family History (Genetics)',
-        'description' => 'Family history can increase your risk of androgenetic alopecia, a common cause of hair loss.',
-        'image'       => 'assets/images/hair-loss/reason-family-history.webp',
-        'image_alt'   => 'Malay father and son looking through a family photo album',
-      ],
-      [
-        'category'    => 'Biology',
-        'title'       => 'Hormonal Changes',
-        'description' => 'Pregnancy, menopause, and thyroid changes can disrupt the hair cycle and increase shedding.',
-        'image'       => 'assets/images/hair-loss/reason-hormonal-changes.webp',
-        'image_alt'   => 'Pregnant Malay woman checking her hair part in a mirror',
-      ],
-      [
-        'category'    => 'Lifestyle',
-        'title'       => 'Physical or Emotional Stress',
-        'description' => 'Physical or emotional stress can trigger telogen effluvium, causing more shedding than usual.',
-        'image'       => 'assets/images/hair-loss/reason-stress.webp',
-        'image_alt'   => 'Malay woman sitting at her desk beside a hairbrush with loose strands',
-      ],
-    ];
-    ?>
     <div class="hairloss-reasons relative mt-4 sm:mt-10">
       <div class="sm:grid sm:grid-cols-3 sm:divide-y-0 sm:-mb-10">
         <?php foreach ($hairloss_reasons as $index => $hairloss_reason) { ?>
@@ -239,7 +238,7 @@
       <div class="absolute left-0 w-full h-10 bg-gradient-to-t from-slate-100 to-transparent hidden sm:block bottom-0"></div>
     </div>
 
-    <div class="hairloss-cta mt-15">
+    <div class="hairloss-cta mt-15 hidden">
       <div class="text-lg">Not sure about what your hair issue?</div>
       <div class="sm:flex sm:items-center sm:justify-center gap-2">
         <a href="<?= asset_url('hair-check'); ?>" class="button-lg bg-gradient-to-br w-full sm:w-auto from-purple-500 via-indigo-600 to-indigo-500 text-white text-shadow-2xs text-shadow-indigo-900/50 ring-1 ring-inset ring-indigo-900/50 inline-flex mt-7 transform duration-200 translate-y-0 hover:-translate-y-1 shadow-lg shadow-slate-400 hover:shadow-3xl hover:shadow-slate-500">

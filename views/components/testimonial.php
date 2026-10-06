@@ -8,6 +8,11 @@
  *       Current content is a preview; replace placeholders and confirm reviews before publishing.
  */
 
+$review_rating = [
+  'rating'        => 4.5,
+  'wrapper_class' => 'mt-3 sm:flex-col sm:items-start sm:gap-0',
+  'text_class'    => 'text-slate-400',
+];
 ?>
 <div class="testimonial text-slate-900 js-component-testimonial-carousel">
   <div class="grid min-w-0 gap-8 lg:grid-cols-3 lg:gap-3">
@@ -73,11 +78,7 @@
         </p>
 
         <?php
-        component('google-review-rating', [
-          'rating'        => 4.5,
-          'wrapper_class' => 'mt-3 sm:flex-col sm:items-start sm:gap-0',
-          'text_class'    => 'text-slate-400',
-        ]);
+        component('google-review-rating', $review_rating);
         ?>
       </div>
     </aside>

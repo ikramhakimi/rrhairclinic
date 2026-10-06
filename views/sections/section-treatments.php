@@ -1,3 +1,41 @@
+<?php
+$treatments = [
+  [
+    'name'  => 'Hair Loss Consultation',
+    'brief' => 'A detailed assessment to identify the cause of hair loss and build a personalised treatment plan.',
+    'image' => 'assets/images/treatment/treatment-hair-loss-consultation.webp',
+  ],
+  [
+    'name'  => 'Medical Hair Loss Treatment',
+    'brief' => 'Doctor-guided treatment to slow hair loss and help preserve existing hair.',
+    'image' => 'assets/images/treatment/treatment-medical-hair-loss.webp',
+  ],
+  [
+    'name'  => 'PRP Hair Treatment',
+    'brief' => 'Regenerative treatment to support follicles, reduce shedding and improve hair density.',
+    'image' => 'assets/images/treatment/treatment-prp-hair.webp',
+  ],
+];
+
+$also_offered_treatments = [
+  [
+    'name'  => 'Exosome Hair Treatment',
+    'brief' => 'Advanced regenerative therapy to support scalp and follicle health.',
+    'image' => 'assets/images/treatment/treatment-exosome-hair.webp',
+  ],
+  [
+    'name'  => 'Hair Transplant',
+    'brief' => 'Permanent restoration for receding hairlines, bald spots and advanced hair loss.',
+    'image' => 'assets/images/treatment/treatment-hair-transplant.webp',
+  ],
+  [
+    'name'  => 'Scalp & Hair Growth Treatment',
+    'brief' => 'Non-surgical treatment to improve scalp condition, strengthen follicles and support healthier growth.',
+    'image' => 'assets/images/treatment/treatment-scalp-hair-growth.webp',
+  ],
+];
+?>
+
 <section class="section section-treatments bg-slate-900 text-slate-400 sm:m-4 sm:rounded-lg">
   
   <div class="container">
@@ -6,43 +44,6 @@
       <h2 class="headline-title font-semibold text-4xl text-white">Restoring hair with precision care.</h2>
       <div class="headline-subtitle mt-5">From hairline design to the final graft, no delegation, no assembly lines. Board-certified dermatologic surgeon with 15+ years dedicated to hair restoration.</div>
     </div>
-    <?php
-      $treatments = [
-        [
-          'name'  => 'Hair Loss Consultation',
-          'brief' => 'A detailed assessment to identify the cause of hair loss and build a personalised treatment plan.',
-          'image' => 'assets/images/treatment/treatment-hair-loss-consultation.webp',
-        ],
-        [
-          'name'  => 'Medical Hair Loss Treatment',
-          'brief' => 'Doctor-guided treatment to slow hair loss and help preserve existing hair.',
-          'image' => 'assets/images/treatment/treatment-medical-hair-loss.webp',
-        ],
-        [
-          'name'  => 'PRP Hair Treatment',
-          'brief' => 'Regenerative treatment to support follicles, reduce shedding and improve hair density.',
-          'image' => 'assets/images/treatment/treatment-prp-hair.webp',
-        ],
-      ];
-
-      $also_offered_treatments = [
-        [
-          'name'  => 'Exosome Hair Treatment',
-          'brief' => 'Advanced regenerative therapy to support scalp and follicle health.',
-          'image' => 'assets/images/treatment/treatment-exosome-hair.webp',
-        ],
-        [
-          'name'  => 'Hair Transplant',
-          'brief' => 'Permanent restoration for receding hairlines, bald spots and advanced hair loss.',
-          'image' => 'assets/images/treatment/treatment-hair-transplant.webp',
-        ],
-        [
-          'name'  => 'Scalp & Hair Growth Treatment',
-          'brief' => 'Non-surgical treatment to improve scalp condition, strengthen follicles and support healthier growth.',
-          'image' => 'assets/images/treatment/treatment-scalp-hair-growth.webp',
-        ],
-      ];
-    ?>
     <div class="grid grid-cols-3 gap-3 mt-8 text-white">
       <?php foreach($treatments as $treatment) { ?>
       <div class="card bg-slate-900 bg-cover bg-center px-6 py-5"

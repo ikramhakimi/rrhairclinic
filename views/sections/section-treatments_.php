@@ -1,3 +1,60 @@
+<?php
+$featured_treatment = [
+  'name'     => 'Hair Transplant',
+  'brief'    => 'Permanent restoration for receding hairlines, bald spots and advanced hair loss.',
+  'image'    => 'assets/images/treatment-hair-transplant.png',
+  'features' => [
+    'Natural-looking results',
+    'Doctor-led & personalised',
+    'Lasting confidence',
+  ],
+];
+
+$treatments = [
+  [
+    'name'     => 'Medical Hair Loss Treatment',
+    'brief'    => 'Doctor-guided treatment to slow hair loss and help preserve existing hair.',
+    'image'    => 'assets/images/treatment-medical-hair-loss.png',
+    'features' => [
+      'Prescription-based treatment',
+      'Personalised by our doctors',
+      'Suitable for early to moderate hair loss',
+    ],
+  ],
+  [
+    'name'     => 'PRP Hair Treatment',
+    'brief'    => 'Regenerative treatment to support follicles, reduce shedding and improve hair density.',
+    'image'    => 'assets/images/treatment-prp-hair.png',
+    'features' => [
+      'Uses your body\'s natural healing factors',
+      'Minimal downtime',
+      'Ideal for thinning hair and maintenance',
+    ],
+  ],
+];
+
+$treatment_groups = [
+  [
+    'name'  => 'Hair Restoration',
+    'brief' => 'Surgical and cosmetic solutions to restore your look.',
+    'items' => [
+      'Hair Transplant',
+      'Hair Loss Consultation',
+      'Scalp & Hair Growth Treatment',
+    ],
+  ],
+  [
+    'name'  => 'Hair & Scalp Treatments',
+    'brief' => 'Non-surgical treatments to support and maintain hair health.',
+    'items' => [
+      'Medical Hair Loss Treatment',
+      'PRP Hair Treatment',
+      'Exosome Hair Treatment',
+    ],
+  ],
+];
+?>
+
 <section class="section section-treatments py-25">
   <div class="container">
     <div class="section-headline max-w-3xl mx-auto text-center">
@@ -11,62 +68,6 @@
       </div>
     </div>
 
-    <?php
-      $featured_treatment = [
-        'name'     => 'Hair Transplant',
-        'brief'    => 'Permanent restoration for receding hairlines, bald spots and advanced hair loss.',
-        'image'    => 'assets/images/treatment-hair-transplant.png',
-        'features' => [
-          'Natural-looking results',
-          'Doctor-led & personalised',
-          'Lasting confidence',
-        ],
-      ];
-
-      $treatments = [
-        [
-          'name'     => 'Medical Hair Loss Treatment',
-          'brief'    => 'Doctor-guided treatment to slow hair loss and help preserve existing hair.',
-          'image'    => 'assets/images/treatment-medical-hair-loss.png',
-          'features' => [
-            'Prescription-based treatment',
-            'Personalised by our doctors',
-            'Suitable for early to moderate hair loss',
-          ],
-        ],
-        [
-          'name'     => 'PRP Hair Treatment',
-          'brief'    => 'Regenerative treatment to support follicles, reduce shedding and improve hair density.',
-          'image'    => 'assets/images/treatment-prp-hair.png',
-          'features' => [
-            'Uses your body\'s natural healing factors',
-            'Minimal downtime',
-            'Ideal for thinning hair and maintenance',
-          ],
-        ],
-      ];
-
-      $treatment_groups = [
-        [
-          'name'  => 'Hair Restoration',
-          'brief' => 'Surgical and cosmetic solutions to restore your look.',
-          'items' => [
-            'Hair Transplant',
-            'Hair Loss Consultation',
-            'Scalp & Hair Growth Treatment',
-          ],
-        ],
-        [
-          'name'  => 'Hair & Scalp Treatments',
-          'brief' => 'Non-surgical treatments to support and maintain hair health.',
-          'items' => [
-            'Medical Hair Loss Treatment',
-            'PRP Hair Treatment',
-            'Exosome Hair Treatment',
-          ],
-        ],
-      ];
-    ?>
 
     <div class="mt-15 grid grid-cols-1 gap-4 lg:grid-cols-11">
       <article

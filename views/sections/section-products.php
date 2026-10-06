@@ -1,96 +1,101 @@
- <?php
+<?php
 
-  $products = [
-    [
-      'name'  => 'Finas Blue 100 Capsules',
-      'price' => 'RM 270.00',
-    ],
-    [
-      'name'  => 'Finas Blue 30 Capsules',
-      'price' => 'RM 90.00',
-    ],
-    [
-      'name'  => 'Finox Pro 100 Capsules',
-      'badge' => 'Dutasteride',
-      'price' => 'RM 400.00',
-    ],
-    [
-      'name'  => 'Finox Pro 30 Capsules',
-      'badge' => 'Dutasteride',
-      'price' => 'RM 150.00',
-    ],
-    [
-      'name'  => 'Finox Red 100 Capsules',
-      'price' => 'RM 330.00',
-    ],
-    [
-      'name'  => 'Finox Red 30 Capsules',
-      'price' => 'RM 110.00',
-    ],
-    [
-      'name'      => 'Finox+ Grey 100 Capsules',
-      'old_price' => 'RM 375.00',
-      'price'     => 'RM 360.00',
-    ],
-    [
-      'name'  => 'Finox+ Grey 30 Capsules',
-      'price' => 'RM 125.00',
-    ],
-    [
-      'name'      => 'Root Activator Deluxe Kit',
-      'old_price' => 'RM 605.00',
-      'price'     => 'RM 570.00',
-    ],
-    [
-      'name'      => 'Root Activator Pro Deluxe Kit',
-      'badge'     => 'Dutasteride',
-      'old_price' => 'RM 650.00',
-      'price'     => 'RM 615.00',
-    ],
-    [
-      'name'      => 'Root Activator Pro Starter Kit',
-      'badge'     => 'Dutasteride',
-      'old_price' => 'RM 400.00',
-      'price'     => 'RM 360.00',
-    ],
-    [
-      'name'      => 'Root Activator Starter Kit',
-      'old_price' => 'RM 365.00',
-      'price'     => 'RM 340.00',
-    ],
-    [
-      'name'      => 'RR Duo Signature',
-      'old_price' => 'RM 240.00',
-      'price'     => 'RM 220.00',
-    ],
-    [
-      'name'  => 'RR Root Activator Solution',
-      'badge' => '100ml',
-      'price' => 'RM 150.00',
-    ],
-    [
-      'name'  => 'RR Volumizing Shampoo',
-      'badge' => '300ml',
-      'price' => 'RM 90.00',
-    ],
-  ];
+$products = [
+  [
+    'name'  => 'Finas Blue 100 Capsules',
+    'price' => 'RM 270.00',
+  ],
+  [
+    'name'  => 'Finas Blue 30 Capsules',
+    'price' => 'RM 90.00',
+  ],
+  [
+    'name'  => 'Finox Pro 100 Capsules',
+    'badge' => 'Dutasteride',
+    'price' => 'RM 400.00',
+  ],
+  [
+    'name'  => 'Finox Pro 30 Capsules',
+    'badge' => 'Dutasteride',
+    'price' => 'RM 150.00',
+  ],
+  [
+    'name'  => 'Finox Red 100 Capsules',
+    'price' => 'RM 330.00',
+  ],
+  [
+    'name'  => 'Finox Red 30 Capsules',
+    'price' => 'RM 110.00',
+  ],
+  [
+    'name'      => 'Finox+ Grey 100 Capsules',
+    'old_price' => 'RM 375.00',
+    'price'     => 'RM 360.00',
+  ],
+  [
+    'name'  => 'Finox+ Grey 30 Capsules',
+    'price' => 'RM 125.00',
+  ],
+  [
+    'name'      => 'Root Activator Deluxe Kit',
+    'old_price' => 'RM 605.00',
+    'price'     => 'RM 570.00',
+  ],
+  [
+    'name'      => 'Root Activator Pro Deluxe Kit',
+    'badge'     => 'Dutasteride',
+    'old_price' => 'RM 650.00',
+    'price'     => 'RM 615.00',
+  ],
+  [
+    'name'      => 'Root Activator Pro Starter Kit',
+    'badge'     => 'Dutasteride',
+    'old_price' => 'RM 400.00',
+    'price'     => 'RM 360.00',
+  ],
+  [
+    'name'      => 'Root Activator Starter Kit',
+    'old_price' => 'RM 365.00',
+    'price'     => 'RM 340.00',
+  ],
+  [
+    'name'      => 'RR Duo Signature',
+    'old_price' => 'RM 240.00',
+    'price'     => 'RM 220.00',
+  ],
+  [
+    'name'  => 'RR Root Activator Solution',
+    'badge' => '100ml',
+    'price' => 'RM 150.00',
+  ],
+  [
+    'name'  => 'RR Volumizing Shampoo',
+    'badge' => '300ml',
+    'price' => 'RM 90.00',
+  ],
+];
+
+$section_headline = [
+  'topic'    => 'Hair Care Products',
+  'title'    => 'Support your treatment with doctor-guided hair care.',
+  'subtitle' => 'Explore selected RR Hair Clinic products for scalp care, hair growth support and ongoing maintenance.',
+];
+
+$carousel_controls = [
+  'hook'          => 'component-products',
+  'slide_label'   => 'product',
+  'wrapper_class' => 'mt-5 lg:-mt-12 relative',
+];
 ?>
+
 <section class="section section-products bg-white sm:m-4 sm:rounded-lg js-component-products-carousel">
   <div class="container">
     <?php
-    component('section-headline', [
-      'topic'    => 'Hair Care Products',
-      'title'    => 'Support your treatment with doctor-guided hair care.',
-      'subtitle' => 'Explore selected RR Hair Clinic products for scalp care, hair growth support and ongoing maintenance.',
-    ]);
+    component('section-headline', $section_headline);
     ?>
 
     <?php
-    component('carousel-controls', [
-      'hook'          => 'component-products',
-      'slide_label'   => 'product',
-      'wrapper_class' => 'mt-5 lg:-mt-12 relative',
-    ]);
+    component('carousel-controls', $carousel_controls);
     ?>
   </div>
 

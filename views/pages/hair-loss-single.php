@@ -3,8 +3,7 @@
 $page_title   = 'Male Pattern Baldness | RR Hair Clinic';
 $page_current = 'hair-loss';
 
-component('navbar');
-component('service-detail', [
+$service_detail = [
   'title'         => 'Male Pattern Baldness',
   'intro'         => 'Understand changes around your hairline and crown, then explore a care plan '
     . 'that starts with a personal assessment.',
@@ -80,8 +79,13 @@ component('service-detail', [
       'href'  => asset_url('hair-loss#thinning-hair'),
     ],
   ],
-]);
-section('footer', [
+];
+
+$footer_options = [
   'placeholder_images' => true,
   'consultation_url'   => 'https://wa.me/601116741858',
-]);
+];
+
+component('navbar');
+component('service-detail', $service_detail);
+section('footer', $footer_options);

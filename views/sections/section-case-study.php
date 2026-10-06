@@ -131,7 +131,7 @@ $review_mockups = [
 $star_rating = ['rating' => 5];
 ?>
 
-<section class="section section-case-study js-case-study-carousel">
+<section class="section section-case-study bg-slate-50 shadow-sm sm:m-4 sm:rounded-lg js-case-study-carousel">
   <div class="container relative">
     <?php component('section-headline', $section_headline); ?>
 
@@ -201,7 +201,7 @@ $star_rating = ['rating' => 5];
           <span class="sm:hidden">See the results. Discover the journey.</span>
           <span class="hidden sm:inline">See the progress. Get to know the experience.</span>
         </h2>
-        <p class="text-slate-500 sm:inline">
+        <p class="text-slate-500 text-sm sm:text-base sm:inline mt-2 sm:mt-0">
           <span class="sm:hidden">
             Photos show the progress. The stories reveal the conversations, questions, and follow-up care behind each journey.
           </span>
@@ -217,7 +217,7 @@ $star_rating = ['rating' => 5];
         <?php for ($review_group = 0; $review_group < 2; $review_group++) { ?>
         <div class="marquee-group"<?= $review_group === 1 ? ' aria-hidden="true"' : ''; ?>>
           <?php foreach ($review_mockups as $review) { ?>
-          <div class="review relative bg-gradient-to-br from-slate-200 via-slate-300 to-slate-200 rounded-xl relative flex w-80 sm:w-100 flex-col p-5 sm:px-10 sm:py-8">
+          <div class="review relative bg-gradient-to-br from-slate-100 via-slate-300 to-slate-200 rounded-xl relative flex w-80 sm:w-100 flex-col p-5 sm:px-10 sm:py-8">
             <div class="review-rating relative">
               <?php component('star-rating', $star_rating); ?>
             </div>
@@ -245,8 +245,8 @@ $star_rating = ['rating' => 5];
         <?php } ?>
       </div>
 
-      <div class="pointer-events-none absolute inset-y-0 left-0 w-30 bg-gradient-to-r from-slate-100 to-transparent hidden sm:block"></div>
-      <div class="pointer-events-none absolute inset-y-0 right-0 w-30 bg-gradient-to-l from-slate-100 to-transparent hidden sm:block"></div>
+      <div class="pointer-events-none absolute inset-y-0 left-0 w-30 bg-gradient-to-r from-white to-transparent hidden sm:block"></div>
+      <div class="pointer-events-none absolute inset-y-0 right-0 w-30 bg-gradient-to-l from-white to-transparent hidden sm:block"></div>
     </div>
   </div>
 

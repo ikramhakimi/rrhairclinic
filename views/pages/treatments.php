@@ -3,8 +3,7 @@
 $page_title   = 'Hair Loss Treatments | RR Hair Clinic';
 $page_current = 'treatments';
 
-component('navbar');
-component('service-listing', [
+$service_listing = [
   'topic' => 'Our Treatments',
   'title' => 'Hair loss treatments, built around you.',
   'intro' => 'Explore hair restoration options at RR Hair Clinic. Start with an assessment to understand '
@@ -65,43 +64,50 @@ component('service-listing', [
       'href'        => asset_url('hair-loss'),
     ],
   ],
-]);
+];
+
+$testimonial_options = [
+  'testimonials' => [
+    [
+      'quote'   => "Eleven months on, my barber asked which clinic I went to - he couldn't find the donor area. "
+        . "That's when I knew it was worth it.",
+      'author'  => 'Ikram Hakimi',
+      'details' => 'DHI Implantation · 3,500 grafts · Kelantan',
+      'avatar'  => 'assets/images/customer/2.webp',
+    ],
+    [
+      'quote'   => 'The team explained every step, and the recovery was much easier than I expected. '
+        . 'The results speak for themselves.',
+      'author'  => 'Ikram Hakimi',
+      'details' => 'DHI Implantation · 3,500 grafts · Kelantan',
+      'avatar'  => 'assets/images/customer/5.webp',
+    ],
+    [
+      'quote'   => 'Patient testimonial coming soon.',
+      'author'  => 'Patient name',
+      'details' => 'Placeholder · approved review to be added',
+      'avatar'  => 'assets/images/customer/8.webp',
+    ],
+  ],
+];
+
+$footer_options = [
+  'placeholder_images' => true,
+  'consultation_url'   => 'https://wa.me/601116741858',
+];
+
+component('navbar');
+component('service-listing', $service_listing);
 ?>
 <section class="section py-20 bg-white">
   <div class="container">
     <?php
     // Reuse the current testimonial preview content from the case-study section.
-    component('testimonial', [
-      'testimonials' => [
-        [
-          'quote'   => "Eleven months on, my barber asked which clinic I went to - he couldn't find the donor area. "
-            . "That's when I knew it was worth it.",
-          'author'  => 'Ikram Hakimi',
-          'details' => 'DHI Implantation · 3,500 grafts · Kelantan',
-          'avatar'  => 'assets/images/customer/2.webp',
-        ],
-        [
-          'quote'   => 'The team explained every step, and the recovery was much easier than I expected. '
-            . 'The results speak for themselves.',
-          'author'  => 'Ikram Hakimi',
-          'details' => 'DHI Implantation · 3,500 grafts · Kelantan',
-          'avatar'  => 'assets/images/customer/5.webp',
-        ],
-        [
-          'quote'   => 'Patient testimonial coming soon.',
-          'author'  => 'Patient name',
-          'details' => 'Placeholder · approved review to be added',
-          'avatar'  => 'assets/images/customer/8.webp',
-        ],
-      ],
-    ]);
+    component('testimonial', $testimonial_options);
     ?>
   </div>
 </section>
 <?php
 section('surgeon');
 section('faq');
-section('footer', [
-  'placeholder_images' => true,
-  'consultation_url'   => 'https://wa.me/601116741858',
-]);
+section('footer', $footer_options);

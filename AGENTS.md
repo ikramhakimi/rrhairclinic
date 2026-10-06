@@ -73,6 +73,10 @@ Only when explicitly requested:
 - Page templates:
   - `$page_title`
   - `$page_current`
+- In PHP view files, declare static data and component configuration arrays in one PHP block at the top,
+  before HTML or component rendering. Keep the markup below easy to scan.
+- Preserve array values, order, and existing component APIs when moving them. Leave arrays that depend on
+  loop variables or render-time state beside the code that needs them.
 - Follow global formatting rules.
 
 ---
