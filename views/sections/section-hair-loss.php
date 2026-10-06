@@ -180,7 +180,7 @@ $hairloss_reasons = [
   <div class="container sm:mt-10 sm:text-center">
     <div class="hairloss-quote text-base sm:text-xl max-w-3xl mt-5 mx-auto">
       <h2 class="font-medium text-slate-600 sm:inline">What can cause hair loss?</h2>
-      <p class="text-slate-500 text-sm sm:text-base sm:inline mt-2 sm:mt-0">
+      <p class="text-slate-500 text-sm sm:text-xl sm:inline mt-2 sm:mt-0">
         These patterns can have different causes, from genetics and hormonal changes to stress or scalp health.
         Finding the cause helps guide the right treatment.
       </p>

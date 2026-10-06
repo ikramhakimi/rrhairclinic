@@ -95,13 +95,14 @@
 
 <div
   id="site-mobile-menu"
-  class="pointer-events-none fixed inset-0 z-50 opacity-0 transition-opacity duration-300 motion-reduce:transition-none"
+  class="pointer-events-none fixed inset-0 z-50"
   aria-hidden="true"
   inert
 >
   <button
     type="button"
-    class="absolute inset-0 cursor-pointer bg-slate-950/50"
+    class="absolute inset-0 cursor-pointer bg-slate-950/50 opacity-0 transition-opacity duration-200 ease-out
+      motion-reduce:transition-none js-component-navbar-drawer-backdrop"
     aria-label="Close menu"
     tabindex="-1"
     data-drawer-close
@@ -109,7 +110,8 @@
 
   <aside
     class="absolute inset-y-0 right-0 flex w-[min(24rem,calc(100%-2rem))] translate-x-full flex-col overflow-hidden bg-white
-      shadow-xl transition-transform duration-300 ease-out motion-reduce:transition-none js-component-navbar-drawer-panel"
+      shadow-xl transition-transform duration-300 ease-[cubic-bezier(0.2,0,0,1)]
+      motion-reduce:transition-none js-component-navbar-drawer-panel"
     role="dialog"
     aria-modal="true"
     aria-label="Site navigation"
